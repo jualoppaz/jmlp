@@ -17,7 +17,7 @@ var router = require('./app/server/router');
 
 app.use(router);
 
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 
 app.listen(port, function() {
     console.log("Node server running on http://localhost:", port);
