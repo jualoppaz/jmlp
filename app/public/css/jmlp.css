@@ -1,0 +1,103 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+body{
+    padding-top: 60px;
+}
+
+nav.navbar-default{
+    background-color: #2b2b2b;
+    border-color: #2b2b2b;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:focus, .navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus{
+    color: #eee;
+    border-top: 5px solid #2b2b2b;
+    border-bottom: 5px solid #2b2b2b;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-brand{
+    font-size: 22px;
+}
+
+.navbar-default .navbar-nav > li > a{
+    font-size: 16px;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover{
+    color: #eee;
+    border-top: 5px solid green;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-nav > li > a:focus{
+    outline: none;
+}
+
+.parallax-window {
+    min-height: 600px;
+    background: transparent;
+}
+
+section{
+    background-color: white;
+}
+
+/* Parallax */
+
+.bg {
+    /*margin-top: -150px;*/
+    /* El segundo porcentaje mide a partir de que altura vertical se empieza a visualizar la imagen */
+    background: url('/img/pino_montano.jpg') 0% 75% no-repeat;
+    background-size: 100% auto;
+    position: fixed;
+    width: 100%;
+    /* Altura natural de la imagen, que no del div*/
+    min-height: 800px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg div{
+    position: relative;
+}
+
+.bg div img{
+    margin: auto;
+    width: 180px;
+    height: 180px;
+    margin-top: 150px;
+    border: 4px solid white;
+}
+
+section {
+    font-family: arial;
+    width: 100%;
+    line-height: 20px;
+    font-size: 16px;
+    z-index: 10;
+}
+
+section h1:first-child{
+    padding-top: 15px;
+}
+
+.bg + section{
+    /* distancia entre el section y el navbar */
+    margin-top: 500px;
+}
+
+.bg div div h1, .bg div div h3{
+    color: #fff;
+}
+
+section img.img-thumbnail{
+    border: none;
+}
+
+div.ng-view{
+    background-color: white;
+}
