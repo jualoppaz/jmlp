@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="082986fb-6f95-4e58-ad99-3cd7e693eab7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/img/tecnologia_fontAwesome.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/img/tecnologia_pycharm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/img/tecnologia_python.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="082986fb-6f95-4e58-ad99-3cd7e693eab7" name="Default" comment="" />
     <ignored path="juan-manuel-lopez-pazos.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
