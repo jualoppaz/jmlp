@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="082986fb-6f95-4e58-ad99-3cd7e693eab7" name="Default" comment="" />
+    <list default="true" id="082986fb-6f95-4e58-ad99-3cd7e693eab7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/public/img/tecnologia_phpstorm.png" afterPath="$PROJECT_DIR$/app/public/img/tecnologia_phpStorm.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/public/img/tecnologia_pycharm.png" afterPath="$PROJECT_DIR$/app/public/img/tecnologia_pyCharm.png" />
+    </list>
     <ignored path="juan-manuel-lopez-pazos.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,8 +92,8 @@
       <file leaf-file-name="curriculum.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/js/angular/controllers/curriculum.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="222" column="39" selection-start-line="222" selection-start-column="33" selection-end-line="222" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.90543735">
+              <caret line="244" column="14" selection-start-line="244" selection-start-column="14" selection-end-line="244" selection-end-column="14" />
               <folding>
                 <element signature="e#0#47#0" expanded="false" />
               </folding>
@@ -439,7 +443,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -826,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/js/angular/controllers/curriculum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="222" column="39" selection-start-line="222" selection-start-column="33" selection-end-line="222" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.90543735">
+          <caret line="244" column="14" selection-start-line="244" selection-start-column="14" selection-end-line="244" selection-end-column="14" />
           <folding>
             <element signature="e#0#47#0" expanded="false" />
           </folding>
