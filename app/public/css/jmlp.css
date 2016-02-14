@@ -4,6 +4,8 @@
 
 body{
     padding-top: 60px;
+    background-color: white;
+    text-align: justify;
 }
 
 nav.navbar-default{
@@ -50,8 +52,8 @@ section{
 .bg {
     /*margin-top: -150px;*/
     /* El segundo porcentaje mide a partir de que altura vertical se empieza a visualizar la imagen */
-    background: url('/img/pino_montano.jpg') 0% 75% no-repeat;
-    background-size: 100% auto;
+    background: url('/img/pino_montano.jpg') 0% -140px no-repeat;
+    background-size: 100% 100%;
     position: fixed;
     width: 100%;
     /* Altura natural de la imagen, que no del div*/
@@ -87,7 +89,7 @@ section h1:first-child{
 
 .bg + section{
     /* distancia entre el section y el navbar */
-    margin-top: 500px;
+    margin-top: 470px;
 }
 
 .bg div div h1, .bg div div h3{
@@ -99,6 +101,7 @@ section img.img-thumbnail{
 }
 
 div.ng-view{
+    padding-bottom: 20px;
     background-color: white;
 }
 
@@ -145,4 +148,41 @@ div.media-body div.progress-bar{
 
 .media:first-child{
     margin-top: 15px;
+}
+
+/* Sticky footer - Inicio */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    /* El margin inferior del body debe coincidir con el height del footer */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+
+    /* Estos 3 parámetros son para que la imagen de la página principal no se vea entre el body y el footer debido al Parallax */
+    background-color: #2b2b2b;
+    color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.footer div{
+    /* También es necesario para que la imagen de la página principal no se vea entre el section y el footer al hacer scroll */
+    background-color: #2b2b2b;
+}
+
+/* Sticky footer - Fin */
+
+.footer a{
+    color: white;
 }
