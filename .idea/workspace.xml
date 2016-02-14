@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="082986fb-6f95-4e58-ad99-3cd7e693eab7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/public/img/tecnologia_pycharm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/public/img/tecnologia_python.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/img/tecnologia_fontAwesome.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/img/tecnologia_pycharm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/img/tecnologia_python.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="juan-manuel-lopez-pazos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,8 +93,8 @@
       <file leaf-file-name="curriculum.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/js/angular/controllers/curriculum.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4113475">
-              <caret line="393" column="23" selection-start-line="393" selection-start-column="23" selection-end-line="393" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="222" column="39" selection-start-line="222" selection-start-column="33" selection-end-line="222" selection-end-column="39" />
               <folding>
                 <element signature="e#0#47#0" expanded="false" />
               </folding>
@@ -829,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/js/angular/controllers/curriculum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4113475">
-          <caret line="393" column="23" selection-start-line="393" selection-start-column="23" selection-end-line="393" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="222" column="39" selection-start-line="222" selection-start-column="33" selection-end-line="222" selection-end-column="39" />
           <folding>
             <element signature="e#0#47#0" expanded="false" />
           </folding>
