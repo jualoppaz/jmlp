@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="082986fb-6f95-4e58-ad99-3cd7e693eab7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/public/img/tecnologia_pycharm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/public/img/tecnologia_python.png" afterPath="" />
     </list>
     <ignored path="juan-manuel-lopez-pazos.iws" />
     <ignored path=".idea/workspace.xml" />
