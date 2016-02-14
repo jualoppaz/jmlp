@@ -2,7 +2,7 @@
 
 angular.module('jmlp').controller('LoguedUserController', function($scope, UserService, $http, $window){
 
-    $scope.title = "Título";
+    $scope.title = "";
 
     $scope.usuarioEstaLogueado = false;
 

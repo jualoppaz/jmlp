@@ -11,6 +11,10 @@ angular.module('jmlp', ['ngRoute', 'services', 'ui.bootstrap'])
                 controller: 'HomeController',
                 templateUrl: 'templates/contacto.html'
             })
+            .when('/curriculum', {
+                controller: 'CurriculumController',
+                templateUrl: 'templates/curriculum.html'
+            })
 
             //this is the default route.
             .otherwise({

@@ -3,6 +3,7 @@ html(ng-app="jmlp", ng-controller="LoguedUserController")
     head
         //meta(charset="UTF-8")
         title(ng-bind-template="{{title}}")
+        link(rel="stylesheet", type="text/css", href="/css/font-awesome.css")
         link(rel="stylesheet", type="text/css", href="/css/bootstrap.css")
         link(rel="stylesheet", type="text/css", href="/css/jmlp.css")
         script(src="js/jquery.js", type="text/javascript")
@@ -15,6 +16,8 @@ html(ng-app="jmlp", ng-controller="LoguedUserController")
         script(src="js/angular/controllers/loguedUser.js", type="text/javascript")
         script(src="js/angular/controllers/home.js", type="text/javascript")
         script(src="js/angular/controllers/navbar.js", type="text/javascript")
+        script(src="js/angular/controllers/curriculum.js", type="text/javascript")
+
         script(type="text/javascript").
             function parallax(){
                 var scrolled = $(window).scrollTop();

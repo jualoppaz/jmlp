@@ -1,0 +1,115 @@
+<section class="container">
+    <h1><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
+    <hr>
+    <ul class="media-list">
+        <li class="media" ng-repeat="formacion in curriculum.formacionAcademica">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" ng-src="{{formacion.imagen}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4><b>{{formacion.desde}} - {{formacion.hasta}}</b></h4>
+                <a class="media-heading" ng-bind-template="{{formacion.descripcion}}"></a>
+            </div>
+        </li>
+    </ul>
+    <h1><i class="fa fa-briefcase"></i>&nbsp;Experiencia Profesional</h1>
+    <hr>
+    <ul class="media-list">
+        <li class="media" ng-repeat="experiencia in curriculum.experienciaProfesional">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" ng-src="{{experiencia.imagen}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4><b>{{experiencia.desde}} - {{experiencia.hasta}}: {{experiencia.cargo}}</b> en <b>{{experiencia.empresa}}</b></h4>
+                <a class="media-heading" ng-bind-template="{{experiencia.descripcion}}"></a>
+            </div>
+        </li>
+    </ul>
+    <h1><i class="fa fa-university"></i>&nbsp;Formación Complementaria</h1>
+    <hr>
+    <ul class="media-list">
+        <li class="media" ng-repeat="formacion in curriculum.formacionComplementaria">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" ng-src="{{formacion.imagen}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4><b>{{formacion.fecha}}</b></h4>
+                <a class="media-heading">{{formacion.descripcion}}</a>
+            </div>
+        </li>
+    </ul>
+    <h1><i class="fa fa-code-fork"></i>&nbsp;Proyectos</h1>
+    <hr>
+    <ul class="media-list">
+        <li class="media" ng-repeat="proyecto in curriculum.proyectos">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" ng-src="{{proyecto.imagen}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4><b>{{proyecto.desde}} - {{proyecto.hasta}}: {{proyecto.resumen}}</b></h4>
+                <a class="media-heading">{{proyecto.descripcion}}</a>
+                <div ng-show="proyecto.tecnologias">
+                    <b>Tecnologías utilizadas:</b> <img title="{{tecnologia.nombre}}" class="img-responsive img-thumbnail" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                </div>
+                <div ng-show="proyecto.repositorio"><b>Repositorio:</b> <a ng-click="abrirEnlace(proyecto.repositorio)">{{proyecto.repositorio}}</a></div>
+                <div ng-show="proyecto.web"><b>Web:</b> <a ng-click="abrirEnlace(proyecto.web)">{{proyecto.web}}</a></div>
+            </div>
+        </li>
+    </ul>
+    <h1><i class="fa fa-book"></i>&nbsp;Conocimientos</h1>
+    <hr>
+    <ul class="media-list col-md-12">
+        <li class="media col-md-4" ng-repeat="conocimiento in curriculum.conocimientos">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" ng-src="{{conocimiento.imagen}}" title="{{conocimiento.nombre}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <div class="progress" ng-show="conocimiento.nivel == 1">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100" style="width: 33.3%">
+                        <span class="">Básico</span>
+                    </div>
+                </div>
+                <div class="progress" ng-show="conocimiento.nivel == 2">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="66.6" aria-valuemin="0" aria-valuemax="100" style="width: 66.6%">
+                        <span class="">Intermedio</span>
+                    </div>
+                </div>
+                <div class="progress" ng-show="conocimiento.nivel == 3">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span class="">Avanzado</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h1 class="col-md-12"><i class="fa fa-users"></i>&nbsp;Idiomas</h1>
+    <hr>
+    <ul class="media-list col-md-12">
+        <li class="media" ng-repeat="idioma in curriculum.idiomas">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" ng-src="{{conocimiento.imagen}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4><b>{{proyecto.desde}} - {{proyecto.hasta}}: {{proyecto.resumen}}</b></h4>
+                <a class="media-heading">{{proyecto.descripcion}}</a>
+                <div ng-show="proyecto.tecnologias">
+                    <b>Tecnologías utilizadas:</b> <img title="{{tecnologia.nombre}}" class="img-responsive img-thumbnail" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                </div>
+                <div ng-show="proyecto.repositorio"><b>Repositorio:</b> <a ng-click="abrirEnlace(proyecto.repositorio)">{{proyecto.repositorio}}</a></div>
+                <div ng-show="proyecto.web"><b>Web:</b> <a ng-click="abrirEnlace(proyecto.web)">{{proyecto.web}}</a></div>
+            </div>
+        </li>
+    </ul>
+</section>

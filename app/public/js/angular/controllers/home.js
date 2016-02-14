@@ -1,12 +1,14 @@
 angular.module('jmlp').controller('HomeController', function ($scope) {
 
+    $scope.$parent.title = "Bienvenido";
+
     $scope.temas = [
         {
             tecnologia: "AngularJS",
-            src: "/img/angularjs.png"
+            src: "/img/tema_angularjs.png"
         },{
             tecnologia: "Node.js",
-            src: "/img/nodejs.png"
+            src: "/img/tema_nodejs.png"
         }
     ];
 
