@@ -206,7 +206,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "img/tecnologia_bootstrap.png"
                     },{
                         nombre: "Font Awesome",
-                        imagen: "img/tecnologia_fontawesome.png"
+                        imagen: "img/tecnologia_fontAwesome.png"
                     }
                 ]
             }
