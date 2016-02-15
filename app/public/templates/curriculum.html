@@ -1,7 +1,7 @@
 <section class="container">
-    <h1><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
-    <hr>
-    <ul class="media-list">
+    <h1 class="col-md-12"><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
+    <hr class="col-md-12">
+    <ul class="media-list col-md-12">
         <li class="media" ng-repeat="formacion in curriculum.formacionAcademica">
             <div class="media-left media-middle">
                 <a href="#">
@@ -14,9 +14,9 @@
             </div>
         </li>
     </ul>
-    <h1><i class="fa fa-briefcase"></i>&nbsp;Experiencia Profesional</h1>
-    <hr>
-    <ul class="media-list">
+    <h1 class="col-md-12"><i class="fa fa-briefcase"></i>&nbsp;Experiencia Profesional</h1>
+    <hr class="col-md-12">
+    <ul class="media-list col-md-12">
         <li class="media" ng-repeat="experiencia in curriculum.experienciaProfesional">
             <div class="media-left media-middle">
                 <a href="#">
@@ -29,9 +29,9 @@
             </div>
         </li>
     </ul>
-    <h1><i class="fa fa-university"></i>&nbsp;Formación Complementaria</h1>
-    <hr>
-    <ul class="media-list">
+    <h1 class="col-md-12"><i class="fa fa-university"></i>&nbsp;Formación Complementaria</h1>
+    <hr class="col-md-12">
+    <ul class="media-list col-md-12">
         <li class="media" ng-repeat="formacion in curriculum.formacionComplementaria">
             <div class="media-left media-middle">
                 <a href="#">
@@ -44,9 +44,9 @@
             </div>
         </li>
     </ul>
-    <h1><i class="fa fa-code-fork"></i>&nbsp;Proyectos</h1>
-    <hr>
-    <ul class="media-list">
+    <h1 class="col-md-12"><i class="fa fa-code-fork"></i>&nbsp;Proyectos</h1>
+    <hr class="col-md-12">
+    <ul class="media-list col-md-12">
         <li class="media" ng-repeat="proyecto in curriculum.proyectos">
             <div class="media-left">
                 <a href="#">
@@ -64,8 +64,8 @@
             </div>
         </li>
     </ul>
-    <h1><i class="fa fa-book"></i>&nbsp;Conocimientos</h1>
-    <hr>
+    <h1 class="col-md-12"><i class="fa fa-book"></i>&nbsp;Conocimientos</h1>
+    <hr class="col-md-12">
     <ul class="media-list col-md-12" ng-repeat="conocimientos in curriculum.conocimientos">
         <h3>
             <i class="fa fa-code" ng-show="conocimientos.tipo == 'Lenguajes de programación'"></i>
@@ -108,22 +108,17 @@
         </li>
     </ul>
     <h1 class="col-md-12"><i class="fa fa-users"></i>&nbsp;Idiomas</h1>
-    <hr>
+    <hr class="col-md-12">
     <ul class="media-list col-md-12">
         <li class="media" ng-repeat="idioma in curriculum.idiomas">
             <div class="media-left">
                 <a href="#">
-                    <img class="media-object" ng-src="{{conocimiento.imagen}}">
+                    <img class="media-object" ng-src="{{idioma.imagen}}">
                 </a>
             </div>
             <div class="media-body">
-                <h4><b>{{proyecto.desde}} - {{proyecto.hasta}}: {{proyecto.resumen}}</b></h4>
-                <a class="media-heading">{{proyecto.descripcion}}</a>
-                <div ng-show="proyecto.tecnologias">
-                    <b>Tecnologías utilizadas:</b> <img title="{{tecnologia.nombre}}" class="img-responsive img-thumbnail" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
-                </div>
-                <div ng-show="proyecto.repositorio"><b>Repositorio:</b> <a ng-click="abrirEnlace(proyecto.repositorio)">{{proyecto.repositorio}}</a></div>
-                <div ng-show="proyecto.web"><b>Web:</b> <a ng-click="abrirEnlace(proyecto.web)">{{proyecto.web}}</a></div>
+                <h4><b>Nivel {{idioma.nivel}} en {{idioma.nombre}} ({{idioma.fecha}})</b></h4>
+                <a class="media-heading">{{idioma.descripcion}}</a>
             </div>
         </li>
     </ul>

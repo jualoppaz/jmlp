@@ -186,3 +186,7 @@ body{
 .footer a{
     color: white;
 }
+
+ul h1{
+    padding-top: 15px;
+}

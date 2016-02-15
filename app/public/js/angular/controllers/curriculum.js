@@ -7,60 +7,59 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
     $scope.$parent.title = "Currículum";
 
     $scope.curriculum = {
-       formacionAcademica: [
-           {
-               desde: "09/2010",
-               hasta: "09/2014",
-               descripcion: "Grado en Ingeniería Informática - Ingeniería del Software por la Universidad de Sevilla (2010-2014)",
-               imagen: "/img/estudios_us.png"
-           }
-       ],
-       experienciaProfesional: [
-           {
-               descripcion: "Desarrollo de aplicaciones web con tecnologías tales como PHP, Magento o Laravel y maquetación web con Bootstrap.",
-               imagen: "/img/empresa_innopro.png",
-               desde:"01/2016",
-               hasta: "Actualidad",
-               cargo: "Desarrollador",
-               empresa: "Innopro Advanced"
-           },
-           {
-               descripcion: "Realización de servicio relacionados con certificación de aplicaciones desarrolladas por otras empresas," +
-               " así como realización de pruebas funcionales, automatización de pruebas con Selenium o revisiones de documentos técnicos.",
-               imagen: "/img/empresa_sopra.png",
-               desde:"12/2014",
-               hasta: "12/2015",
-               cargo: "Tester",
-               empresa: "Sopra Steria"
-           },{
-               descripcion: "Realización de tareas relacionadas con bases de datos y maquetación web, siempre en torno a páginas web realizadas " +
-               "con WordPress.",
-               imagen: "/img/empresa_maravish.png",
-               desde:"10/2014",
-               hasta: "11/2014",
-               cargo: "Técnico Programador",
-               empresa: "Maravish Promotions"
-           },{
-               descripcion: "Prácticas no remuneradas de 150 horas como desarrollador con tecnologías Java2EE e interfaces de usuario con " +
-               "Oracle ADF, JSF y JBossSeam.",
-               imagen: "/img/empresa_guadaltel.png",
-               desde:"02/2014",
-               hasta: "05/2014",
-               cargo: "Desarrollador",
-               empresa: "Guadaltel"
-           }
-       ],
-       formacionComplementaria: [
-           {
-               descripcion: "Certificación ISTQB nivel Foundation",
-               fecha: "Noviembre de 2015",
-               imagen: "img/formacionComplementaria_istqb.png"
-           },{
-               descripcion: "Curso de 12 horas sobre la herramienta HP LoadRunner",
-               fecha: "Octubre de 2015",
-               imagen: "img/formacionComplementaria_hp_loadRunner.png"
-           }
-       ],
+        formacionAcademica: [
+            {
+                desde: "09/2010",
+                hasta: "09/2014",
+                descripcion: "Grado en Ingeniería Informática - Ingeniería del Software por la Universidad de Sevilla (2010-2014)",
+                imagen: "/img/estudios_us.png"
+            }
+        ],
+        experienciaProfesional: [
+            {
+                descripcion: "Desarrollo de aplicaciones web con tecnologías tales como PHP, Magento o Laravel y maquetación web con Bootstrap.",
+                imagen: "/img/empresa_innopro.png",
+                desde:"01/2016",
+                hasta: "Actualidad",
+                cargo: "Desarrollador",
+                empresa: "Innopro Advanced"
+            },{
+                descripcion: "Realización de servicio relacionados con certificación de aplicaciones desarrolladas por otras empresas," +
+                " así como realización de pruebas funcionales, automatización de pruebas con Selenium o revisiones de documentos técnicos.",
+                imagen: "/img/empresa_sopra.png",
+                desde:"12/2014",
+                hasta: "12/2015",
+                cargo: "Tester",
+                empresa: "Sopra Steria"
+            },{
+                descripcion: "Realización de tareas relacionadas con bases de datos y maquetación web, siempre en torno a páginas web realizadas " +
+                "con WordPress.",
+                imagen: "/img/empresa_maravish.png",
+                desde:"10/2014",
+                hasta: "11/2014",
+                cargo: "Técnico Programador",
+                empresa: "Maravish Promotions"
+            },{
+                descripcion: "Prácticas no remuneradas de 150 horas como desarrollador con tecnologías Java2EE e interfaces de usuario con " +
+                "Oracle ADF, JSF y JBossSeam.",
+                imagen: "/img/empresa_guadaltel.png",
+                desde:"02/2014",
+                hasta: "05/2014",
+                cargo: "Desarrollador",
+                empresa: "Guadaltel"
+            }
+        ],
+        formacionComplementaria: [
+            {
+                descripcion: "Certificación ISTQB nivel Foundation",
+                fecha: "Noviembre de 2015",
+                imagen: "img/formacionComplementaria_istqb.png"
+            },{
+                descripcion: "Curso de 12 horas sobre la herramienta HP LoadRunner",
+                fecha: "Octubre de 2015",
+                imagen: "img/formacionComplementaria_hp_loadRunner.png"
+            }
+        ],
         proyectos: [
             {
                 resumen: "Usuario activo en la comunidad de Desarolladores GitHub",
@@ -407,7 +406,20 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ]
             }
+
+
+        ],
+        idiomas: [
+            {
+                nombre: "Inglés",
+                nivel: "B1",
+                descripcion: "Acreditación de nivel B1 por el Instituto de idiomas de la Universidad de Sevilla.",
+                fecha: "2012",
+                imagen: "/img/estudios_us.png"
+            }
         ]
+
+
     };
 
     $scope.abrirEnlace = function(enlace){
