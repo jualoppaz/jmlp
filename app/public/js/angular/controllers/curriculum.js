@@ -279,7 +279,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nivel: "3"
                     },{
                         nombre: "Font Awesome",
-                        imagen: "/img/tecnologia_fontAwesome.png",
+                        imagen: "/img/tecnologia_font_awesome.png",
                         nivel: "3"
                     }
                 ]
