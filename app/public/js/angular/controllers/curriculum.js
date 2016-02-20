@@ -406,8 +406,6 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ]
             }
-
-
         ],
         idiomas: [
             {
@@ -418,8 +416,6 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 imagen: "/img/estudios_us.png"
             }
         ]
-
-
     };
 
     $scope.abrirEnlace = function(enlace){

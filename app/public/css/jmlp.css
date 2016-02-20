@@ -190,3 +190,10 @@ body{
 ul h1{
     padding-top: 15px;
 }
+
+div.login{
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    margin-top: 15px;
+}

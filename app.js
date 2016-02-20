@@ -13,6 +13,23 @@ app.use(express.static(__dirname + '/app/public'));
 app.set('views', path.join(__dirname + '/app/server/views'));
 app.set('view engine', 'jade');
 
+
+var cadena_bbdd = "";
+
+if(process.env.MONGOHQ_URL){
+    cadena_bbdd = 'mongodb://[user]:[password]@[host]:[port]';
+}else{
+    cadena_bbdd = 'mongodb://localhost/jmlp';
+}
+
+mongoose.connect(cadena_bbdd, function(err, res) {
+    if(err) {
+        console.log('ERROR: connecting to Database. ' + err);
+    } else {
+        console.log('Connected to Database');
+    }
+});
+
 var router = require('./app/server/router');
 
 app.use(router);

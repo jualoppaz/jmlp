@@ -34,10 +34,10 @@ nav.navbar.navbar-fixed-top.navbar-default(role="navigation")
                 //li
                     a(href="https://twitter.com/pronostigolesp", target="_blank", ng-cloak)
                         i.fa.fa-twitter
-                li(ng-show="usuarioEstaLogueado", style="margin-left:15px", ng-cloak)
-                    a.btn.btn-qdb(href="#", role="button", ng-click="cerrarSesion()")#entrar Cerrar sesión
-                li(ng-show="!usuarioEstaLogueado", style="margin-left:15px", ng-cloak)
+                li(ng-show="isAuthenticated()", style="margin-left:15px", ng-cloak)
+                    a.btn.btn-qdb(href="/logout", role="button", ng-click="cerrarSesion()")#entrar Cerrar sesión
+                li(ng-show="!isAuthenticated()", style="margin-left:15px", ng-cloak)
                     a.btn.btn-qdb(href="/login", role="button")#entrar Entrar
 
 //include ../modals/login
-//include ../modals/logout
+//include ../modals/logout.js

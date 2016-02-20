@@ -1,6 +1,6 @@
 // Controlador Base. Por eso es el único que tiene dependencias
 
-angular.module('jmlp').controller('LoguedUserController', function($scope, UserService, $http, $window){
+angular.module('jmlp').controller('LoguedUserController', function($scope, UserService, $http, $window, $auth){
 
     $scope.title = "";
 
@@ -23,12 +23,12 @@ angular.module('jmlp').controller('LoguedUserController', function($scope, UserS
             });
     };
 
-    $scope.cerrarSesion = function(){
-        $http.get('/api/logout')
+    /*$scope.cerrarSesion = function(){
+        $http.get('/api/logout.js')
             .success(function(data){
                 angular.element("#modalTitleLogout").text("Sesión cerrada correctamente");
                 angular.element("#modalTextLogout").text("Vuelva pronto.");
-                angular.element("#modal-logout").modal('show');
+                angular.element("#modal-logout.js").modal('show');
 
                 $scope.usuarioEstaLogueado = false;
 
@@ -36,10 +36,21 @@ angular.module('jmlp').controller('LoguedUserController', function($scope, UserS
             .error(function(data){
                 console.log(data);
             });
-    };
+    };*/
 
     $scope.redirigirTrasLogout = function(){
         $window.location.reload();
+    };
+
+    $scope.isAuthenticated = function(){
+
+        //console.log("¿Estamos autenticados? - LoguedUser");
+
+        return $auth.isAuthenticated();
+    };
+
+    $scope.getPayload = function(){
+        return $auth.getPayload();
     };
 
 });

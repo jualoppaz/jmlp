@@ -10,14 +10,14 @@ app.controller('NavbarController', function ($scope, $http, $window){
 
     /*
     $scope.cerrarSesion = function(){
-        $http.get('/api/logout')
+        $http.get('/api/logout.js')
             .success(function(data){
                 if(data == "ok"){
                     //alert("Ha cerrado sesión correctamente");
 
                     angular.element("#modalTitleLogout").text("Sesión cerrada correctamente");
                     angular.element("#modalTextLogout").text("Vuelva pronto.");
-                    angular.element("#modal-logout").modal('show');
+                    angular.element("#modal-logout.js").modal('show');
 
                     $scope.usuarioEstaLogueado = false;
 

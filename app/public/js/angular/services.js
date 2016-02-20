@@ -8,10 +8,23 @@ services.service('UserService', ['$http', function($http){
 
 }]);
 
-services.service('LoginService', ['$http', function($http){
+services.service('LoginService', ['$http', function($http, $q, $auth, $location){
 
     this.hacerLogin = function(form){
         return $http.post('/api/login', form);
+    };
+
+    this.loginRealizado = function($q, $auth, $location){
+        var defered = $q.defer();
+
+        if($auth.isAuthenticated()){
+            defered.resolve($auth.isAuthenticated());
+        }else{
+            defered.reject($auth.isAuthenticated());
+
+        }
+
+        return defered.promise;
     };
 
 }]);
