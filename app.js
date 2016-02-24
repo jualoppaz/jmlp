@@ -16,7 +16,7 @@ app.set('view engine', 'jade');
 
 var cadena_bbdd = "";
 
-if(process.env.MONGOHQ_URL){
+if(process.env.MONGOLAB_URL){
     cadena_bbdd = 'mongodb://[user]:[password]@[host]:[port]';
 }else{
     cadena_bbdd = 'mongodb://localhost/jmlp';
