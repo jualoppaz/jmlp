@@ -1,10 +1,10 @@
 <div class="bg col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-    <div class="col-md-12 text-center">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 
         <img src="/img/yo_web4.jpg" class="img-circle img-responsive">
 
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-6 col-xs-12">
             <h1>Juan Manuel Lopez | Desarrollador de Software</h1>
             <h3>Amante del desarrollo Full-Stack (Node.js, Angular.js, MongoDB, ...) y otros frameworks como Laravel o Ionic</h3>
         </div>
@@ -12,16 +12,18 @@
 
 </div>
 
-<section class="container">
-    <h1>Bienvenido a mi página web</h1>
-    <p>Con esta página web pretendo darme a conocer, mostrar a los demás mis proyectos y enseñar todo lo que sé.</p>
-    <p>Espero que te guste.</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12">
+        <h1>Bienvenido a mi página web</h1>
+        <p>Con esta página web pretendo darme a conocer, mostrar a los demás mis proyectos y enseñar todo lo que sé.</p>
+        <p>Espero que te guste.</p>
 
-    <h1>Temas</h1>
-    <div class="col-md-12">
-        <div class="col-md-3" ng-repeat="tema in temas">
-            <img src="{{tema.imagen}}" class="img-thumbnail img-responsive">
+        <h1>Temas</h1>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="tema in temas">
+                <img src="{{tema.imagen}}" class="img-thumbnail img-responsive">
+            </div>
         </div>
     </div>
-</section>
+</div>
 

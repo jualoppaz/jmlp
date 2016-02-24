@@ -87,22 +87,37 @@ section h1:first-child{
     padding-top: 15px;
 }
 
-.bg + section{
+div.bg + div{
     /* distancia entre el section y el navbar */
     margin-top: 470px;
+    background-color: white;
+    padding-bottom: 15px;
 }
 
 .bg div div h1, .bg div div h3{
     color: #fff;
 }
 
-section img.img-thumbnail{
+div img.img-thumbnail{
     border: none;
 }
 
 div.ng-view{
-    padding-bottom: 20px;
-    background-color: white;
+    margin-bottom: 20px;
+    background: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+}
+
+div.ng-view:after{
+    content: " ";
+    display: block;
+    clear:both;
+}
+
+footer{
+    clear: both;
 }
 
 ul li div img{
@@ -159,7 +174,8 @@ html {
 
 body{
     /* El margin inferior del body debe coincidir con el height del footer */
-    margin-bottom: 60px;
+    margin-bottom: 165px;
+    min-height: 100%;
 }
 
 .footer {
@@ -167,7 +183,7 @@ body{
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 60px;
+    height: 165px;
 
     /* Estos 3 parámetros son para que la imagen de la página principal no se vea entre el body y el footer debido al Parallax */
     background-color: #2b2b2b;
