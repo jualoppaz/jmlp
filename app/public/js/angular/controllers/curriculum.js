@@ -67,8 +67,13 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 "además, para ayudar a otros usuarios con soluciones propuestas con distintas tecnologías.",
                 desde: "12/2013",
                 hasta: "Actualidad",
-                repositorio: "https://github.com/jualoppaz",
-                imagen: "/img/tecnologia_github.png"
+                imagen: "/img/tecnologia_github.png",
+                enlaces: [
+                    {
+                        tipo: "repositorio",
+                        enlace: "https://github.com/jualoppaz"
+                    }
+                ]
             },{
                 resumen: "Desarrollo de la aplicación web Pronostigol",
                 descripcion: "Aplicación web para consultar estadísticas relacionadas con los distintos sorteos de Loterías y Apuestas " +
@@ -96,9 +101,16 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 ],
                 desde: "05/2014",
                 hasta: "Actualidad",
-                repositorio: "https://github.com/jualoppaz/pronostigol",
-                web: "http://www.pronostigol.es",
-                imagen: "/img/proyecto_pronostigol.png"
+                imagen: "/img/proyecto_pronostigol.png",
+                enlaces: [
+                    {
+                        tipo: "repositorio",
+                        enlace: "https://github.com/jualoppaz/pronostigol"
+                    },{
+                        tipo: "web",
+                        enlace: "http://www.pronostigol.es"
+                    }
+                ]
             },{
                 resumen: "Desarrollo de la página web para la empresa Rayosol Toldos",
                 descripcion: "Página web para la empresa Rayosol Toldos con el objetivo de mostrar los distintos modelos de toldos que fabrican e instalan," +
@@ -119,9 +131,13 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ],desde: "02/2015",
                 hasta: "06/2015",
-                repositorio: "",
-                web: "http://www.rayosoltoldos.com",
-                imagen: "/img/proyecto_rayosol.png"
+                imagen: "/img/proyecto_rayosol.png",
+                enlaces: [
+                    {
+                        tipo: "web",
+                        enlace: "http://www.rayosoltoldos.com"
+                    }
+                ]
             },{
                 resumen: "Desarrollo de la página web de Complementos Marta Pazos",
                 descripcion: "Desarrollo de la página web de Complementos Marta Pazos la cual consta de: un amplio catálogo de productos," +
@@ -149,9 +165,13 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ],desde: "10/2014",
                 hasta: "01/2015",
-                repositorio: "",
-                web: "http://www.complementosmartapazos.com",
-                imagen: "/img/proyecto_complementosMartaPazos.png"
+                imagen: "/img/proyecto_complementosMartaPazos.png",
+                enlaces: [
+                    {
+                        tipo: "web",
+                        enlace: "http://www.complementosmartapazos.com"
+                    }
+                ]
             },{
                 resumen: "Desarrollo de la aplicación web EatHub",
                 descripcion: "Aplicación web para crear, compartir y personalizar recetas. Proyecto realizado durante la asignatura " +
@@ -159,8 +179,6 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 "del Software de la Universidad de Sevilla.",
                 desde: "02/2014",
                 hasta: "09/2014",
-                web: "http://eat-hub.herokuapp.com",
-                repositorio: "https://github.com/EatHub",
                 imagen: "/img/proyecto_eathub.png",
                 tecnologias: [
                     {
@@ -176,6 +194,15 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Bootstrap",
                         imagen: "img/tecnologia_bootstrap.png"
                     }
+                ],
+                enlaces: [
+                    {
+                        tipo: "web",
+                        enlace: "http://eat-hub.herokuapp.com"
+                    },{
+                        tipo: "repositorio",
+                        enlace: "https://github.com/EatHub"
+                    }
                 ]
             },{
                 resumen: "Desarrollo de la página web de Caramelos La Gloria",
@@ -184,8 +211,6 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 "de Fin de Grado en el Grado en Ingeniería Informática - Ingeniería del Software.",
                 desde: "12/2013",
                 hasta: "09/2014",
-                web: "http://carameloslagloria.herokuapp.com",
-                repositorio: "https://github.com/jualoppaz/lagloria",
                 imagen: "/img/proyecto_lagloria.png",
                 tecnologias: [
                     {
@@ -206,6 +231,15 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     },{
                         nombre: "Font Awesome",
                         imagen: "img/tecnologia_fontAwesome.png"
+                    }
+                ],
+                enlaces: [
+                    {
+                        tipo: "web",
+                        enlace: "http://carameloslagloria.herokuapp.com"
+                    },{
+                        tipo: "repositorio",
+                        enlace: "https://github.com/jualoppaz/lagloria"
                     }
                 ]
             }
