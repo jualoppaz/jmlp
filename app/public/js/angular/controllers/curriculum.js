@@ -24,7 +24,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 cargo: "Desarrollador",
                 empresa: "Innopro Advanced"
             },{
-                descripcion: "Realización de servicio relacionados con certificación de aplicaciones desarrolladas por otras empresas," +
+                descripcion: "Realización de servicios relacionados con certificación de aplicaciones desarrolladas por otras empresas," +
                 " así como realización de pruebas funcionales, automatización de pruebas con Selenium o revisiones de documentos técnicos.",
                 imagen: "/img/empresa_sopra.png",
                 desde:"12/2014",
