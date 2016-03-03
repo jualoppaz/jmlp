@@ -274,6 +274,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 tipo: "Frameworks",
                 lista: [
                     {
+                        nombre: "jQuery",
+                        imagen: "/img/tecnologia_jquery.png",
+                        nivel: "3"
+                    },{
                         nombre: "AngularJS",
                         imagen: "/img/tecnologia_angularjs.png",
                         nivel: "3"
@@ -281,6 +285,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Express.js",
                         imagen: "/img/tecnologia_expressjs.png",
                         nivel: "3"
+                    },{
+                        nombre: "Mongoose",
+                        imagen: "/img/tecnologia_mongoose.png",
+                        nivel: "2"
                     },{
                         nombre: "Spring",
                         imagen: "/img/tecnologia_spring.png",
