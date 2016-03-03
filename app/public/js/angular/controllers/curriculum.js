@@ -290,6 +290,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "/img/tecnologia_mongoose.png",
                         nivel: "2"
                     },{
+                        nombre: "Laravel",
+                        imagen: "/img/tecnologia_laravel.png",
+                        nivel: "1"
+                    },{
                         nombre: "Spring",
                         imagen: "/img/tecnologia_spring.png",
                         nivel: "1"
@@ -297,14 +301,14 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Hibernate",
                         imagen: "/img/tecnologia_hibernate.png",
                         nivel: "1"
-                    }, {
-                        nombre: "Django",
-                        imagen: "/img/tecnologia_django.png",
-                        nivel: "1"
                     },{
                         nombre: "Selenium Webdriver",
                         imagen: "/img/tecnologia_selenium.png",
                         nivel: "3"
+                    }, {
+                        nombre: "Django",
+                        imagen: "/img/tecnologia_django.png",
+                        nivel: "1"
                     }
                 ]
             },{
@@ -462,5 +466,5 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
 
     $scope.abrirEnlace = function(enlace){
         $window.open(enlace, "_blank");
-    }
+    };
 });
