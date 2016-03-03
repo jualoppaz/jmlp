@@ -255,3 +255,6 @@ b + img{
     }
 }
 
+tr.text-center th{
+    text-align: center;
+}
