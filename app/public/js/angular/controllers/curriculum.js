@@ -205,7 +205,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ]
             },{
-                resumen: "Desarrollo de la página web de Caramelos La Gloria",
+                resumen: "Trabajo de Fin de Grado: Desarrollo de la página web de Caramelos La Gloria",
                 descripcion: "Página web para la empresa Caramelos La Gloria con el objetivo de mostrar un amplio catálogo de " +
                 "productos, todo ello con un diseño innovador y atractivo para los usuarios. Este proyecto fue presentado como Trabajo " +
                 "de Fin de Grado en el Grado en Ingeniería Informática - Ingeniería del Software.",

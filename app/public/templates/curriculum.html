@@ -58,7 +58,7 @@
                 <a class="media-heading col-xs-12 without-lateral-padding">{{proyecto.descripcion}}</a>
                 <div ng-show="proyecto.tecnologias" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
                     <b class="pull-left">Tecnologías utilizadas:</b> 
-                    <img title="{{tecnologia.nombre}}" class="img-responsive img-thumbnail col-xs-4 without-lateral-padding" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                    <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
                 </div>
                 <div ng-repeat="enlace in proyecto.enlaces" class="col-xs-12 without-lateral-padding">
                     <b ng-show="enlace.tipo == 'repositorio'">Repositorio:</b>
