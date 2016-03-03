@@ -15,6 +15,10 @@ angular.module('jmlp', ['ngRoute', 'services', 'ui.bootstrap', 'satellizer'])
                 controller: 'CurriculumController',
                 templateUrl: 'templates/curriculum.html'
             })
+            .when('/expediente-academico', {
+                controller: 'ExpedienteAcademicoController',
+                templateUrl: 'templates/expedienteAcademico.html'
+            })
             .when('/login', {
                 controller: 'LoginController',
                 templateUrl: 'templates/login.html'

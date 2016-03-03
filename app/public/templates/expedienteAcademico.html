@@ -1,5 +1,5 @@
 <section class="container">
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
+    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding"><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
     <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
     <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="formacion in curriculum.formacionAcademica">
@@ -11,12 +11,11 @@
             <div class="media-body">
                 <h4><b>{{formacion.desde}} - {{formacion.hasta}}</b></h4>
                 <a class="media-heading" ng-bind-template="{{formacion.descripcion}}"></a>
-                <br/>
                 Si quieres ver mis notas en la Universidad consulta mi <a href="expediente-academico">Expediente académico</a>
             </div>
         </li>
     </ul>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-briefcase"></i>&nbsp;Experiencia Profesional</h1>
+    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding"><i class="fa fa-briefcase"></i>&nbsp;Experiencia Profesional</h1>
     <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
     <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="experiencia in curriculum.experienciaProfesional">
@@ -46,7 +45,7 @@
             </div>
         </li>
     </ul>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-code-fork"></i>&nbsp;Proyectos</h1>
+    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding"><i class="fa fa-code-fork"></i>&nbsp;Proyectos</h1>
     <hr class="col-md-12 col-sm-12 col-xs-12">
     <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="proyecto in curriculum.proyectos">
@@ -70,7 +69,7 @@
             </div>
         </li>
     </ul>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-book"></i>&nbsp;Conocimientos</h1>
+    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding"><i class="fa fa-book"></i>&nbsp;Conocimientos</h1>
     <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
     <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding" ng-repeat="conocimientos in curriculum.conocimientos">
         <h3>
@@ -113,7 +112,7 @@
             </div>
         </li>
     </ul>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-users"></i>&nbsp;Idiomas</h1>
+    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding"><i class="fa fa-users"></i>&nbsp;Idiomas</h1>
     <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
     <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="idioma in curriculum.idiomas">
