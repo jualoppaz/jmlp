@@ -59,7 +59,7 @@
                 <div ng-show="proyecto.tecnologias">
                     <b>Tecnologías utilizadas:</b> <img title="{{tecnologia.nombre}}" class="img-responsive img-thumbnail" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
                 </div>
-                <div ng-repeat="enlace in proyecto.enlaces">
+                <div ng-repeat="enlace in proyecto.enlaces | orderBy:'tipo'">
                     <b ng-show="enlace.tipo == 'repositorio'">Repositorio:</b>
                     <b ng-show="enlace.tipo == 'web'">Web:</b>
                     <a ng-click="abrirEnlace(enlace.enlace)">{{enlace.enlace}}</a>
