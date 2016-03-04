@@ -1,4 +1,4 @@
-angular.module('jmlp', ['ngRoute', 'services', 'ui.bootstrap', 'satellizer'])
+angular.module('jmlp', ['ngRoute', 'services', 'ui.bootstrap', 'satellizer', 'angular.filter'])
     .config(['$routeProvider', '$locationProvider', '$authProvider', function ($routeProvider, $locationProvider, $authProvider) {
 
         //configure routes.
@@ -14,6 +14,10 @@ angular.module('jmlp', ['ngRoute', 'services', 'ui.bootstrap', 'satellizer'])
             .when('/curriculum', {
                 controller: 'CurriculumController',
                 templateUrl: 'templates/curriculum.html'
+            })
+            .when('/expediente-academico', {
+                controller: 'ExpedienteAcademicoController',
+                templateUrl: 'templates/expedienteAcademico.html'
             })
             .when('/login', {
                 controller: 'LoginController',

@@ -1,0 +1,68 @@
+<section class="container">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding"><i class="fa fa-graduation-cap"></i>&nbsp;Curso 2010/2011</h1>
+    <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th colspan="7" class="text-center">Curso académico 2010-2011</th>
+            </tr>
+            <tr class="text-center">
+                <th>Abreviatura</th>
+                <th>Departamento</th>
+                <th>Nombre de la asignatura</th>
+                <th>Curso</th>
+                <th>Nota</th>
+                <th>Método de aprobado</th>
+                <th>Conv. utilizadas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th colspan="7" class="text-center">Primer Cuatrimestre</th>
+            </tr>
+            <tr ng-repeat="nota in notasExpediente | filter:{cursoAcademico: '2010/2011', cuatrimestre: 1} | orderBy: '-numeroConvocatoria'" class="text-center">
+                <td>{{nota.abreviatura}}</td>
+                <td>{{nota.departamento}}</td>
+                <td>{{nota.asignatura}}</td>
+                <td>{{nota.curso}}</td>
+                <td>
+                    <span class="label label-success" ng-show="nota.nota >=5 && nota.nota <7">{{nota.nota}}</span>
+                    <span class="label label-fail" ng-show="nota.nota <5">{{nota.nota}}</span>
+                    <span class="label label-info" ng-show="nota.nota >=7 && nota.nota <9">{{nota.nota}}</span>
+                    <span class="label label-warning" ng-show="nota.nota >=9 && !nota.matriculaHonor">{{nota.nota}}</span>
+                    <span class="label label-danger" ng-show="nota.matriculaHonor">{{nota.nota}}</span>
+                </td>
+                <td>
+                    <span class="label label-info" ng-show="nota.metodoAprobado == 'Parciales'">{{nota.metodoAprobado}}</span>
+                    <span class="label label-warning" ng-show="nota.metodoAprobado == 'Convocatoria'">{{nota.metodoAprobado}}</span>
+                </td>
+                <td>{{getConvocatoriasUtilizadas(nota.asignatura)}}</td>
+            </tr>
+            <tr>
+                <th colspan="7" class="text-center">Segundo Cuatrimestre</th>
+            </tr>
+            <tr ng-repeat="nota in notasExpediente | filter:{cursoAcademico: '2010/2011', cuatrimestre: 2}" class="text-center">
+                <td>{{nota.abreviatura}}</td>
+                <td>{{nota.departamento}}</td>
+                <td>{{nota.asignatura}}</td>
+                <td>{{nota.curso}}</td>
+                <td><span class="label label-success">{{nota.nota}}</span></td>
+                <td><span class="label label-info">{{nota.metodoAprobado}}</span></td>
+                <td>{{getConvocatoriasUtilizadas(nota.asignatura)}}</td>
+            </tr>
+            <tr>
+                <th colspan="7" class="text-center">Anuales</th>
+            </tr>
+            <tr ng-repeat="nota in notasExpediente | orderBy:'-numeroConvocatoria' | unique: 'asignatura' | filter:{cursoAcademico: '2010/2011', cuatrimestre: 0}" class="text-center">
+                <td>{{nota.abreviatura}}</td>
+                <td>{{nota.departamento}}</td>
+                <td>{{nota.asignatura}}</td>
+                <td>{{nota.curso}}</td>
+                <td><span class="label label-success">{{getNotaMasRecienteDelCurso(nota.curso, nota.asignatura) || 'N/A'}}</span></td>
+                <td><span class="label label-info">{{nota.metodoAprobado || 'N/A'}}</span></td>
+                <td>{{getConvocatoriasUtilizadas(nota.asignatura)}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

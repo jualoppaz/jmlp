@@ -205,7 +205,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ]
             },{
-                resumen: "Desarrollo de la página web de Caramelos La Gloria",
+                resumen: "Trabajo de Fin de Grado: Desarrollo de la página web de Caramelos La Gloria",
                 descripcion: "Página web para la empresa Caramelos La Gloria con el objetivo de mostrar un amplio catálogo de " +
                 "productos, todo ello con un diseño innovador y atractivo para los usuarios. Este proyecto fue presentado como Trabajo " +
                 "de Fin de Grado en el Grado en Ingeniería Informática - Ingeniería del Software.",
@@ -274,6 +274,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 tipo: "Frameworks",
                 lista: [
                     {
+                        nombre: "jQuery",
+                        imagen: "/img/tecnologia_jquery.png",
+                        nivel: "3"
+                    },{
                         nombre: "AngularJS",
                         imagen: "/img/tecnologia_angularjs.png",
                         nivel: "3"
@@ -282,6 +286,14 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "/img/tecnologia_expressjs.png",
                         nivel: "3"
                     },{
+                        nombre: "Mongoose",
+                        imagen: "/img/tecnologia_mongoose.png",
+                        nivel: "2"
+                    },{
+                        nombre: "Laravel",
+                        imagen: "/img/tecnologia_laravel.png",
+                        nivel: "1"
+                    },{
                         nombre: "Spring",
                         imagen: "/img/tecnologia_spring.png",
                         nivel: "1"
@@ -289,14 +301,14 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Hibernate",
                         imagen: "/img/tecnologia_hibernate.png",
                         nivel: "1"
-                    }, {
-                        nombre: "Django",
-                        imagen: "/img/tecnologia_django.png",
-                        nivel: "1"
                     },{
                         nombre: "Selenium Webdriver",
                         imagen: "/img/tecnologia_selenium.png",
                         nivel: "3"
+                    }, {
+                        nombre: "Django",
+                        imagen: "/img/tecnologia_django.png",
+                        nivel: "1"
                     }
                 ]
             },{
@@ -454,5 +466,5 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
 
     $scope.abrirEnlace = function(enlace){
         $window.open(enlace, "_blank");
-    }
+    };
 });
