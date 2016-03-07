@@ -258,3 +258,12 @@ b + img{
 tr.text-center th{
     text-align: center;
 }
+
+.label-fail{
+    background-color: #4000FF;
+    color: white;
+}
+
+.label-success{
+    background-color: #468847;
+}
