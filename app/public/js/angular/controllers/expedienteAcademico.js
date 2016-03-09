@@ -648,7 +648,7 @@ angular.module('jmlp').controller('ExpedienteAcademicoController', function($sco
         var notasOrdenadas = $filter('orderBy')($scope.notasExpediente, '-numeroConvocatoria');
 
         var res = false;
-        
+
         for(var i=0; i<notasOrdenadas.length; i++){
 
             var nota = notasOrdenadas[i];

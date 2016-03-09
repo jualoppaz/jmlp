@@ -267,3 +267,11 @@ tr.text-center th{
 .label-success{
     background-color: #468847;
 }
+
+ul li a.expediente-academico{
+    font-weight: bold;
+}
+
+ul li a.expediente-academico:hover{
+    text-decoration: underline;
+}
