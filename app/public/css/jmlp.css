@@ -69,6 +69,8 @@ section{
     z-index: -1;
 }
 
+
+
 .bg div{
     position: relative;
 }
@@ -77,8 +79,14 @@ section{
     margin: auto;
     width: 180px;
     height: 180px;
-    margin-top: 150px;
+    margin-top: 100px;
     border: 4px solid white;
+}
+
+@media (min-width: 768px){
+    .bg div img{
+        margin-top: 150px;
+    }
 }
 
 section {
@@ -95,9 +103,22 @@ section h1:first-child{
 
 div.bg + div{
     /* distancia entre el section y el navbar */
-    margin-top: 470px;
+    /*margin-top: 470px;*/
+    margin-top: 600px;
     background-color: white;
     padding-bottom: 15px;
+}
+
+@media (min-width: 768px){
+    div.bg + div{
+        margin-top: 500px;
+    }
+}
+
+@media (min-width: 992px){
+    div.bg + div{
+        margin-top: 520px;
+    }
 }
 
 .bg div div h1, .bg div div h3{
@@ -274,4 +295,46 @@ ul li a.expediente-academico{
 
 ul li a.expediente-academico:hover{
     text-decoration: underline;
+}
+
+.contact-border{
+    border: 2px solid #2b2b2b;
+    border-radius: 4px;
+}
+
+div.contact{
+    padding-bottom: 20px;
+}
+/*
+div.contact-ways{
+    margin-top:350px;
+}*/
+
+textarea.mail-message{
+    resize: none;
+}
+
+.contact-panel{
+    padding: 15px;
+}
+
+
+.contact i{
+    color: #2b2b2b;
+}
+
+.contact i.fa-envelope-square:hover{
+    color: #b92c28;
+}
+
+.contact i.fa-github-square:hover{
+    color: #ccc;
+}
+
+.contact i.fa-linkedin-square:hover{
+    color: #069;
+}
+
+.white-background{
+    background-color: white;
 }

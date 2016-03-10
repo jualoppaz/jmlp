@@ -7,10 +7,10 @@ angular.module('jmlp', ['ngRoute', 'services', 'ui.bootstrap', 'satellizer', 'an
                 controller: 'HomeController',
                 templateUrl: 'templates/home.html'
             })
-            .when('/contacto', {
-                controller: 'HomeController',
+            /*.when('/contacto', {
+                controller: 'ContactController',
                 templateUrl: 'templates/contacto.html'
-            })
+            })*/
             .when('/curriculum', {
                 controller: 'CurriculumController',
                 templateUrl: 'templates/curriculum.html'
