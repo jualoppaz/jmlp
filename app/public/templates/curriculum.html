@@ -59,7 +59,7 @@
                 <h4><b>{{proyecto.desde}} - {{proyecto.hasta}}: {{proyecto.resumen}}</b></h4>
                 <a class="media-heading col-xs-12 without-lateral-padding">{{proyecto.descripcion}}</a>
                 <div ng-show="proyecto.tecnologias" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
-                    <b class="pull-left">Tecnologías utilizadas:</b> 
+                    <b class="pull-left">Tecnologías utilizadas:</b>
                     <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
                 </div>
                 <div ng-repeat="enlace in proyecto.enlaces | orderBy:'tipo'">
