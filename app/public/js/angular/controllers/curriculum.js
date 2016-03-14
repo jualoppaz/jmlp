@@ -20,7 +20,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 descripcion: "Desarrollo de aplicaciones web con tecnologías tales como PHP, Magento o Laravel y maquetación web con Bootstrap.",
                 imagen: "/img/empresa_innopro.png",
                 desde:"01/2016",
-                hasta: "Actualidad",
+                hasta: "03/2016",
                 cargo: "Desarrollador",
                 empresa: "Innopro Advanced"
             },{
