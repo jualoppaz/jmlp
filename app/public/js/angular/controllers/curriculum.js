@@ -467,4 +467,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
     $scope.abrirEnlace = function(enlace){
         $window.open(enlace, "_blank");
     };
+
+    $scope.descargarCurriculum = function(){
+        $window.open('/Curriculum.pdf', '_blank');
+    };
 });

@@ -338,3 +338,11 @@ textarea.mail-message{
 .white-background{
     background-color: white;
 }
+
+.fa-file-pdf-o{
+    color: #b92c28;
+}
+
+a .fa-file-pdf-o:hover{
+    cursor: pointer;
+}
