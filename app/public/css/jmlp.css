@@ -347,6 +347,6 @@ a .fa-file-pdf-o:hover, a .fa-download:hover{
     cursor: pointer;
 }
 
-h3.pdf a:hover{
+h3.pdf a:hover, h3.pdf a:visited, h3.pdf a:focus{
     text-decoration: none;
 }
