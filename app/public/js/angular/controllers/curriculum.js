@@ -471,4 +471,15 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
     $scope.descargarCurriculum = function(){
         $window.open('/Curriculum.pdf', '_blank');
     };
+
+    $scope.host = function(){
+
+        var host = $location.host();
+
+        if(host == "localhost"){
+            host += ":" + $location.port();
+        }
+
+        return host;
+    };
 });

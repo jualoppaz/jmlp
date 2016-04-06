@@ -339,10 +339,14 @@ textarea.mail-message{
     background-color: white;
 }
 
-.fa-file-pdf-o{
+.fa-file-pdf-o, .fa-download{
     color: #b92c28;
 }
 
-a .fa-file-pdf-o:hover{
+a .fa-file-pdf-o:hover, a .fa-download:hover{
     cursor: pointer;
+}
+
+h3.pdf a:hover{
+    text-decoration: none;
 }

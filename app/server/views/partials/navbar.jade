@@ -20,11 +20,11 @@ nav.navbar.navbar-fixed-top.navbar-default(role="navigation")
                     a(ng-href="contacto") Contacto
                 li
                     a(ng-href="curriculum") Curr&iacute;culum
-                li.hidden-lg.hidden-md.hidden-sm(ng-show="usuarioEstaLogueado == false")
+                //li.hidden-lg.hidden-md.hidden-sm(ng-show="usuarioEstaLogueado == false")
                     a(ng-href="login") Entrar
                 li.hidden-lg.hidden-md.hidden-sm(ng-show="usuarioEstaLogueado")
                     a(ng-href="#", ng-click="cerrarSesion()") Cerrar sesión
-                li.hidden-lg.hidden-md.hidden-sm(ng-show="usuarioEstaLogueado == false")
+                //li.hidden-lg.hidden-md.hidden-sm(ng-show="usuarioEstaLogueado == false")
                     a(ng-href="/signup") Registrarse
 
             ul.nav.navbar-nav.navbar-right.hidden-xs
@@ -36,7 +36,7 @@ nav.navbar.navbar-fixed-top.navbar-default(role="navigation")
                         i.fa.fa-twitter
                 li(ng-show="isAuthenticated()", style="margin-left:15px", ng-cloak)
                     a.btn.btn-qdb(href="/logout", role="button", ng-click="cerrarSesion()")#entrar Cerrar sesión
-                li(ng-show="!isAuthenticated()", style="margin-left:15px", ng-cloak)
+                //li(ng-show="!isAuthenticated()", style="margin-left:15px", ng-cloak)
                     a.btn.btn-qdb(href="/login", role="button")#entrar Entrar
 
 //include ../modals/login

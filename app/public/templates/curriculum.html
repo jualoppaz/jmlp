@@ -1,5 +1,12 @@
 <section class="container">
-    <h3>Descargar en formato PDF <a ng-click="descargarCurriculum()"><i class="fa fa-file-pdf-o"></i></a></h3>
+    <h3 class="pdf">Consultar en Formato PDF
+        <a href="http://{{host()}}/Curriculum.pdf" target="_blank" title="Visualizar">
+            <i class="fa fa-file-pdf-o"></i>
+        </a>
+        <a href="http://{{host()}}/Curriculum.pdf" target="_self" download title="Descargar">
+            <i class="fa fa-download"></i>
+        </a>
+    </h3>
     <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
     <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
     <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
