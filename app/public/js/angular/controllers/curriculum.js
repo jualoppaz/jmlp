@@ -53,11 +53,13 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
             {
                 descripcion: "Certificación ISTQB nivel Foundation",
                 fecha: "Noviembre de 2015",
-                imagen: "img/formacionComplementaria_istqb.png"
+                imagen: "img/formacionComplementaria_istqb.png",
+                certificado: "certificado_istqb.pdf"
             },{
                 descripcion: "Curso de 12 horas sobre la herramienta HP LoadRunner",
                 fecha: "Octubre de 2015",
-                imagen: "img/formacionComplementaria_hp_loadRunner.png"
+                imagen: "img/formacionComplementaria_hp_loadRunner.png",
+                certificado: "certificado_hploadrunner.pdf"
             }
         ],
         proyectos: [

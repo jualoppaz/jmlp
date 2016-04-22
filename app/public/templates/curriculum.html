@@ -45,7 +45,7 @@
         <li class="media" ng-repeat="formacion in curriculum.formacionComplementaria">
             <div class="media-left media-middle">
                 <a href="#">
-                    <img class="media-object" ng-src="{{formacion.imagen}}">
+                    <img class="media-object" ng-src="{{formacion.imagen}}" ng-click="abrirEnlace(formacion.certificado)" title="Ver certificado">
                 </a>
             </div>
             <div class="media-body">
