@@ -17,6 +17,13 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
         ],
         experienciaProfesional: [
             {
+                descripcion: "Desarrollo del Frontend del Portal del Investigador de Universitas XXI - Investigación con AngularJS.",
+                imagen: "/img/empresa_augeDigital.png",
+                desde:"05/2016",
+                hasta: "Actualidad",
+                cargo: "Desarrollador",
+                empresa: "AUGE Digital"
+            },{
                 descripcion: "Desarrollo de aplicaciones web con tecnologías tales como PHP, Magento o Laravel y maquetación web con Bootstrap.",
                 imagen: "/img/empresa_innopro.png",
                 desde:"01/2016",
