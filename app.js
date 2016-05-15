@@ -17,7 +17,7 @@ app.set('view engine', 'jade');
 var cadena_bbdd = "";
 
 if(process.env.MONGOHQ_URL){
-    cadena_bbdd = process.env.MONGOHQ_URL;
+    cadena_bbdd = process.env.MONGOLAB_URL;
 }else{
     cadena_bbdd = 'mongodb://localhost/jmlp';
 }
