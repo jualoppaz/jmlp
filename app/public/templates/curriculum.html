@@ -70,7 +70,7 @@
                     <b class="pull-left">Tecnologías utilizadas:</b>
                     <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
                 </div>
-                <div ng-repeat="enlace in proyecto.enlaces | orderBy:'tipo'">
+                <div ng-repeat="enlace in proyecto.enlaces | orderBy:'tipo'" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
                     <b ng-show="enlace.tipo == 'repositorio'">Repositorio:</b>
                     <b ng-show="enlace.tipo == 'web'">Web:</b>
                     <a ng-click="abrirEnlace(enlace.enlace)">{{enlace.enlace}}</a>
