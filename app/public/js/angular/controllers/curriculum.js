@@ -328,6 +328,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "/img/tecnologia_css3.png",
                         nivel: "2"
                     },{
+                        nombre: "Sass",
+                        imagen: "/img/tecnologia_sass.png",
+                        nivel: "2"
+                    },{
                         nombre: "Bootstrap",
                         imagen: "/img/tecnologia_bootstrap.png",
                         nivel: "3"
