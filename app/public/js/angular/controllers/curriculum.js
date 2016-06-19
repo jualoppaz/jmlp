@@ -80,7 +80,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 enlaces: [
                     {
                         tipo: "repositorio",
-                        enlace: "https://github.com/jualoppaz"
+                        nombre: "https://github.com/jualoppaz",
+                        ruta: "https://github.com/jualoppaz"
                     }
                 ]
             },{
@@ -98,8 +99,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "img/tecnologia_mongodb.png",
                         nombre: "MongoDB"
                     },{
-                        imagen: "img/tecnologia_jade.png",
-                        nombre: "Jade"
+                        imagen: "img/tecnologia_pug.png",
+                        nombre: "Pug (antes Jade)"
                     },{
                         imagen: "img/tecnologia_bootstrap.png",
                         nombre: "Bootstrap"
@@ -114,10 +115,12 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 enlaces: [
                     {
                         tipo: "repositorio",
-                        enlace: "https://github.com/jualoppaz/pronostigol"
+                        nombre: "https://github.com/jualoppaz/pronostigol",
+                        ruta: "https://github.com/jualoppaz/pronostigol"
                     },{
                         tipo: "web",
-                        enlace: "http://www.pronostigol.es"
+                        nombre: "http://www.pronostigol.es",
+                        ruta: "http://www.pronostigol.es"
                     }
                 ]
             },{
@@ -132,8 +135,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "img/tecnologia_nodejs.png",
                         nombre: "Node.js"
                     },{
-                        imagen: "img/tecnologia_jade.png",
-                        nombre: "Jade"
+                        imagen: "img/tecnologia_pug.png",
+                        nombre: "Pug (antes Jade)"
                     },{
                         imagen: "img/tecnologia_bootstrap.png",
                         nombre: "Bootstrap"
@@ -144,7 +147,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 enlaces: [
                     {
                         tipo: "web",
-                        enlace: "http://www.rayosoltoldos.com"
+                        nombre: "http://www.rayosoltoldos.com",
+                        ruta: "http://www.rayosoltoldos.com"
                     }
                 ]
             },{
@@ -163,8 +167,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "img/tecnologia_mongodb.png",
                         nombre: "MongoDB"
                     },{
-                        imagen: "img/tecnologia_jade.png",
-                        nombre: "Jade"
+                        imagen: "img/tecnologia_pug.png",
+                        nombre: "Pug (antes Jade)"
                     },{
                         imagen: "img/tecnologia_bootstrap.png",
                         nombre: "Bootstrap"
@@ -178,7 +182,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 enlaces: [
                     {
                         tipo: "web",
-                        enlace: "http://www.complementosmartapazos.com"
+                        nombre: "http://www.complementosmartapazos.com",
+                        ruta: "http://www.complementosmartapazos.com"
                     }
                 ]
             },{
@@ -207,10 +212,12 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 enlaces: [
                     {
                         tipo: "web",
-                        enlace: "http://eat-hub.herokuapp.com"
+                        nombre: "http://eat-hub.herokuapp.com",
+                        ruta: "http://eat-hub.herokuapp.com"
                     },{
                         tipo: "repositorio",
-                        enlace: "https://github.com/EatHub"
+                        nombre: "https://github.com/EatHub",
+                        ruta: "https://github.com/EatHub"
                     }
                 ]
             },{
@@ -232,8 +239,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "AngularJS",
                         imagen: "img/tecnologia_angularjs.png"
                     },{
-                        nombre: "Jade",
-                        imagen: "img/tecnologia_jade.png"
+                        nombre: "Pug (antes Jade)",
+                        imagen: "img/tecnologia_pug.png"
                     },{
                         nombre: "Bootstrap",
                         imagen: "img/tecnologia_bootstrap.png"
@@ -245,10 +252,16 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 enlaces: [
                     {
                         tipo: "web",
-                        enlace: "http://carameloslagloria.herokuapp.com"
+                        nombre: "http://carameloslagloria.herokuapp.com",
+                        ruta: "http://carameloslagloria.herokuapp.com"
                     },{
                         tipo: "repositorio",
-                        enlace: "https://github.com/jualoppaz/lagloria"
+                        nombre: "https://github.com/jualoppaz/lagloria",
+                        ruta: "https://github.com/jualoppaz/lagloria"
+                    },{
+                        tipo: "Memoria",
+                        nombre: "Documentación del proyecto",
+                        ruta: "/docs/memoria_tfg.pdf"
                     }
                 ]
             }
@@ -277,6 +290,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Node.js",
                         imagen: "/img/tecnologia_nodejs.png",
                         nivel: "3"
+                    },{
+                        nombre: "Coffee Script",
+                        imagen: "/img/tecnologia_coffeeScript.png",
+                        nivel: "1"
                     }
                 ]
             },{
@@ -342,6 +359,15 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ]
             },{
+                tipo: "Motores de Plantillas",
+                lista: [
+                    {
+                        nombre: "Pug (antes Jade)",
+                        imagen: "/img/tecnologia_pug.png",
+                        nivel: "3"
+                    }
+                ]
+            },{
                 tipo: "Gestores de contenido",
                 lista: [
                     {
@@ -381,7 +407,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ]
             },{
-                tipo: "Herramientas",
+                tipo: "Herramientas de Gestión de Proyectos",
                 lista: [
                     {
                         nombre: "Jira",
@@ -396,13 +422,34 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "/img/tecnologia_mantis.png",
                         nivel: "3"
                     },{
-                        nombre: "Jenkins",
-                        imagen: "/img/tecnologia_jenkins.png",
-                        nivel: "2"
-                    },{
                         nombre: "SpiraTeam",
                         imagen: "/img/tecnologia_spiraTeam.png",
                         nivel: "3"
+                    }
+                ]
+            },{
+                tipo: "Herramientas de Gestión de la Configuración",
+                lista: [
+                    {
+                        nombre: "NPM",
+                        imagen: "/img/tecnologia_npm.png",
+                        nivel: "2"
+                    },{
+                        nombre: "Bower",
+                        imagen: "/img/tecnologia_bower.png",
+                        nivel: "2"
+                    },{
+                        nombre: "Composer",
+                        imagen: "/img/tecnologia_composer.png",
+                        nivel: "1"
+                    },{
+                        nombre: "Brunch",
+                        imagen: "/img/tecnologia_brunch.png",
+                        nivel: "1"
+                    },{
+                        nombre: "Jenkins",
+                        imagen: "/img/tecnologia_jenkins.png",
+                        nivel: "2"
                     },{
                         nombre: "jMeter",
                         imagen: "/img/tecnologia_jmeter.png",
@@ -477,9 +524,9 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
         ]
     };
 
-    $scope.abrirEnlace = function(enlace){
+    /*$scope.abrirEnlace = function(enlace){
         $window.open(enlace, "_blank");
-    };
+    };*/
 
     $scope.descargarCurriculum = function(){
         $window.open('/Curriculum.pdf', '_blank');

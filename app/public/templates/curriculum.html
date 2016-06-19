@@ -1,9 +1,9 @@
 <section class="container">
     <h3 class="pdf">Consultar en Formato PDF
-        <a href="http://{{host()}}/Curriculum.pdf" target="_blank" title="Visualizar">
+        <a href="/docs/Curriculum.pdf" target="_blank" title="Visualizar">
             <i class="fa fa-file-pdf-o"></i>
         </a>
-        <a href="http://{{host()}}/Curriculum.pdf" target="_self" download title="Descargar">
+        <a href="/docs/Curriculum.pdf" target="_self" download title="Descargar">
             <i class="fa fa-download"></i>
         </a>
     </h3>
@@ -70,10 +70,12 @@
                     <b class="pull-left">Tecnologías utilizadas:</b>
                     <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
                 </div>
-                <div ng-repeat="enlace in proyecto.enlaces | orderBy:'tipo'" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
-                    <b ng-show="enlace.tipo == 'repositorio'">Repositorio:</b>
-                    <b ng-show="enlace.tipo == 'web'">Web:</b>
-                    <a ng-click="abrirEnlace(enlace.enlace)">{{enlace.enlace}}</a>
+                <div ng-repeat="enlace in proyecto.enlaces | orderBy:'$index'" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+                    <!--<b ng-show="enlace.tipo == 'repositorio'">Repositorio:</b>
+                    <b ng-show="enlace.tipo == 'web'">Web:</b>-->
+                    <b class="text-capitalize" ng-bind-template="{{enlace.tipo}}:"></b>
+                    <!--<a ng-click="abrirEnlace(enlace.ruta)">{{enlace.nombre}}</a>-->
+                    <a ng-href="{{enlace.ruta}}" target="_blank">{{enlace.nombre}}</a>
                 </div>
             </div>
         </li>
@@ -85,10 +87,12 @@
             <i class="fa fa-code" ng-show="conocimientos.tipo == 'Lenguajes de programación'"></i>
             <i class="fa fa-puzzle-piece" ng-show="conocimientos.tipo == 'Frameworks'"></i>
             <i class="fa fa-paint-brush" ng-show="conocimientos.tipo == 'Diseño web'"></i>
+            <i class="fa fa-sitemap" ng-show="conocimientos.tipo == 'Motores de Plantillas'"></i>
             <i class="fa fa-files-o" ng-show="conocimientos.tipo == 'Gestores de contenido'"></i>
             <i class="fa fa-database" ng-show="conocimientos.tipo == 'Bases de datos'"></i>
             <i class="fa fa-share-alt" ng-show="conocimientos.tipo == 'Sistemas de control de versiones'"></i>
-            <i class="fa fa-wrench" ng-show="conocimientos.tipo == 'Herramientas'"></i>
+            <i class="fa fa-calendar" ng-show="conocimientos.tipo == 'Herramientas de Gestión de Proyectos'"></i>
+            <i class="fa fa-cogs" ng-show="conocimientos.tipo == 'Herramientas de Gestión de la Configuración'"></i>
             <i class="fa fa-desktop" ng-show="conocimientos.tipo == 'Sistemas operativos'"></i>
             <i class="fa fa-laptop" ng-show="conocimientos.tipo == 'Entornos de desarrollo'"></i>
             <i class="fa fa-cog" ng-show="conocimientos.tipo == 'Otros'"></i>
