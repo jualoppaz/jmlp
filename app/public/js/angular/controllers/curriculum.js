@@ -386,11 +386,11 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     {
                         nombre: "MySQL",
                         imagen: "/img/tecnologia_mysql.png",
-                        nivel: "2"
+                        nivel: "1"
                     },{
                         nombre: "Oracle",
                         imagen: "/img/tecnologia_oracle.png",
-                        nivel: "2"
+                        nivel: "1"
                     },{
                         nombre: "MongoDB",
                         imagen: "/img/tecnologia_mongodb.png",
