@@ -331,9 +331,13 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Selenium Webdriver",
                         imagen: "/img/tecnologia_selenium.png",
                         nivel: "3"
-                    }, {
+                    },{
                         nombre: "Django",
                         imagen: "/img/tecnologia_django.png",
+                        nivel: "1"
+                    },{
+                        nombre: "Vue.js",
+                        imagen: "/img/tecnologia_vuejs.png",
                         nivel: "1"
                     }
                 ]
@@ -367,7 +371,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nivel: "3"
                     }
                 ]
-            },{
+            },/*{
                 tipo: "Gestores de contenido",
                 lista: [
                     {
@@ -376,7 +380,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nivel: "2"
                     }
                 ]
-            },{
+            },*/{
                 tipo: "Bases de datos",
                 lista: [
                     {
@@ -449,7 +453,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     },{
                         nombre: "Jenkins",
                         imagen: "/img/tecnologia_jenkins.png",
-                        nivel: "2"
+                        nivel: "1"
                     },{
                         nombre: "jMeter",
                         imagen: "/img/tecnologia_jmeter.png",
@@ -499,6 +503,22 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     },{
                         nombre: "PyCharm",
                         imagen: "/img/tecnologia_pyCharm.png",
+                        nivel: "1"
+                    },{
+                        nombre: "Visual Studio Code",
+                        imagen: "/img/tecnologia_visualStudioCode.png",
+                        nivel: "1"
+                    },{
+                        nombre: "Brackets",
+                        imagen: "/img/tecnologia_brackets.png",
+                        nivel: "1"
+                    },{
+                        nombre: "Sublime Text",
+                        imagen: "/img/tecnologia_sublimeText.png",
+                        nivel: "1"
+                    },{
+                        nombre: "Atom",
+                        imagen: "/img/tecnologia_atom.png",
                         nivel: "1"
                     }
                 ]
