@@ -466,6 +466,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "SoapUI",
                         imagen: "/img/tecnologia_soapui.png",
                         nivel: "1"
+                    },{
+                        nombre: "Source Tree (+ Git Flow)",
+                        imagen: "/img/tecnologia_sourceTree.png",
+                        nivel: "2"
                     }
                 ]
             },{
