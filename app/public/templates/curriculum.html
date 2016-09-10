@@ -20,7 +20,7 @@
                 <h4><b>{{formacion.desde}} - {{formacion.hasta}}</b></h4>
                 <a class="media-heading" ng-bind-template="{{formacion.descripcion}}"></a>
                 <br/>
-                Si quieres ver mis notas en la Universidad consulta mi <a href="expediente-academico" class="expediente-academico">Expediente académico</a>
+                Si quieres ver mis notas en la Universidad consulta mi <a ng-href="expediente-academico" class="expediente-academico">Expediente académico</a>
             </div>
         </li>
     </ul>
@@ -44,8 +44,8 @@
     <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="formacion in curriculum.formacionComplementaria">
             <div class="media-left media-middle">
-                <a href="#">
-                    <img class="media-object" ng-src="{{formacion.imagen}}" ng-click="abrirEnlace(formacion.certificado)" title="Ver certificado">
+                <a ng-href="docs/{{formacion.certificado}}" target="_blank">
+                    <img class="media-object" ng-src="{{formacion.imagen}}" title="Ver certificado">
                 </a>
             </div>
             <div class="media-body">
