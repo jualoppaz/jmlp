@@ -17,10 +17,18 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
         ],
         experienciaProfesional: [
             {
+                descripcion: "Participación en el proyecto FARO BCE para el BBVA por parte de GMV con tecnologías J2EE, así como " +
+                "Maven, Hibernate, JSF o PrimeFaces entre otros.",
+                imagen: "/img/empresa_siag.png",
+                desde:"10/2016",
+                hasta: "Actualidad",
+                cargo: "Desarrollador",
+                empresa: "SIAG Consulting"
+            },{
                 descripcion: "Desarrollo del Frontend del Portal del Investigador de Universitas XXI - Investigación con AngularJS.",
                 imagen: "/img/empresa_augeDigital.png",
                 desde:"05/2016",
-                hasta: "Actualidad",
+                hasta: "10/2016",
                 cargo: "Desarrollador",
                 empresa: "AUGE Digital"
             },{
@@ -338,6 +346,14 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     },{
                         nombre: "Vue.js",
                         imagen: "/img/tecnologia_vuejs.png",
+                        nivel: "1"
+                    },{
+                        nombre: "JavaServer Faces (jsf)",
+                        imagen: "/img/tecnologia_jsf.png",
+                        nivel: "1"
+                    },{
+                        nombre: "PrimeFaces",
+                        imagen: "/img/tecnologia_primeFaces.png",
                         nivel: "1"
                     }
                 ]
