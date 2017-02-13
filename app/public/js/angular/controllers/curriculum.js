@@ -299,9 +299,9 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "/img/tecnologia_nodejs.png",
                         nivel: "3"
                     },{
-                        nombre: "Coffee Script",
-                        imagen: "/img/tecnologia_coffeeScript.png",
-                        nivel: "1"
+                        nombre: "PHP",
+                        imagen: "/img/tecnologia_php.png",
+                        nivel: "2"
                     }
                 ]
             },{
