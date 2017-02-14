@@ -404,6 +404,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "/img/tecnologia_mysql.png",
                         nivel: "1"
                     },{
+                        nombre: "PostgreSQL",
+                        imagen: "/img/tecnologia_postgresql.png",
+                        nivel: "1"
+                    },{
                         nombre: "Oracle",
                         imagen: "/img/tecnologia_oracle.png",
                         nivel: "1"
@@ -486,16 +490,16 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Source Tree (+ Git Flow)",
                         imagen: "/img/tecnologia_sourceTree.png",
                         nivel: "2"
+                    },{
+                        nombre: "JSHint",
+                        imagen: "/img/tecnologia_jshint.png",
+                        nivel: "1"
                     }
                 ]
             },{
                 tipo: "Sistemas operativos",
                 lista: [
                     {
-                        nombre: "Windows XP",
-                        imagen: "/img/tecnologia_windowsxp.png",
-                        nivel: "3"
-                    },{
                         nombre: "Windows 7",
                         imagen: "/img/tecnologia_windows7.png",
                         nivel: "3"
