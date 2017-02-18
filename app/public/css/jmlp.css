@@ -66,7 +66,8 @@ section{
     min-height: 800px;
     top: 0;
     left: 0;
-    z-index: -1;
+    /* Comentamos esto para evitar que se rompan los href en la cabecera */
+    /*z-index: -1;*/
 }
 
 
@@ -349,4 +350,29 @@ a .fa-file-pdf-o:hover, a .fa-download:hover{
 
 h3.pdf a:hover, h3.pdf a:visited, h3.pdf a:focus{
     text-decoration: none;
+}
+
+a.no-decoration{
+    text-decoration: none;
+}
+
+/* CSS para letras del texto MEAN */
+a.mean span{
+    display: inline-block;
+}
+
+a.mean span.mongo{
+    color: #3e8f3e;
+}
+
+a.mean span.express{
+    color: #e38d13;
+}
+
+a.mean span.angular{
+    color: #d43f3a;
+}
+
+a.mean span.node{
+    color: #66cc33;
 }
