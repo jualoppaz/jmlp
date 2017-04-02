@@ -324,6 +324,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "/img/tecnologia_mongoose.png",
                         nivel: "2"
                     },{
+                        nombre: "Symfony",
+                        imagen: "/img/tecnologia_symfony.png",
+                        nivel: "2"
+                    },{
                         nombre: "Laravel",
                         imagen: "/img/tecnologia_laravel.png",
                         nivel: "1"
@@ -331,6 +335,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Spring",
                         imagen: "/img/tecnologia_spring.png",
                         nivel: "1"
+                    },{
+                        nombre: "Doctrine",
+                        imagen: "/img/tecnologia_doctrine.png",
+                        nivel: "2"
                     },{
                         nombre: "Hibernate",
                         imagen: "/img/tecnologia_hibernate.png",
