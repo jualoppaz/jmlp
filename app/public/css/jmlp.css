@@ -376,3 +376,7 @@ a.mean span.angular{
 a.mean span.node{
     color: #66cc33;
 }
+
+hr{
+    box-sizing: border-box;
+}
