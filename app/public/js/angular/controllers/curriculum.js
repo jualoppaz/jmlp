@@ -502,6 +502,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "JSHint",
                         imagen: "/img/tecnologia_jshint.png",
                         nivel: "1"
+                    },{
+                        nombre: "TestNG",
+                        imagen: "/img/tecnologia_testng.png",
+                        nivel: "1"
                     }
                 ]
             },{
