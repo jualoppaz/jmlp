@@ -22,12 +22,16 @@ if(process.env.MONGOLAB_URL){
     cadena_bbdd = 'mongodb://localhost/jmlp';
 }
 
-mongoose.connect(cadena_bbdd, function(err, res) {
-    if(err) {
-        console.log('ERROR: connecting to Database. ' + err);
-    } else {
-        console.log('Connected to Database');
-    }
+mongoose.connect(cadena_bbdd, {
+    useMongoClient: true
+});
+
+mongoose.connection.on('connected', function () {
+    console.log('Connected to Database');
+});
+
+mongoose.connection.on('error',function (err) {
+    console.log('ERROR: connecting to Database. ' + err);
 });
 
 var router = require('./app/server/router');
