@@ -17,20 +17,103 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
         ],
         experienciaProfesional: [
             {
-                descripcion: "Participación en el proyecto FARO BCE para el BBVA por parte de GMV con tecnologías J2EE, así como " +
-                "Maven, Hibernate, JSF o PrimeFaces entre otros.",
+                descripcion: "",
                 imagen: "/img/empresa_siag.png",
-                desde:"10/2016",
+                desde: "10/2016",
                 hasta: "Actualidad",
-                cargo: "Desarrollador",
-                empresa: "SIAG Consulting"
+                cargo: "Consultor",
+                empresa: "SIAG Consulting",
+                clientes: [
+                    {
+                        nombre: "GMV",
+                        imagen: "/img/empresa_gmv.png",
+                        desde: "10/2016",
+                        hasta: "Actualidad",
+                        descripcion: "Colaboración con GMV para participar en el desarrollo de diversos proyectos como Desarrollador Web.",
+                        proyectos: [
+                            {
+                                nombre: "FARO Evidencias",
+                                desde: "07/2017",
+                                hasta: "Actualidad",
+                                cargo: "Desarrollador Web",
+                                funciones: [
+                                    {
+                                        nombre: "Maquetación CSS"
+                                    }, {
+                                        nombre: "Corrección de defectos en Backend"
+                                    }, {
+                                        nombre: "Corrección de defectos en Frontend"
+                                    }, {
+                                        nombre: "Análisis de Requisitos"
+                                    }, {
+                                        nombre: "Planificación y Estimación de tareas"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             },{
-                descripcion: "Desarrollo del Frontend del Portal del Investigador de Universitas XXI - Investigación con AngularJS.",
+                descripcion: "Incorporación a plantilla tras 2 meses de buen trabajo previo como Desarrollador Web con AngularJS",
                 imagen: "/img/empresa_augeDigital.png",
-                desde:"05/2016",
+                desde:"07/2016",
                 hasta: "10/2016",
-                cargo: "Desarrollador",
-                empresa: "AUGE Digital"
+                cargo: "Desarrollador Web",
+                empresa: "AUGE Digital",
+                proyectos: [
+                    {
+                        nombre: "Portal del Investigador de Universitas XXI - Investigación",
+                        descripcion: "Desarrollo del Frontend del Portal del Investigador de Universitas XXI - Investigación con AngularJS.",
+                        desde: "05/2016",
+                        hasta: "07/2016",
+                        cargo: "Desarrollador Web",
+                        funciones: [
+                            {
+                                nombre: "Maquetación CSS con Bootstrap"
+                            },{
+                                nombre: "Desarrollo web con AngularJS"
+                            },{
+                                nombre: "Desarrollo de servicios con AngularJS para consumir API de terceros"
+                            },{
+                                nombre: "Análisis y Diseño de soluciones"
+                            },{
+                                nombre: "Documentación de código"
+                            }
+                        ]
+                    }
+                ]
+            },{
+                imagen: "/img/empresa_aertis.png",
+                desde:"05/2016",
+                hasta: "07/2016",
+                cargo: "Consultor",
+                empresa: "Aertis",
+                clientes: [
+                    {
+                        nombre: "AUGE Digital",
+                        imagen: "/img/empresa_augeDigital.png",
+                        desde: "05/2016",
+                        hasta: "07/2016",
+                        descripcion: "Participación en un proyecto de Desarrollo Web con AngularJS por parte de AUGE Digital.",
+                        proyectos: [
+                            {
+                                nombre: "Portal del Investigador de Universitas XXI - Investigación",
+                                desde: "05/2016",
+                                hasta: "07/2016",
+                                cargo: "Desarrollador Web",
+                                funciones: [
+                                    {
+                                        nombre: "Maquetación CSS con Bootstrap"
+                                    },{
+                                        nombre: "Desarrollo web con AngularJS"
+                                    },{
+                                        nombre: "Desarrollo de servicios con AngularJS para consumir API de terceros"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             },{
                 descripcion: "Desarrollo de aplicaciones web con tecnologías tales como PHP, Magento o Laravel y maquetación web con Bootstrap.",
                 imagen: "/img/empresa_innopro.png",
@@ -395,16 +478,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nivel: "3"
                     }
                 ]
-            },/*{
-                tipo: "Gestores de contenido",
-                lista: [
-                    {
-                        nombre: "WordPress",
-                        imagen: "/img/tecnologia_wordPress.png",
-                        nivel: "2"
-                    }
-                ]
-            },*/{
+            },{
                 tipo: "Bases de datos",
                 lista: [
                     {

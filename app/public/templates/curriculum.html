@@ -13,7 +13,7 @@
         <li class="media" ng-repeat="formacion in curriculum.formacionAcademica">
             <div class="media-left media-middle">
                 <a href="#">
-                    <img class="media-object" ng-src="{{formacion.imagen}}">
+                    <img class="media-object main-image" ng-src="{{formacion.imagen}}">
                 </a>
             </div>
             <div class="media-body">
@@ -28,14 +28,55 @@
     <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
     <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="experiencia in curriculum.experienciaProfesional">
-            <div class="media-left media-middle">
+            <div class="media-left">
                 <a href="#">
-                    <img class="media-object" ng-src="{{experiencia.imagen}}">
+                    <img class="media-object main-image" ng-src="{{experiencia.imagen}}">
                 </a>
             </div>
             <div class="media-body">
-                <h4><b>{{experiencia.desde}} - {{experiencia.hasta}}: {{experiencia.cargo}}</b> en <b>{{experiencia.empresa}}</b></h4>
-                <a class="media-heading" ng-bind-template="{{experiencia.descripcion}}"></a>
+                <h4 ng-class="{'title-job-centered': !experiencia.descripcion}"><b>{{experiencia.desde}} - {{experiencia.hasta}}: {{experiencia.cargo}}</b> en <b>{{experiencia.empresa}}</b></h4>
+                <a class="media-heading" ng-show="experiencia.descripcion" ng-bind-template="{{experiencia.descripcion}}"></a>
+                <!-- Seccion para mostrar colaboraciones en clientes -->
+                <div ng-repeat="cliente in experiencia.clientes">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object secondary-image" ng-src="{{cliente.imagen}}">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4><b>{{cliente.desde}} - {{cliente.hasta}}</b></h4>
+                        <a class="media-heading" ng-show="cliente.descripcion" ng-bind-template="{{cliente.descripcion}}"></a>
+                    </div>
+                    <h3 class="proyectos-cliente" ng-show="cliente.proyectos">Proyectos</h3>
+                    <div ng-repeat="proyecto in cliente.proyectos">
+                        <p>
+                            <b>
+                                <a ng-bind-template="{{proyecto.nombre}}: "></a>
+                                <a ng-bind-template="{{proyecto.desde}} - {{proyecto.hasta}}"></a>
+                            </b>
+                        </p>
+                        <p ng-bind-template="Cargo: {{proyecto.cargo}}"></p>
+                        <p>Funciones:</p>
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="funcion in proyecto.funciones" ng-bind="funcion.nombre"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Seccion para mostrar proyectos de la empresa -->
+            <h3 class="proyectos-empresa" ng-show="experiencia.proyectos">Proyectos</h3>
+            <div ng-repeat="proyecto in experiencia.proyectos">
+                <p>
+                    <b>
+                        <a ng-bind-template="{{proyecto.nombre}}: "></a>
+                        <a ng-bind-template="{{proyecto.desde}} - {{proyecto.hasta}}"></a>
+                    </b>
+                </p>
+                <p ng-bind-template="Cargo: {{proyecto.cargo}}"></p>
+                <p>Funciones:</p>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="funcion in proyecto.funciones" ng-bind="funcion.nombre"></li>
+                </ul>
             </div>
         </li>
     </ul>
@@ -45,7 +86,7 @@
         <li class="media" ng-repeat="formacion in curriculum.formacionComplementaria">
             <div class="media-left media-middle">
                 <a ng-href="docs/{{formacion.certificado}}" target="_blank">
-                    <img class="media-object" ng-src="{{formacion.imagen}}" title="Ver certificado">
+                    <img class="media-object main-image" ng-src="{{formacion.imagen}}" title="Ver certificado">
                 </a>
             </div>
             <div class="media-body">
@@ -60,7 +101,7 @@
         <li class="media" ng-repeat="proyecto in curriculum.proyectos">
             <div class="media-left">
                 <a href="#">
-                    <img class="media-object" ng-src="{{proyecto.imagen}}">
+                    <img class="media-object main-image" ng-src="{{proyecto.imagen}}">
                 </a>
             </div>
             <div class="media-body">
@@ -68,7 +109,7 @@
                 <a class="media-heading col-xs-12 without-lateral-padding">{{proyecto.descripcion}}</a>
                 <div ng-show="proyecto.tecnologias" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
                     <b class="pull-left">Tecnologías utilizadas:</b>
-                    <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                    <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
                 </div>
                 <div ng-repeat="enlace in proyecto.enlaces | orderBy:'$index'" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
                     <!--<b ng-show="enlace.tipo == 'repositorio'">Repositorio:</b>
@@ -102,7 +143,7 @@
         <li class="media col-md-4 col-sm-6 col-xs-12" ng-repeat="conocimiento in conocimientos.lista">
             <div class="media-left">
                 <a href="#">
-                    <img class="media-object" ng-src="{{conocimiento.imagen}}" title="{{conocimiento.nombre}}">
+                    <img class="media-object main-image" ng-src="{{conocimiento.imagen}}" title="{{conocimiento.nombre}}">
                 </a>
             </div>
             <div class="media-body media-middle">
@@ -133,7 +174,7 @@
         <li class="media" ng-repeat="idioma in curriculum.idiomas">
             <div class="media-left">
                 <a href="#">
-                    <img class="media-object" ng-src="{{idioma.imagen}}">
+                    <img class="media-object main-image" ng-src="{{idioma.imagen}}">
                 </a>
             </div>
             <div class="media-body">
