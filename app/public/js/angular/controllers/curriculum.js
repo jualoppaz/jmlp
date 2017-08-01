@@ -39,14 +39,62 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                 funciones: [
                                     {
                                         nombre: "Maquetación CSS"
-                                    }, {
+                                    },{
                                         nombre: "Corrección de defectos en Backend"
-                                    }, {
+                                    },{
                                         nombre: "Corrección de defectos en Frontend"
-                                    }, {
+                                    },{
                                         nombre: "Análisis de Requisitos"
-                                    }, {
+                                    },{
                                         nombre: "Planificación y Estimación de tareas"
+                                    }
+                                ]
+                            },{
+                                nombre: "Cambio TRM",
+                                desde: "12/2016",
+                                hasta: "07/2017",
+                                cargo: "Desarrollador Web",
+                                tecnologias: [
+                                    {
+                                        imagen: "img/tecnologia_php.png",
+                                        nombre: "PHP"
+                                    },{
+                                        imagen: "img/tecnologia_bootstrap.png",
+                                        nombre: "Bootstrap"
+                                    },{
+                                        imagen: "img/tecnologia_fontAwesome.png",
+                                        nombre: "Font Awesome"
+                                    }
+                                ],
+                                funciones: [
+                                    {
+                                        nombre: "Desarrollo de WebServices en PHP con NuSOAP"
+                                    },{
+                                        nombre: "Maquetación CSS con Bootstrap"
+                                    },{
+                                        nombre: "Corrección de defectos en Backend"
+                                    },{
+                                        nombre: "Corrección de defectos en Frontend"
+                                    },{
+                                        nombre: "Análisis de Requisitos"
+                                    },{
+                                        nombre: "Planificación y Estimación de tareas"
+                                    }
+                                ]
+                            },{
+                                nombre: "FARO Evidencias",
+                                desde: "10/2016",
+                                hasta: "12/2016",
+                                cargo: "Desarrollador Web",
+                                funciones: [
+                                    {
+                                        nombre: "Maquetación CSS"
+                                    },{
+                                        nombre: "Corrección de defectos en Backend"
+                                    },{
+                                        nombre: "Corrección de defectos en Frontend"
+                                    },{
+                                        nombre: "Diseño de Google Site para el BBVA"
                                     }
                                 ]
                             }
@@ -653,10 +701,6 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
             }
         ]
     };
-
-    /*$scope.abrirEnlace = function(enlace){
-        $window.open(enlace, "_blank");
-    };*/
 
     $scope.descargarCurriculum = function(){
         $window.open('/Curriculum.pdf', '_blank');

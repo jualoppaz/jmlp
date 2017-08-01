@@ -8,8 +8,6 @@ angular.module('jmlp').controller('LoguedUserController', function($scope, UserS
 
     $scope.usuarioLogueado = {};
 
-    //getUser();
-
     function getUser(){
         UserService.solicitarUsuario()
             .success(function(data){
@@ -21,31 +19,13 @@ angular.module('jmlp').controller('LoguedUserController', function($scope, UserS
                     $scope.usuarioEstaLogueado = false;
                 }
             });
-    };
-
-    /*$scope.cerrarSesion = function(){
-        $http.get('/api/logout.js')
-            .success(function(data){
-                angular.element("#modalTitleLogout").text("Sesión cerrada correctamente");
-                angular.element("#modalTextLogout").text("Vuelva pronto.");
-                angular.element("#modal-logout.js").modal('show');
-
-                $scope.usuarioEstaLogueado = false;
-
-            })
-            .error(function(data){
-                console.log(data);
-            });
-    };*/
+    }
 
     $scope.redirigirTrasLogout = function(){
         $window.location.reload();
     };
 
     $scope.isAuthenticated = function(){
-
-        //console.log("¿Estamos autenticados? - LoguedUser");
-
         return $auth.isAuthenticated();
     };
 

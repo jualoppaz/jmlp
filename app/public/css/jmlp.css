@@ -157,8 +157,7 @@ ul li a:hover{
     text-decoration: none;
 }
 
-div.media-body div{
-    /*display: block;*/
+div.custom-line:not(:first-of-type):not(.technologies-list){
     margin-top: 15px;
 }
 
@@ -265,10 +264,10 @@ b + img{
         clear: none;
     }
 
-    .media-body div b{
+    /*.media-body div b{
         padding-top: 12px;
         margin-right: 15px;
-    }
+    }*/
 
     .media-body div img.technology{
         padding: 4px;
@@ -306,10 +305,6 @@ ul li a.expediente-academico:hover{
 div.contact{
     padding-bottom: 20px;
 }
-/*
-div.contact-ways{
-    margin-top:350px;
-}*/
 
 textarea.mail-message{
     resize: none;
@@ -387,4 +382,17 @@ hr{
 
 .title-job-centered{
     margin-bottom: 40px;
+}
+
+.customer-project-technologies{
+
+}
+
+.technologies-list .title{
+    padding-top: 12px;
+    margin-right: 15px;
+}
+
+.functions-list{
+    margin-top: 5px;
 }
