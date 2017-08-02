@@ -1,7 +1,7 @@
 /*
-        Tablets:        768px;
-        Medium deviceS: 992px;
-        Large devices:  1200px;
+        Tablets:        >= 768px;
+        Medium deviceS: >= 992px;
+        Large devices:  >= 1200px;
 */
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -157,8 +157,12 @@ ul li a:hover{
     text-decoration: none;
 }
 
-div.custom-line:not(:first-of-type):not(.technologies-list){
+div.custom-line:not(:first-of-type):not(.technologies):not(.functions-title){
     margin-top: 15px;
+}
+
+.custom-line{
+    overflow:auto;
 }
 
 img.main-image{
@@ -255,19 +259,14 @@ div.media-body a{
     text-align: justify;
 }
 
-b + img{
+.technologies-list{
     clear: both;
 }
 
 @media (min-width: 768px){
-    b + img{
+    .technologies-list{
         clear: none;
     }
-
-    /*.media-body div b{
-        padding-top: 12px;
-        margin-right: 15px;
-    }*/
 
     .media-body div img.technology{
         padding: 4px;
@@ -313,7 +312,6 @@ textarea.mail-message{
 .contact-panel{
     padding: 15px;
 }
-
 
 .contact i{
     color: #2b2b2b;
@@ -384,15 +382,15 @@ hr{
     margin-bottom: 40px;
 }
 
-.customer-project-technologies{
-
-}
-
-.technologies-list .title{
+.technologies .title{
     padding-top: 12px;
     margin-right: 15px;
 }
 
 .functions-list{
     margin-top: 5px;
+}
+
+.technologies-list{
+    overflow:auto;
 }

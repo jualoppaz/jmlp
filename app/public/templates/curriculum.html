@@ -7,9 +7,9 @@
             <i class="fa fa-download"></i>
         </a>
     </h3>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
-    <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
-    <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+    <h1 class="col-xs-12"><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
+    <hr class="col-xs-12 without-lateral-padding">
+    <ul class="media-list col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="formacion in curriculum.formacionAcademica">
             <div class="media-left media-middle">
                 <a href="#">
@@ -24,9 +24,9 @@
             </div>
         </li>
     </ul>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-briefcase"></i>&nbsp;Experiencia Profesional</h1>
-    <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
-    <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+    <h1 class="col-xs-12"><i class="fa fa-briefcase"></i>&nbsp;Experiencia Profesional</h1>
+    <hr class="col-xs-12 without-lateral-padding">
+    <ul class="media-list col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="experiencia in curriculum.experienciaProfesional">
             <div class="media-left">
                 <a href="#">
@@ -59,11 +59,13 @@
                             <a>Cargo: </a>
                             <a ng-bind="proyecto.cargo"></a>
                         </div>
-                        <div ng-show="proyecto.tecnologias" class="custom-line technologies-list col-xs-12 without-lateral-padding">
+                        <div ng-show="proyecto.tecnologias" class="custom-line technologies">
                             <a class="pull-left title">Tecnologías utilizadas:</a>
-                            <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                            <div class="technologies-list">
+                                <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                            </div>
                         </div>
-                        <div class="custom-line">
+                        <div class="custom-line functions-title">
                             Funciones:
                         </div>
                         <ul class="list-group functions-list">
@@ -85,7 +87,7 @@
                     <a>Cargo: </a>
                     <a ng-bind="proyecto.cargo"></a>
                 </div>
-                <div class="custom-line">
+                <div class="custom-line functions-title">
                     <a>Funciones:</a>
                 </div>
                 <ul class="list-group functions-list">
@@ -94,9 +96,9 @@
             </div>
         </li>
     </ul>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-university"></i>&nbsp;Formación Complementaria</h1>
-    <hr class="col-md-12 col-sm-12 col-xs-12">
-    <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+    <h1 class="col-xs-12"><i class="fa fa-university"></i>&nbsp;Formación Complementaria</h1>
+    <hr class="col-xs-12">
+    <ul class="media-list col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="formacion in curriculum.formacionComplementaria">
             <div class="media-left media-middle">
                 <a ng-href="docs/{{formacion.certificado}}" target="_blank">
@@ -109,9 +111,9 @@
             </div>
         </li>
     </ul>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-code-fork"></i>&nbsp;Proyectos</h1>
-    <hr class="col-md-12 col-sm-12 col-xs-12">
-    <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+    <h1 class="col-xs-12"><i class="fa fa-code-fork"></i>&nbsp;Proyectos</h1>
+    <hr class="col-xs-12">
+    <ul class="media-list col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="proyecto in curriculum.proyectos">
             <div class="media-left">
                 <a href="#">
@@ -121,9 +123,11 @@
             <div class="media-body">
                 <h4><b>{{proyecto.desde}} - {{proyecto.hasta}}: {{proyecto.resumen}}</b></h4>
                 <a class="media-heading col-xs-12 without-lateral-padding">{{proyecto.descripcion}}</a>
-                <div ng-show="proyecto.tecnologias" class="technologies-list col-xs-12 without-lateral-padding">
+                <div ng-show="proyecto.tecnologias" class="technologies col-xs-12 without-lateral-padding">
                     <b class="pull-left title">Tecnologías utilizadas:</b>
-                    <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                    <div class="technologies-list">
+                        <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                    </div>
                 </div>
                 <div ng-repeat="enlace in proyecto.enlaces | orderBy:'$index'" class="custom-line col-xs-12 without-lateral-padding">
                     <b class="text-capitalize" ng-bind-template="{{enlace.tipo}}:"></b>
@@ -132,9 +136,9 @@
             </div>
         </li>
     </ul>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-book"></i>&nbsp;Conocimientos</h1>
-    <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
-    <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding" ng-repeat="conocimientos in curriculum.conocimientos">
+    <h1 class="col-xs-12"><i class="fa fa-book"></i>&nbsp;Conocimientos</h1>
+    <hr class="col-xs-12 without-lateral-padding">
+    <ul class="media-list col-xs-12 without-lateral-padding" ng-repeat="conocimientos in curriculum.conocimientos">
         <h3>
             <i class="fa fa-code" ng-show="conocimientos.tipo == 'Lenguajes de programación'"></i>
             <i class="fa fa-puzzle-piece" ng-show="conocimientos.tipo == 'Frameworks'"></i>
@@ -176,9 +180,9 @@
             </div>
         </li>
     </ul>
-    <h1 class="col-md-12 col-sm-12 col-xs-12"><i class="fa fa-users"></i>&nbsp;Idiomas</h1>
-    <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
-    <ul class="media-list col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+    <h1 class="col-xs-12"><i class="fa fa-users"></i>&nbsp;Idiomas</h1>
+    <hr class="col-xs-12 without-lateral-padding">
+    <ul class="media-list col-xs-12 without-lateral-padding">
         <li class="media" ng-repeat="idioma in curriculum.idiomas">
             <div class="media-left">
                 <a href="#">

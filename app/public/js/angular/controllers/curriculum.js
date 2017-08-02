@@ -36,6 +36,21 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                 desde: "07/2017",
                                 hasta: "Actualidad",
                                 cargo: "Desarrollador Web",
+                                tecnologias: [
+                                    {
+                                        imagen: "img/tecnologia_java.png",
+                                        nombre: "Java"
+                                    },{
+                                        imagen: "/img/tecnologia_jsf.png",
+                                        nombre: "JavaServer Faces (JSF)"
+                                    },{
+                                        imagen: "/img/tecnologia_primeFaces.png",
+                                        nombre: "PrimeFaces"
+                                    },{
+                                        imagen: "/img/tecnologia_maven.png",
+                                        nombre: "Maven"
+                                    }
+                                ],
                                 funciones: [
                                     {
                                         nombre: "Maquetación CSS"
@@ -86,6 +101,21 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                 desde: "10/2016",
                                 hasta: "12/2016",
                                 cargo: "Desarrollador Web",
+                                tecnologias: [
+                                    {
+                                        imagen: "img/tecnologia_java.png",
+                                        nombre: "Java"
+                                    },{
+                                        imagen: "/img/tecnologia_jsf.png",
+                                        nombre: "JavaServer Faces (JSF)"
+                                    },{
+                                        imagen: "/img/tecnologia_primeFaces.png",
+                                        nombre: "PrimeFaces"
+                                    },{
+                                        imagen: "/img/tecnologia_maven.png",
+                                        nombre: "Maven"
+                                    }
+                                ],
                                 funciones: [
                                     {
                                         nombre: "Maquetación CSS"
@@ -601,6 +631,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "/img/tecnologia_brunch.png",
                         nivel: "1"
                     },{
+                        imagen: "/img/tecnologia_maven.png",
+                        nombre: "Maven",
+                        nivel: "1"
+                    },{
                         nombre: "Jenkins",
                         imagen: "/img/tecnologia_jenkins.png",
                         nivel: "1"
@@ -710,7 +744,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
 
         var host = $location.host();
 
-        if(host == "localhost"){
+        if(host == "localhost" || host == "127.0.0.1"){
             host += ":" + $location.port();
         }
 

@@ -19,7 +19,7 @@ var cadena_bbdd = "";
 if(process.env.MONGOLAB_URL){
     cadena_bbdd = process.env.MONGOLAB_URL;
 }else{
-    cadena_bbdd = 'mongodb://localhost/jmlp';
+    cadena_bbdd = 'mongodb://127.0.0.1/jmlp';
 }
 
 mongoose.connect(cadena_bbdd, {
@@ -41,5 +41,5 @@ app.use(router);
 var port = process.env.PORT || 3000;
 
 app.listen(port, function() {
-    console.log("Node server running on http://localhost:", port);
+    console.log("Node server running on http://127.0.0.1:", port);
 });
