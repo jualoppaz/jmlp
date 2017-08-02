@@ -277,13 +277,63 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ]
             },{
-                descripcion: "Realización de servicios relacionados con certificación de aplicaciones desarrolladas por otras empresas," +
-                " así como realización de pruebas funcionales, automatización de pruebas con Selenium o revisiones de documentos técnicos.",
+                descripcion: "Realización de servicios relacionados con certificación de aplicaciones desarrolladas " +
+                "por otras empresas, así como realización de pruebas funcionales, automatización de pruebas con " +
+                "Selenium o revisiones de documentos técnicos.",
                 imagen: "/img/empresa_sopra.png",
                 desde:"12/2014",
                 hasta: "12/2015",
                 cargo: "Tester",
-                empresa: "Sopra Steria"
+                empresa: "Sopra Steria",
+                proyectos: [
+                    {
+                        nombre: "Gestión de Calidad sobre aplicaciones para la CMAOT",
+                        descripcion: "Aseguramiento de la calidad sobre multitud de aplicaciones web realizadas para " +
+                            "la Consejería de Medio Ambiente y Ordenación del Territorio",
+                        desde: "12/2014",
+                        hasta: "12/2015",
+                        cargo: "Tester",
+                        tecnologias: [
+                            {
+                                imagen: "/img/tecnologia_spiraTeam.png",
+                                nombre: "SpiraTeam"
+                            },{
+                                nombre: "Jenkins",
+                                imagen: "/img/tecnologia_jenkins.png"
+                            },{
+                                nombre: "jMeter",
+                                imagen: "/img/tecnologia_jmeter.png"
+                            },{
+                                nombre: "HP LoadRunner",
+                                imagen: "/img/tecnologia_hpLoadRunner.png"
+                            },{
+                                nombre: "SoapUI",
+                                imagen: "/img/tecnologia_soapui.png"
+                            },{
+                                nombre: "Selenium Webdriver",
+                                imagen: "/img/tecnologia_selenium.png"
+                            },{
+                                nombre: "Mantis",
+                                imagen: "/img/tecnologia_mantis.png"
+                            }
+                        ],
+                        funciones: [
+                            {
+                                nombre: "Realización de pruebas funcionales manuales"
+                            },{
+                                nombre: "Realización de pruebas funcionales automatizadas con Selenium"
+                            }, {
+                                nombre: "Realización de pruebas de rendimiento con jMeter"
+                            },{
+                                nombre: "Reporte de incidencias en Mantis"
+                            },{
+                                nombre: "Soporte técnico a usuarios y desarrolladores"
+                            },{
+                                nombre: "Soporte y revisión de tareas de otros compañeros"
+                            }
+                        ]
+                    }
+                ]
             },{
                 descripcion: "Realización de tareas relacionadas con bases de datos y maquetación web, siempre en torno a páginas web realizadas " +
                 "con WordPress.",
