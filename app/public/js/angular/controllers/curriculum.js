@@ -145,6 +145,30 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         desde: "05/2016",
                         hasta: "07/2016",
                         cargo: "Desarrollador Web",
+                        tecnologias: [
+                            {
+                                imagen: "/img/tecnologia_angularjs.png",
+                                nombre: "AngularJS"
+                            },{
+                                imagen: "/img/tecnologia_javascript.png",
+                                nombre: "JavaScript"
+                            },{
+                                imagen: "/img/tecnologia_jquery.png",
+                                nombre: "jQuery"
+                            },{
+                                imagen: "/img/tecnologia_bootstrap.png",
+                                nombre: "Bootstrap"
+                            },{
+                                imagen: "/img/tecnologia_brunch.png",
+                                nombre: "Brunch"
+                            },{
+                                imagen: "/img/tecnologia_bower.png",
+                                nombre: "Bower"
+                            },{
+                                imagen: "/img/tecnologia_npm.png",
+                                nombre: "NPM"
+                            }
+                        ],
                         funciones: [
                             {
                                 nombre: "Maquetación CSS con Bootstrap"

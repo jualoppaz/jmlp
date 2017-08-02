@@ -87,6 +87,12 @@
                     <a>Cargo: </a>
                     <a ng-bind="proyecto.cargo"></a>
                 </div>
+                <div ng-show="proyecto.tecnologias" class="technologies">
+                    <a class="pull-left title">Tecnologías utilizadas:</a>
+                    <div class="technologies-list">
+                        <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                    </div>
+                </div>
                 <div class="custom-line functions-title">
                     <a>Funciones:</a>
                 </div>
