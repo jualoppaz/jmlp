@@ -235,12 +235,47 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ]
             },{
-                descripcion: "Desarrollo de aplicaciones web con tecnologías tales como PHP, Magento o Laravel y maquetación web con Bootstrap.",
+                descripcion: "Desarrollo de aplicaciones web con tecnologías tales como PHP o Laravel y maquetación web con Bootstrap.",
                 imagen: "/img/empresa_innopro.png",
                 desde:"01/2016",
                 hasta: "03/2016",
                 cargo: "Desarrollador",
-                empresa: "Innopro Advanced"
+                empresa: "Innopro Advanced",
+                proyectos: [
+                    {
+                        nombre: "Certificaciones TIC",
+                        descripcion: "Aplicación web realizada con PHP para Media Interactiva",
+                        desde: "01/2016",
+                        hasta: "03/2016",
+                        cargo: "Desarrollador Web",
+                        tecnologias: [
+                            {
+                                imagen: "/img/tecnologia_php.png",
+                                nombre: "PHP"
+                            },{
+                                imagen: "/img/tecnologia_laravel.png",
+                                nombre: "Laravel"
+                            },{
+                                imagen: "/img/tecnologia_javascript.png",
+                                nombre: "JavaScript"
+                            },{
+                                imagen: "/img/tecnologia_bootstrap.png",
+                                nombre: "Bootstrap"
+                            }
+                        ],
+                        funciones: [
+                            {
+                                nombre: "Desarrollo web con PHP"
+                            },{
+                                nombre: "Modificación de componentes en Laravel"
+                            },{
+                                nombre: "Maquetación CSS con Bootstrap"
+                            },{
+                                nombre: "Animación de contenidos con JavaScript"
+                            }
+                        ]
+                    }
+                ]
             },{
                 descripcion: "Realización de servicios relacionados con certificación de aplicaciones desarrolladas por otras empresas," +
                 " así como realización de pruebas funcionales, automatización de pruebas con Selenium o revisiones de documentos técnicos.",

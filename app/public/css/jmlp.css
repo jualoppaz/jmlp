@@ -394,3 +394,7 @@ hr{
 .technologies-list{
     overflow:auto;
 }
+
+div.progress{
+    margin-bottom: 0;
+}
