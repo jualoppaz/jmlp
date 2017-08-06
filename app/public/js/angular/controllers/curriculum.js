@@ -335,14 +335,6 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     }
                 ]
             },{
-                descripcion: "Realización de tareas relacionadas con bases de datos y maquetación web, siempre en torno a páginas web realizadas " +
-                "con WordPress.",
-                imagen: "/img/empresa_maravish.png",
-                desde:"10/2014",
-                hasta: "11/2014",
-                cargo: "Técnico Programador",
-                empresa: "Maravish Promotions"
-            },{
                 descripcion: "Prácticas no remuneradas de 150 horas como desarrollador con tecnologías Java2EE e interfaces de usuario con " +
                 "Oracle ADF, JSF y JBossSeam.",
                 imagen: "/img/empresa_guadaltel.png",
