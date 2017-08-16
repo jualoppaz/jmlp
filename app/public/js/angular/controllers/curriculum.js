@@ -49,6 +49,9 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                     },{
                                         imagen: "/img/tecnologia_maven.png",
                                         nombre: "Maven"
+                                    },{
+                                        imagen: "/img/tecnologia_liquibase.jpg",
+                                        nombre: "Liquibase"
                                     }
                                 ],
                                 funciones: [
@@ -79,6 +82,9 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                     },{
                                         imagen: "img/tecnologia_fontAwesome.png",
                                         nombre: "Font Awesome"
+                                    },{
+                                        imagen: "/img/tecnologia_liquibase.jpg",
+                                        nombre: "Liquibase"
                                     }
                                 ],
                                 funciones: [
@@ -114,6 +120,9 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                     },{
                                         imagen: "/img/tecnologia_maven.png",
                                         nombre: "Maven"
+                                    },{
+                                        imagen: "/img/tecnologia_liquibase.jpg",
+                                        nombre: "Liquibase"
                                     }
                                 ],
                                 funciones: [
