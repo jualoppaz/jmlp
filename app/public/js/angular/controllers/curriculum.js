@@ -50,8 +50,20 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                         imagen: "/img/tecnologia_maven.png",
                                         nombre: "Maven"
                                     },{
+                                        imagen: "/img/tecnologia_hibernate.png",
+                                        nombre: "Hibernate"
+                                    },{
                                         imagen: "/img/tecnologia_liquibase.jpg",
                                         nombre: "Liquibase"
+                                    },{
+                                        imagen: "/img/tecnologia_css3.png",
+                                        nombre: "CSS3"
+                                    },{
+                                        imagen: "/img/tecnologia_javascript.png",
+                                        nombre: "JavaScript"
+                                    },{
+                                        imagen: "/img/tecnologia_jquery.png",
+                                        nombre: "jQuery"
                                     }
                                 ],
                                 funciones: [
@@ -121,8 +133,20 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                         imagen: "/img/tecnologia_maven.png",
                                         nombre: "Maven"
                                     },{
+                                        imagen: "/img/tecnologia_hibernate.png",
+                                        nombre: "Hibernate"
+                                    },{
                                         imagen: "/img/tecnologia_liquibase.jpg",
                                         nombre: "Liquibase"
+                                    },{
+                                        imagen: "/img/tecnologia_css3.png",
+                                        nombre: "CSS3"
+                                    },{
+                                        imagen: "/img/tecnologia_javascript.png",
+                                        nombre: "JavaScript"
+                                    },{
+                                        imagen: "/img/tecnologia_jquery.png",
+                                        nombre: "jQuery"
                                     }
                                 ],
                                 funciones: [
