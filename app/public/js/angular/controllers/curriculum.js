@@ -50,6 +50,9 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                         imagen: "/img/tecnologia_maven.png",
                                         nombre: "Maven"
                                     },{
+                                        imagen: "/img/tecnologia_postgresql.png",
+                                        nombre: "PostgreSQL"
+                                    },{
                                         imagen: "/img/tecnologia_hibernate.png",
                                         nombre: "Hibernate"
                                     },{
@@ -88,6 +91,9 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                     {
                                         imagen: "img/tecnologia_php.png",
                                         nombre: "PHP"
+                                    },{
+                                        imagen: "/img/tecnologia_mysql.png",
+                                        nombre: "MySQL"
                                     },{
                                         imagen: "/img/tecnologia_liquibase.jpg",
                                         nombre: "Liquibase"
@@ -150,6 +156,9 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                     },{
                                         imagen: "/img/tecnologia_maven.png",
                                         nombre: "Maven"
+                                    },{
+                                        imagen: "/img/tecnologia_postgresql.png",
+                                        nombre: "PostgreSQL"
                                     },{
                                         imagen: "/img/tecnologia_hibernate.png",
                                         nombre: "Hibernate"
