@@ -89,14 +89,32 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                         imagen: "img/tecnologia_php.png",
                                         nombre: "PHP"
                                     },{
+                                        imagen: "/img/tecnologia_liquibase.jpg",
+                                        nombre: "Liquibase"
+                                    },{
+                                        imagen: "/img/tecnologia_symfony.png",
+                                        nombre: "Symfony"
+                                    },{
+                                        imagen: "/img/tecnologia_doctrine.png",
+                                        nombre: "Doctrine"
+                                    },{
+                                        imagen: "img/tecnologia_css3.png",
+                                        nombre: "CSS3"
+                                    },{
+                                        imagen: "img/tecnologia_sass.png",
+                                        nombre: "Sass"
+                                    },{
                                         imagen: "img/tecnologia_bootstrap.png",
                                         nombre: "Bootstrap"
                                     },{
                                         imagen: "img/tecnologia_fontAwesome.png",
                                         nombre: "Font Awesome"
                                     },{
-                                        imagen: "/img/tecnologia_liquibase.jpg",
-                                        nombre: "Liquibase"
+                                        imagen: "img/tecnologia_javascript.png",
+                                        nombre: "JavaScript"
+                                    },{
+                                        imagen: "img/tecnologia_jquery.png",
+                                        nombre: "jQuery"
                                     }
                                 ],
                                 funciones: [
