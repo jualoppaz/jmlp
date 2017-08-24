@@ -401,7 +401,37 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 desde:"02/2014",
                 hasta: "05/2014",
                 cargo: "Desarrollador",
-                empresa: "Guadaltel"
+                empresa: "Guadaltel",
+                proyectos: [
+                    {
+                        nombre: "Proyecto Interno de Investigación",
+                        desde: "02/2014",
+                        hasta: "05/2014",
+                        cargo: "Desarrollador",
+                        tecnologias: [
+                            {
+                                imagen: "/img/tecnologia_java.png",
+                                nombre: "Java"
+                            },{
+                                nombre: "Maven",
+                                imagen: "/img/tecnologia_maven.png"
+                            },{
+                                nombre: "JSF",
+                                imagen: "/img/tecnologia_jsf.png"
+                            },{
+                                nombre: "Hibernate",
+                                imagen: "/img/tecnologia_hibernate.png"
+                            }
+                        ],
+                        funciones: [
+                            {
+                                nombre: "Desarrollo de Vistas y Controladores para interfaces de usuario"
+                            },{
+                                nombre: "Investigación para desarrollo de PDFs autorrellenables"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         formacionComplementaria: [
