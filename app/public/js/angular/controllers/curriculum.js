@@ -449,17 +449,104 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
         ],
         proyectos: [
             {
-                resumen: "Usuario activo en la comunidad de Desarolladores GitHub",
-                descripcion: "En mi perfil de GitHub tengo publicados multitud de proyectos para tener copias de seguridad de los mismos y, " +
-                "además, para ayudar a otros usuarios con soluciones propuestas con distintas tecnologías.",
-                desde: "12/2013",
+                resumen: "Desarrollo de mi página web personal",
+                descripcion: "Desarrollo de mi página web personal para darme a conocer, donde se puede consultar mi currículum y " +
+                    "mi expediente académico, entre otras cosas. Esta aplicación web no es igual que el resto, ya que ha sido " +
+                    "realizada con la filosofía SPA (Single Page Application). Esto quiere decir que consta de una " +
+                    "sola página con diferentes vistas, de modo que no se necesita recargar la página debido a que las vistas " +
+                    "se encuentran en el cliente y no en el servidor.",
+                tecnologias: [
+                    {
+                        imagen: "img/tecnologia_angularjs.png",
+                        nombre: "AngularJS"
+                    },{
+                        imagen: "img/tecnologia_nodejs.png",
+                        nombre: "Node.js"
+                    },{
+                        imagen: "img/tecnologia_pug.png",
+                        nombre: "Pug (antes Jade)"
+                    },{
+                        imagen: "img/tecnologia_mongodb.png",
+                        nombre: "MongoDB"
+                    },{
+                        imagen: "img/tecnologia_bootstrap.png",
+                        nombre: "Bootstrap"
+                    }
+                ],
+                desde: "03/2016",
                 hasta: "Actualidad",
-                imagen: "/img/tecnologia_github.png",
+                imagen: "/img/yo_web4.jpg",
+                bordeImagen: "img-circle",
                 enlaces: [
                     {
-                        tipo: "repositorio",
-                        nombre: "https://github.com/jualoppaz",
-                        ruta: "https://github.com/jualoppaz"
+                        tipo: "web",
+                        nombre: "http://www.juanmanuellopezpazos.es",
+                        ruta: "http://www.juanmanuellopezpazos.es"
+                    }
+                ]
+            },{
+                resumen: "Desarrollo de la página web para la empresa Rayosol Toldos",
+                descripcion: "Página web para la empresa Rayosol Toldos con el objetivo de mostrar los distintos modelos de toldos que fabrican e instalan," +
+                "así como facilitar a los usuarios una forma de contacto inmediata mediante el envío de emails desde la propia página.",
+                tecnologias: [
+                    {
+                        imagen: "img/tecnologia_angularjs.png",
+                        nombre: "AngularJS"
+                    },{
+                        imagen: "img/tecnologia_nodejs.png",
+                        nombre: "Node.js"
+                    },{
+                        imagen: "img/tecnologia_pug.png",
+                        nombre: "Pug (antes Jade)"
+                    },{
+                        imagen: "img/tecnologia_bootstrap.png",
+                        nombre: "Bootstrap"
+                    }
+                ],
+                desde: "02/2015",
+                hasta: "06/2015",
+                imagen: "/img/proyecto_rayosol.png",
+                enlaces: [
+                    {
+                        tipo: "web",
+                        nombre: "http://www.rayosoltoldos.com",
+                        ruta: "http://www.rayosoltoldos.com"
+                    }
+                ]
+            },{
+                resumen: "Desarrollo de la página web de Complementos Marta Pazos",
+                descripcion: "Desarrollo de la página web de Complementos Marta Pazos la cual consta de: un amplio catálogo de productos," +
+                " panel de administración de todo tipo de contenidos de la web como noticias o detalles de los productos, comercio " +
+                "electrónico integrando la API REST de Paypal con el carrito de compras y un diseño totalmente personalizado acorde con el oficio.",
+                tecnologias: [
+                    {
+                        imagen: "img/tecnologia_angularjs.png",
+                        nombre: "AngularJS"
+                    },{
+                        imagen: "img/tecnologia_nodejs.png",
+                        nombre: "Node.js"
+                    },{
+                        imagen: "img/tecnologia_mongodb.png",
+                        nombre: "MongoDB"
+                    },{
+                        imagen: "img/tecnologia_pug.png",
+                        nombre: "Pug (antes Jade)"
+                    },{
+                        imagen: "img/tecnologia_bootstrap.png",
+                        nombre: "Bootstrap"
+                    },{
+                        imagen: "img/tecnologia_fontAwesome.png",
+                        nombre: "Font Awesome"
+                    }
+                ],
+                desde: "10/2014",
+                hasta: "01/2015",
+                imagen: "/img/proyecto_complementosMartaPazos.png",
+                enlaces: [
+                    {
+                        tipo: "web",
+                        nombre: "http://www.complementosmartapazos.com",
+                        ruta: "http://www.complementosmartapazos.com"
                     }
                 ]
             },{
@@ -499,69 +586,6 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         tipo: "web",
                         nombre: "http://www.pronostigol.es",
                         ruta: "http://www.pronostigol.es"
-                    }
-                ]
-            },{
-                resumen: "Desarrollo de la página web para la empresa Rayosol Toldos",
-                descripcion: "Página web para la empresa Rayosol Toldos con el objetivo de mostrar los distintos modelos de toldos que fabrican e instalan," +
-                "así como facilitar a los usuarios una forma de contacto inmediata mediante el envío de emails desde la propia página.",
-                tecnologias: [
-                    {
-                        imagen: "img/tecnologia_angularjs.png",
-                        nombre: "AngularJS"
-                    },{
-                        imagen: "img/tecnologia_nodejs.png",
-                        nombre: "Node.js"
-                    },{
-                        imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug (antes Jade)"
-                    },{
-                        imagen: "img/tecnologia_bootstrap.png",
-                        nombre: "Bootstrap"
-                    }
-                ],desde: "02/2015",
-                hasta: "06/2015",
-                imagen: "/img/proyecto_rayosol.png",
-                enlaces: [
-                    {
-                        tipo: "web",
-                        nombre: "http://www.rayosoltoldos.com",
-                        ruta: "http://www.rayosoltoldos.com"
-                    }
-                ]
-            },{
-                resumen: "Desarrollo de la página web de Complementos Marta Pazos",
-                descripcion: "Desarrollo de la página web de Complementos Marta Pazos la cual consta de: un amplio catálogo de productos," +
-                " panel de administración de todo tipo de contenidos de la web como noticias o detalles de los productos, comercio " +
-                "electrónico integrando la API REST de Paypal con el carrito de compras y un diseño totalmente personalizado acorde con el oficio.",
-                tecnologias: [
-                    {
-                        imagen: "img/tecnologia_angularjs.png",
-                        nombre: "AngularJS"
-                    },{
-                        imagen: "img/tecnologia_nodejs.png",
-                        nombre: "Node.js"
-                    },{
-                        imagen: "img/tecnologia_mongodb.png",
-                        nombre: "MongoDB"
-                    },{
-                        imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug (antes Jade)"
-                    },{
-                        imagen: "img/tecnologia_bootstrap.png",
-                        nombre: "Bootstrap"
-                    },{
-                        imagen: "img/tecnologia_fontAwesome.png",
-                        nombre: "Font Awesome"
-                    }
-                ],desde: "10/2014",
-                hasta: "01/2015",
-                imagen: "/img/proyecto_complementosMartaPazos.png",
-                enlaces: [
-                    {
-                        tipo: "web",
-                        nombre: "http://www.complementosmartapazos.com",
-                        ruta: "http://www.complementosmartapazos.com"
                     }
                 ]
             },{
@@ -640,6 +664,20 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         tipo: "Memoria",
                         nombre: "Documentación del proyecto",
                         ruta: "/docs/memoria_tfg.pdf"
+                    }
+                ]
+            },{
+                resumen: "Usuario activo en la comunidad de Desarolladores GitHub",
+                descripcion: "En mi perfil de GitHub tengo publicados multitud de proyectos para tener copias de seguridad de los mismos y, " +
+                "además, para ayudar a otros usuarios con soluciones propuestas con distintas tecnologías.",
+                desde: "12/2013",
+                hasta: "Actualidad",
+                imagen: "/img/tecnologia_github.png",
+                enlaces: [
+                    {
+                        tipo: "repositorio",
+                        nombre: "https://github.com/jualoppaz",
+                        ruta: "https://github.com/jualoppaz"
                     }
                 ]
             }
