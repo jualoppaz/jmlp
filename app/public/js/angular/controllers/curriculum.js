@@ -709,7 +709,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     },{
                         nombre: "PHP",
                         imagen: "/img/tecnologia_php.png",
-                        nivel: "2"
+                        nivel: "3"
                     }
                 ]
             },{
@@ -723,6 +723,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "AngularJS",
                         imagen: "/img/tecnologia_angularjs.png",
                         nivel: "3"
+                    },{
+                        nombre: "Angular",
+                        imagen: "/img/tecnologia_angular.png",
+                        nivel: "1"
                     },{
                         nombre: "Express.js",
                         imagen: "/img/tecnologia_expressjs.png",
@@ -738,7 +742,11 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     },{
                         nombre: "Laravel",
                         imagen: "/img/tecnologia_laravel.png",
-                        nivel: "1"
+                        nivel: "3"
+                    },{
+                        nombre: "Lumen",
+                        imagen: "/img/tecnologia_lumen.png",
+                        nivel: "3"
                     },{
                         nombre: "Spring",
                         imagen: "/img/tecnologia_spring.png",
@@ -771,6 +779,10 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "PrimeFaces",
                         imagen: "/img/tecnologia_primeFaces.png",
                         nivel: "1"
+                    },{
+                        nombre: "Swagger",
+                        imagen: "/img/tecnologia_swagger.png",
+                        nivel: "3"
                     }
                 ]
             },{
