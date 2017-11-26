@@ -32,9 +32,69 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         descripcion: "Colaboración con GMV para participar en el desarrollo de diversos proyectos como Desarrollador Web.",
                         proyectos: [
                             {
+                                nombre: "Dipippo",
+                                desde: "10/2017",
+                                hasta: "Actualidad",
+                                cargo: "Desarrollador Web",
+                                tecnologias: [
+                                    {
+                                        imagen: "img/tecnologia_laravel.png",
+                                        nombre: "Laravel"
+                                    },{
+                                        imagen: "img/tecnologia_lumen.png",
+                                        nombre: "Lumen"
+                                    },{
+                                        imagen: "img/tecnologia_mysql.png",
+                                        nombre: "MySQL"
+                                    },{
+                                        imagen: "img/tecnologia_sass.png",
+                                        nombre: "Sass"
+                                    },{
+                                        imagen: "img/tecnologia_laravel-mix.png",
+                                        nombre: "Laravel-mix"
+                                    },{
+                                        imagen: "img/tecnologia_swagger.png",
+                                        nombre: "Swagger"
+                                    },{
+                                        imagen: "img/tecnologia_composer.png",
+                                        nombre: "Composer"
+                                    },{
+                                        imagen: "img/tecnologia_npm.png",
+                                        nombre: "NPM"
+                                    },{
+                                        imagen: "img/tecnologia_angular.png",
+                                        nombre: "Angular"
+                                    },{
+                                        imagen: "img/tecnologia_git.png",
+                                        nombre: "Git"
+                                    },{
+                                        imagen: "img/tecnologia_sourceTree.png",
+                                        nombre: "SourceTree (+ Git Flow)"
+                                    }
+                                ],
+                                funciones: [
+                                    {
+                                        nombre: "Diseño y Desarrollo de APIs Rest con Laravel/Lumen"
+                                    },{
+                                        nombre: "Maquetación CSS con Sass a través de laravel-mix"
+                                    },{
+                                        nombre: "Documentación de APIs Rest con Swagger"
+                                    },{
+                                        nombre: "Instalación y configuración de entorno de desarrollo"
+                                    }, {
+                                        nombre: "Gestión de código mediante Git, haciendo uso de la metodología Git Flow"
+                                    },{
+                                        nombre: "Análisis de Requisitos"
+                                    },{
+                                        nombre: "Planificación y estimación de tareas"
+                                    },{
+                                        nombre: "Participación en diseño y modelado"
+                                    }
+                                ]
+                            },{
                                 nombre: "FARO Evidencias",
                                 desde: "07/2017",
-                                hasta: "Actualidad",
+                                hasta: "10/2017",
                                 cargo: "Desarrollador Web",
                                 tecnologias: [
                                     {
@@ -886,13 +946,17 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         imagen: "/img/tecnologia_composer.png",
                         nivel: "1"
                     },{
-                        nombre: "Brunch",
-                        imagen: "/img/tecnologia_brunch.png",
-                        nivel: "1"
-                    },{
                         imagen: "/img/tecnologia_maven.png",
                         nombre: "Maven",
                         nivel: "1"
+                    },{
+                        nombre: "Brunch",
+                        imagen: "/img/tecnologia_brunch.png",
+                        nivel: "2"
+                    },{
+                        nombre: "Laravel-mix",
+                        imagen: "/img/tecnologia_laravel-mix.png",
+                        nivel: "2"
                     },{
                         nombre: "Jenkins",
                         imagen: "/img/tecnologia_jenkins.png",
