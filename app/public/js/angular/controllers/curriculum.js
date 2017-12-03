@@ -509,6 +509,49 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
         ],
         proyectos: [
             {
+                resumen: "Desarrollo de la aplicación web CIDA: Continuous Integration Demo App",
+                descripcion: "Desarrollo de una aplicación web realizada con AngularJS, la cual incluye una Integración " +
+                    "Continua muy completa con la herramienta Brunch, de modo que sea pueda agilizar el desarrollo " +
+                    "desde la compilación de assets hasta su despliegue optimizado en un sistema como Heroku.",
+                tecnologias: [
+                    {
+                        imagen: "img/tecnologia_angularjs.png",
+                        nombre: "AngularJS"
+                    },{
+                        imagen: "img/tecnologia_brunch.png",
+                        nombre: "Brunch"
+                    },{
+                        imagen: "img/tecnologia_sass.png",
+                        nombre: "Sass"
+                    },{
+                        imagen: "img/tecnologia_npm.png",
+                        nombre: "NPM"
+                    },{
+                        imagen: "img/tecnologia_bower.png",
+                        nombre: "Bower"
+                    },{
+                        imagen: "img/tecnologia_nodejs.png",
+                        nombre: "NodeJS"
+                    },{
+                        imagen: "img/tecnologia_jshint.png",
+                        nombre: "JSHint"
+                    }
+                ],
+                desde: "02/2017",
+                hasta: "Actualidad",
+                imagen: "img/tecnologia_brunch.png",
+                enlaces: [
+                    {
+                        tipo: "web",
+                        nombre: "https://cida.herokuapp.com",
+                        ruta: "https://cida.herokuapp.com"
+                    },{
+                        tipo: "repositorio",
+                        nombre: "https://github.com/jualoppaz/cida",
+                        ruta: "https://github.com/jualoppaz/cida"
+                    }
+                ]
+            },{
                 resumen: "Desarrollo de mi página web personal",
                 descripcion: "Desarrollo de mi página web personal para darme a conocer, donde se puede consultar mi currículum y " +
                     "mi expediente académico, entre otras cosas. Esta aplicación web no es igual que el resto, ya que ha sido " +
