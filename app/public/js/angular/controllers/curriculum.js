@@ -567,7 +567,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Node.js"
                     },{
                         imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug (antes Jade)"
+                        nombre: "Pug"
                     },{
                         imagen: "img/tecnologia_mongodb.png",
                         nombre: "MongoDB"
@@ -600,7 +600,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "Node.js"
                     },{
                         imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug (antes Jade)"
+                        nombre: "Pug"
                     },{
                         imagen: "img/tecnologia_bootstrap.png",
                         nombre: "Bootstrap"
@@ -633,7 +633,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "MongoDB"
                     },{
                         imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug (antes Jade)"
+                        nombre: "Pug"
                     },{
                         imagen: "img/tecnologia_bootstrap.png",
                         nombre: "Bootstrap"
@@ -668,7 +668,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "MongoDB"
                     },{
                         imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug (antes Jade)"
+                        nombre: "Pug"
                     },{
                         imagen: "img/tecnologia_bootstrap.png",
                         nombre: "Bootstrap"
@@ -744,7 +744,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "AngularJS",
                         imagen: "img/tecnologia_angularjs.png"
                     },{
-                        nombre: "Pug (antes Jade)",
+                        nombre: "Pug",
                         imagen: "img/tecnologia_pug.png"
                     },{
                         nombre: "Bootstrap",
@@ -913,7 +913,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                 tipo: "Motores de Plantillas",
                 lista: [
                     {
-                        nombre: "Pug (antes Jade)",
+                        nombre: "Pug",
                         imagen: "/img/tecnologia_pug.png",
                         nivel: "3"
                     }
@@ -924,7 +924,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     {
                         nombre: "MySQL",
                         imagen: "/img/tecnologia_mysql.png",
-                        nivel: "1"
+                        nivel: "2"
                     },{
                         nombre: "PostgreSQL",
                         imagen: "/img/tecnologia_postgresql.png",
@@ -1028,65 +1028,6 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         nombre: "TestNG",
                         imagen: "/img/tecnologia_testng.png",
                         nivel: "1"
-                    }
-                ]
-            },{
-                tipo: "Sistemas operativos",
-                lista: [
-                    {
-                        nombre: "Windows 7",
-                        imagen: "/img/tecnologia_windows7.png",
-                        nivel: "3"
-                    },{
-                        nombre: "Ubuntu",
-                        imagen: "/img/tecnologia_ubuntu.png",
-                        nivel: "2"
-                    }
-                ]
-            },{
-                tipo: "Entornos de desarrollo",
-                lista: [
-                    {
-                        nombre: "Eclipse",
-                        imagen: "/img/tecnologia_eclipse.png",
-                        nivel: "3"
-                    },{
-                        nombre: "WebStorm",
-                        imagen: "/img/tecnologia_webStorm.png",
-                        nivel: "2"
-                    },{
-                        nombre: "PhpStorm",
-                        imagen: "/img/tecnologia_phpStorm.png",
-                        nivel: "1"
-                    },{
-                        nombre: "PyCharm",
-                        imagen: "/img/tecnologia_pyCharm.png",
-                        nivel: "1"
-                    },{
-                        nombre: "Visual Studio Code",
-                        imagen: "/img/tecnologia_visualStudioCode.png",
-                        nivel: "1"
-                    },{
-                        nombre: "Brackets",
-                        imagen: "/img/tecnologia_brackets.png",
-                        nivel: "1"
-                    },{
-                        nombre: "Sublime Text",
-                        imagen: "/img/tecnologia_sublimeText.png",
-                        nivel: "1"
-                    },{
-                        nombre: "Atom",
-                        imagen: "/img/tecnologia_atom.png",
-                        nivel: "1"
-                    }
-                ]
-            },{
-                tipo: "Otros",
-                lista: [
-                    {
-                        nombre: "JSON",
-                        imagen: "/img/tecnologia_json.png",
-                        nivel: "3"
                     }
                 ]
             }
