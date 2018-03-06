@@ -32,7 +32,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         descripcion: "Colaboración con GMV para participar en el desarrollo de diversos proyectos como Desarrollador Web.",
                         proyectos: [
                             {
-                                nombre: "Dipippo",
+                                nombre: "Aplicación Web para el Sector Bancario",
+                                descripcion: "Desarrollo de aplicación web para fidelizar clientes para entidades bancarias.",
                                 desde: "10/2017",
                                 hasta: "Actualidad",
                                 cargo: "Desarrollador Web",
@@ -82,7 +83,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                     },{
                                         nombre: "Instalación y configuración de entorno de desarrollo"
                                     }, {
-                                        nombre: "Gestión de código mediante Git, haciendo uso de la metodología Git Flow"
+                                        nombre: "Gestión de código mediante Git Flow"
                                     },{
                                         nombre: "Análisis de Requisitos"
                                     },{
@@ -92,7 +93,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                     }
                                 ]
                             },{
-                                nombre: "FARO Evidencias",
+                                nombre: "Aplicación Web para el Sector Bancario",
+                                descripcion: "Desarrollo y mantenimiento de una aplicación web interna para una entidad bancaria.",
                                 desde: "07/2017",
                                 hasta: "10/2017",
                                 cargo: "Desarrollador Web",
@@ -143,7 +145,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                     }
                                 ]
                             },{
-                                nombre: "Cambio TRM",
+                                nombre: "Aplicación Web para el Sector Transporte",
+                                descripcion: "Desarrollo y mantenimiento de una aplicación web interna para gestión de incidencias relacionadas con transportes y su equipamiento.",
                                 desde: "12/2016",
                                 hasta: "07/2017",
                                 cargo: "Desarrollador Web",
@@ -199,7 +202,8 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                                     }
                                 ]
                             },{
-                                nombre: "FARO Evidencias",
+                                nombre: "Aplicación Web para el Sector Bancario",
+                                descripcion: "Desarrollo y mantenimiento de una aplicación web interna para una entidad bancaria.",
                                 desde: "10/2016",
                                 hasta: "12/2016",
                                 cargo: "Desarrollador Web",
