@@ -32,10 +32,67 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                         descripcion: "Colaboración con GMV para participar en el desarrollo de diversos proyectos como Desarrollador Web.",
                         proyectos: [
                             {
+                                nombre: "Aplicación Web para el Sector de Estudio de Mercado",
+                                descripcion: "Desarrollo de aplicación web para encuestar voluntarios para valorar productos lanzados por los clientes.",
+                                desde: "02/2018",
+                                hasta: "Actualidad",
+                                cargo: "Desarrollador Web",
+                                tecnologias: [
+                                    {
+                                        imagen: "img/tecnologia_laravel.png",
+                                        nombre: "Laravel"
+                                    },{
+                                        imagen: "img/tecnologia_mysql.png",
+                                        nombre: "MySQL"
+                                    },{
+                                        imagen: "img/tecnologia_sass.png",
+                                        nombre: "Sass"
+                                    },{
+                                        imagen: "img/tecnologia_swagger.png",
+                                        nombre: "Swagger"
+                                    },{
+                                        imagen: "img/tecnologia_composer.png",
+                                        nombre: "Composer"
+                                    },{
+                                        imagen: "img/tecnologia_npm.png",
+                                        nombre: "NPM"
+                                    },{
+                                        imagen: "img/tecnologia_angular.png",
+                                        nombre: "Angular 5"
+                                    },{
+                                        imagen: "img/tecnologia_git.png",
+                                        nombre: "Git"
+                                    },{
+                                        imagen: "img/tecnologia_sourceTree.png",
+                                        nombre: "SourceTree (+ Git Flow)"
+                                    }
+                                ],
+                                funciones: [
+                                    {
+                                        nombre: "Diseño y Desarrollo de APIs Rest con Laravel"
+                                    },{
+                                        nombre: "Desarrollo de componentes y servicios de Angular"
+                                    },{
+                                        nombre: "Maquetación CSS con Sass"
+                                    },{
+                                        nombre: "Documentación de APIs Rest con Swagger"
+                                    },{
+                                        nombre: "Instalación y configuración de entorno de desarrollo"
+                                    }, {
+                                        nombre: "Gestión de código mediante Git Flow"
+                                    },{
+                                        nombre: "Análisis de Requisitos"
+                                    },{
+                                        nombre: "Planificación y estimación de tareas"
+                                    },{
+                                        nombre: "Participación en diseño y modelado"
+                                    }
+                                ]
+                            },{
                                 nombre: "Aplicación Web para el Sector Bancario",
                                 descripcion: "Desarrollo de aplicación web para fidelizar clientes para entidades bancarias.",
                                 desde: "10/2017",
-                                hasta: "Actualidad",
+                                hasta: "02/2018",
                                 cargo: "Desarrollador Web",
                                 tecnologias: [
                                     {
@@ -833,7 +890,7 @@ angular.module('jmlp').controller('CurriculumController', function($scope, $loca
                     },{
                         nombre: "Angular",
                         imagen: "/img/tecnologia_angular.png",
-                        nivel: "1"
+                        nivel: "2"
                     },{
                         nombre: "Express.js",
                         imagen: "/img/tecnologia_expressjs.png",
