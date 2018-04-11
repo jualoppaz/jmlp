@@ -11,7 +11,7 @@ app.use(methodOverride());
 app.use(express.static(__dirname + '/app/public'));
 
 app.set('views', path.join(__dirname + '/app/server/views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 
 var cadena_bbdd = "";
