@@ -19,8 +19,9 @@
             <div class="media-body">
                 <h4><b>{{formacion.desde}} - {{formacion.hasta}}</b></h4>
                 <a class="media-heading" ng-bind-template="{{formacion.descripcion}}"></a>
-                <br/>
-                Si quieres ver mis notas en la Universidad consulta mi <a ng-href="expediente-academico" class="expediente-academico">Expediente académico</a>
+                <br />
+                Si quieres ver mis notas en la Universidad consulta mi <a ng-href="expediente-academico" class="expediente-academico">Expediente
+                    académico</a>
             </div>
         </li>
     </ul>
@@ -34,7 +35,8 @@
                 </a>
             </div>
             <div class="media-body">
-                <h4 ng-class="{'title-job-centered': !experiencia.descripcion}"><b>{{experiencia.desde}} - {{experiencia.hasta}}: {{experiencia.cargo}}</b> en <b>{{experiencia.empresa}}</b></h4>
+                <h4 ng-class="{'title-job-centered': !experiencia.descripcion}"><b>{{experiencia.desde}} -
+                        {{experiencia.hasta}}: {{experiencia.puesto}}</b> en <b>{{experiencia.empresa}}</b></h4>
                 <a class="media-heading" ng-show="experiencia.descripcion" ng-bind-template="{{experiencia.descripcion}}"></a>
                 <!-- Seccion para mostrar colaboraciones en clientes -->
                 <div ng-repeat="cliente in experiencia.clientes">
@@ -59,13 +61,14 @@
                             <p ng-bind="proyecto.descripcion"></p>
                         </div>
                         <div class="custom-line">
-                            <a>Cargo: </a>
-                            <a ng-bind="proyecto.cargo"></a>
+                            <a>Puesto: </a>
+                            <a ng-bind="proyecto.puesto"></a>
                         </div>
                         <div ng-show="proyecto.tecnologias" class="custom-line technologies">
                             <a class="pull-left title">Tecnologías utilizadas:</a>
                             <div class="technologies-list">
-                                <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                                <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology"
+                                    ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
                             </div>
                         </div>
                         <div class="custom-line functions-title">
@@ -87,13 +90,14 @@
                     </b>
                 </div>
                 <div class="custom-line">
-                    <a>Cargo: </a>
-                    <a ng-bind="proyecto.cargo"></a>
+                    <a>Puesto: </a>
+                    <a ng-bind="proyecto.puesto"></a>
                 </div>
                 <div ng-show="proyecto.tecnologias" class="technologies">
                     <a class="pull-left title">Tecnologías utilizadas:</a>
                     <div class="technologies-list">
-                        <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                        <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology"
+                            ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
                     </div>
                 </div>
                 <div class="custom-line functions-title">
@@ -126,7 +130,8 @@
         <li class="media" ng-repeat="proyecto in curriculum.proyectos">
             <div class="media-left">
                 <a href="#">
-                    <img class="media-object main-image" ng-class="{'img-circle': proyecto.bordeImagen == 'img-circle'}" ng-src="{{proyecto.imagen}}">
+                    <img class="media-object main-image" ng-class="{'img-circle': proyecto.bordeImagen == 'img-circle'}"
+                        ng-src="{{proyecto.imagen}}">
                 </a>
             </div>
             <div class="media-body">
@@ -135,7 +140,8 @@
                 <div ng-show="proyecto.tecnologias" class="technologies col-xs-12 without-lateral-padding">
                     <b class="pull-left title">Tecnologías utilizadas:</b>
                     <div class="technologies-list">
-                        <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology" ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
+                        <img title="{{tecnologia.nombre}}" class="col-xs-4 img-responsive img-thumbnail technology"
+                            ng-src="{{tecnologia.imagen}}" ng-repeat="tecnologia in proyecto.tecnologias">
                     </div>
                 </div>
                 <div ng-repeat="enlace in proyecto.enlaces | orderBy:'$index'" class="custom-line col-xs-12 without-lateral-padding">
@@ -169,17 +175,20 @@
             </div>
             <div class="media-body media-middle">
                 <div class="progress" ng-show="conocimiento.nivel == 1">
-                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100" style="width: 33.3%">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="33.3" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 33.3%">
                         <span class="">Básico</span>
                     </div>
                 </div>
                 <div class="progress" ng-show="conocimiento.nivel == 2">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="66.6" aria-valuemin="0" aria-valuemax="100" style="width: 66.6%">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="66.6" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 66.6%">
                         <span class="">Intermedio</span>
                     </div>
                 </div>
                 <div class="progress" ng-show="conocimiento.nivel == 3">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 100%">
                         <span class="">Avanzado</span>
                     </div>
                 </div>
