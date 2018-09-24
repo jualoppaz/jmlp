@@ -38,8 +38,17 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                                 imagen: "img/tecnologia_sass.png",
                                 nombre: "Sass"
                             }, {
+                                imagen: "img/tecnologia_bootstrap.png",
+                                nombre: "Bootstrap"
+                            }, {
                                 imagen: "img/tecnologia_npm.png",
                                 nombre: "NPM"
+                            }, {
+                                imagen: "img/tecnologia_bower.png",
+                                nombre: "Bower"
+                            }, {
+                                imagen: "img/tecnologia_git.png",
+                                nombre: "Git"
                             }, {
                                 imagen: "img/tecnologia_sourcetree.png",
                                 nombre: "SourceTree (+ Git Flow)"
@@ -72,14 +81,14 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                         nombre: "GMV",
                         imagen: "/img/empresa_gmv.png",
                         desde: "10/2016",
-                        hasta: "Actualidad",
+                        hasta: "07/2018",
                         descripcion: "Colaboración con GMV para participar en el desarrollo de diversos proyectos como Desarrollador Web.",
                         proyectos: [
                             {
                                 nombre: "Aplicación Web para el Sector de Estudio de Mercado",
                                 descripcion: "Desarrollo de aplicación web para encuestar voluntarios para valorar productos lanzados por los clientes.",
                                 desde: "02/2018",
-                                hasta: "Actualidad",
+                                hasta: "07/2018",
                                 puesto: "Desarrollador Web",
                                 tecnologias: [
                                     {

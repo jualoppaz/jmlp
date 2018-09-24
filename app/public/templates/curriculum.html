@@ -89,6 +89,9 @@
                         <a ng-bind-template="{{proyecto.desde}} - {{proyecto.hasta}}"></a>
                     </b>
                 </div>
+                <div class="custom-line" ng-if="proyecto.descripcion">
+                    <p ng-bind="proyecto.descripcion"></p>
+                </div>
                 <div class="custom-line">
                     <a>Puesto: </a>
                     <a ng-bind="proyecto.puesto"></a>
