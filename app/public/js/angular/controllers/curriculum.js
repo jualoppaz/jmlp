@@ -50,7 +50,7 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                                 imagen: "img/tecnologia_git.png",
                                 nombre: "Git"
                             }, {
-                                imagen: "img/tecnologia_sourcetree.png",
+                                imagen: "img/tecnologia_sourceTree.png",
                                 nombre: "SourceTree (+ Git Flow)"
                             }
                         ],
