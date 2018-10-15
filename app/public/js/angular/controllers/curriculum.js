@@ -31,28 +31,35 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                         desde: "07/2018",
                         hasta: "Actualidad",
                         puesto: "Desarrollador Web",
-                        tecnologias: [
+                        technologies: [
                             {
-                                imagen: "img/tecnologia_angularjs.png",
-                                nombre: "AngularJS"
+                                image: "img/tecnologia_angularjs.png",
+                                name: "AngularJS",
+                                web: "https://angularjs.org"
                             }, {
-                                imagen: "img/tecnologia_sass.png",
-                                nombre: "Sass"
+                                image: "img/tecnologia_sass.png",
+                                name: "Sass",
+                                web: "https://sass-lang.com"
                             }, {
-                                imagen: "img/tecnologia_bootstrap.png",
-                                nombre: "Bootstrap"
+                                image: "img/tecnologia_bootstrap.png",
+                                name: "Bootstrap",
+                                web: "https://getbootstrap.com"
                             }, {
-                                imagen: "img/tecnologia_npm.png",
-                                nombre: "NPM"
+                                image: "img/tecnologia_npm.png",
+                                name: "NPM",
+                                web: "https://www.npmjs.com"
                             }, {
-                                imagen: "img/tecnologia_bower.png",
-                                nombre: "Bower"
+                                image: "img/tecnologia_bower.png",
+                                name: "Bower",
+                                web: "https://bower.io"
                             }, {
-                                imagen: "img/tecnologia_git.png",
-                                nombre: "Git"
+                                image: "img/tecnologia_git.png",
+                                name: "Git",
+                                web: "https://git-scm.com"
                             }, {
-                                imagen: "img/tecnologia_sourceTree.png",
-                                nombre: "SourceTree (+ Git Flow)"
+                                image: "img/tecnologia_sourceTree.png",
+                                name: "SourceTree (+ Git Flow)",
+                                web: "https://www.sourcetreeapp.com"
                             }
                         ],
                         funciones: [
@@ -93,34 +100,43 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                                 desde: "02/2018",
                                 hasta: "07/2018",
                                 puesto: "Desarrollador Web",
-                                tecnologias: [
+                                technologies: [
                                     {
-                                        imagen: "img/tecnologia_laravel.png",
-                                        nombre: "Laravel"
+                                        image: "img/tecnologia_laravel.png",
+                                        name: "Laravel",
+                                        web: "https://laravel.com"
                                     }, {
-                                        imagen: "img/tecnologia_mysql.png",
-                                        nombre: "MySQL"
+                                        image: "img/tecnologia_mysql.png",
+                                        name: "MySQL",
+                                        web: "https://www.mysql.com"
                                     }, {
-                                        imagen: "img/tecnologia_sass.png",
-                                        nombre: "Sass"
+                                        image: "img/tecnologia_sass.png",
+                                        name: "Sass",
+                                        web: "https://sass-lang.com"
                                     }, {
-                                        imagen: "img/tecnologia_swagger.png",
-                                        nombre: "Swagger"
+                                        image: "img/tecnologia_swagger.png",
+                                        name: "Swagger",
+                                        web: "https://swagger.io"
                                     }, {
-                                        imagen: "img/tecnologia_composer.png",
-                                        nombre: "Composer"
+                                        image: "img/tecnologia_composer.png",
+                                        name: "Composer",
+                                        web: "https://getcomposer.org"
                                     }, {
-                                        imagen: "img/tecnologia_npm.png",
-                                        nombre: "NPM"
+                                        image: "img/tecnologia_npm.png",
+                                        name: "NPM",
+                                        web: "https://www.npmjs.com"
                                     }, {
-                                        imagen: "img/tecnologia_angular.png",
-                                        nombre: "Angular 5"
+                                        image: "img/tecnologia_angular.png",
+                                        name: "Angular 5",
+                                        web: "https://angular.io"
                                     }, {
-                                        imagen: "img/tecnologia_git.png",
-                                        nombre: "Git"
+                                        image: "img/tecnologia_git.png",
+                                        name: "Git",
+                                        web: "https://git-scm.com"
                                     }, {
-                                        imagen: "img/tecnologia_sourceTree.png",
-                                        nombre: "SourceTree (+ Git Flow)"
+                                        image: "img/tecnologia_sourceTree.png",
+                                        name: "SourceTree (+ Git Flow)",
+                                        web: "https://www.sourcetreeapp.com"
                                     }
                                 ],
                                 funciones: [
@@ -150,40 +166,50 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                                 desde: "10/2017",
                                 hasta: "02/2018",
                                 puesto: "Desarrollador Web",
-                                tecnologias: [
+                                technologies: [
                                     {
-                                        imagen: "img/tecnologia_laravel.png",
-                                        nombre: "Laravel"
+                                        image: "img/tecnologia_laravel.png",
+                                        name: "Laravel",
+                                        web: "https://laravel.com"
                                     }, {
-                                        imagen: "img/tecnologia_lumen.png",
-                                        nombre: "Lumen"
+                                        image: "img/tecnologia_lumen.png",
+                                        name: "Lumen",
+                                        web: "https://lumen.laravel.com"
                                     }, {
-                                        imagen: "img/tecnologia_mysql.png",
-                                        nombre: "MySQL"
+                                        image: "img/tecnologia_mysql.png",
+                                        name: "MySQL",
+                                        web: "https://www.mysql.com"
                                     }, {
-                                        imagen: "img/tecnologia_sass.png",
-                                        nombre: "Sass"
+                                        image: "img/tecnologia_sass.png",
+                                        name: "Sass",
+                                        web: "https://sass-lang.com"
                                     }, {
-                                        imagen: "img/tecnologia_laravel-mix.png",
-                                        nombre: "Laravel-mix"
+                                        image: "img/tecnologia_laravel-mix.png",
+                                        name: "Laravel-mix"
                                     }, {
-                                        imagen: "img/tecnologia_swagger.png",
-                                        nombre: "Swagger"
+                                        image: "img/tecnologia_swagger.png",
+                                        name: "Swagger",
+                                        web: "https://swagger.io"
                                     }, {
-                                        imagen: "img/tecnologia_composer.png",
-                                        nombre: "Composer"
+                                        image: "img/tecnologia_composer.png",
+                                        name: "Composer",
+                                        web: "https://getcomposer.org"
                                     }, {
-                                        imagen: "img/tecnologia_npm.png",
-                                        nombre: "NPM"
+                                        image: "img/tecnologia_npm.png",
+                                        name: "NPM",
+                                        web: "https://www.npmjs.com"
                                     }, {
-                                        imagen: "img/tecnologia_angular.png",
-                                        nombre: "Angular"
+                                        image: "img/tecnologia_angular.png",
+                                        name: "Angular",
+                                        web: "https://angular.io"
                                     }, {
-                                        imagen: "img/tecnologia_git.png",
-                                        nombre: "Git"
+                                        image: "img/tecnologia_git.png",
+                                        name: "Git",
+                                        web: "https://git-scm.com"
                                     }, {
-                                        imagen: "img/tecnologia_sourceTree.png",
-                                        nombre: "SourceTree (+ Git Flow)"
+                                        image: "img/tecnologia_sourceTree.png",
+                                        name: "SourceTree (+ Git Flow)",
+                                        web: "https://www.sourcetreeapp.com"
                                     }
                                 ],
                                 funciones: [
@@ -211,37 +237,44 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                                 desde: "07/2017",
                                 hasta: "10/2017",
                                 puesto: "Desarrollador Web",
-                                tecnologias: [
+                                technologies: [
                                     {
-                                        imagen: "img/tecnologia_java.png",
-                                        nombre: "Java"
+                                        image: "img/tecnologia_java.png",
+                                        name: "Java",
+                                        web: "https://www.java.com"
                                     }, {
-                                        imagen: "/img/tecnologia_jsf.png",
-                                        nombre: "JavaServer Faces (JSF)"
+                                        image: "/img/tecnologia_jsf.png",
+                                        name: "JavaServer Faces (JSF)"
                                     }, {
-                                        imagen: "/img/tecnologia_primeFaces.png",
-                                        nombre: "PrimeFaces"
+                                        image: "/img/tecnologia_primeFaces.png",
+                                        name: "PrimeFaces",
+                                        web: "https://www.primefaces.org"
                                     }, {
-                                        imagen: "/img/tecnologia_maven.png",
-                                        nombre: "Maven"
+                                        image: "/img/tecnologia_maven.png",
+                                        name: "Maven",
+                                        web: "https://maven.apache.org"
                                     }, {
-                                        imagen: "/img/tecnologia_postgresql.png",
-                                        nombre: "PostgreSQL"
+                                        image: "/img/tecnologia_postgresql.png",
+                                        name: "PostgreSQL",
+                                        web: "https://www.postgresql.org"
                                     }, {
-                                        imagen: "/img/tecnologia_hibernate.png",
-                                        nombre: "Hibernate"
+                                        image: "/img/tecnologia_hibernate.png",
+                                        name: "Hibernate",
+                                        web: "http://hibernate.org"
                                     }, {
-                                        imagen: "/img/tecnologia_liquibase.jpg",
-                                        nombre: "Liquibase"
+                                        image: "/img/tecnologia_liquibase.jpg",
+                                        name: "Liquibase",
+                                        web: "https://www.liquibase.org"
                                     }, {
-                                        imagen: "/img/tecnologia_css3.png",
-                                        nombre: "CSS3"
+                                        image: "/img/tecnologia_css3.png",
+                                        name: "CSS3"
                                     }, {
-                                        imagen: "/img/tecnologia_javascript.png",
-                                        nombre: "JavaScript"
+                                        image: "/img/tecnologia_javascript.png",
+                                        name: "JavaScript"
                                     }, {
-                                        imagen: "/img/tecnologia_jquery.png",
-                                        nombre: "jQuery"
+                                        image: "/img/tecnologia_jquery.png",
+                                        name: "jQuery",
+                                        web: "https://jquery.com"
                                     }
                                 ],
                                 funciones: [
@@ -263,40 +296,49 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                                 desde: "12/2016",
                                 hasta: "07/2017",
                                 puesto: "Desarrollador Web",
-                                tecnologias: [
+                                technologies: [
                                     {
-                                        imagen: "img/tecnologia_php.png",
-                                        nombre: "PHP"
+                                        image: "img/tecnologia_php.png",
+                                        name: "PHP",
+                                        web: "http://php.net"
                                     }, {
-                                        imagen: "/img/tecnologia_mysql.png",
-                                        nombre: "MySQL"
+                                        image: "/img/tecnologia_mysql.png",
+                                        name: "MySQL",
+                                        web: "https://www.mysql.com"
                                     }, {
-                                        imagen: "/img/tecnologia_liquibase.jpg",
-                                        nombre: "Liquibase"
+                                        image: "/img/tecnologia_liquibase.jpg",
+                                        name: "Liquibase",
+                                        web: "https://www.liquibase.org"
                                     }, {
-                                        imagen: "/img/tecnologia_symfony.png",
-                                        nombre: "Symfony"
+                                        image: "/img/tecnologia_symfony.png",
+                                        name: "Symfony",
+                                        web: "https://symfony.es"
                                     }, {
-                                        imagen: "/img/tecnologia_doctrine.png",
-                                        nombre: "Doctrine"
+                                        image: "/img/tecnologia_doctrine.png",
+                                        name: "Doctrine",
+                                        web: "https://www.doctrine-project.org"
                                     }, {
-                                        imagen: "img/tecnologia_css3.png",
-                                        nombre: "CSS3"
+                                        image: "img/tecnologia_css3.png",
+                                        name: "CSS3"
                                     }, {
-                                        imagen: "img/tecnologia_sass.png",
-                                        nombre: "Sass"
+                                        image: "img/tecnologia_sass.png",
+                                        name: "Sass",
+                                        web: "https://sass-lang.com"
                                     }, {
-                                        imagen: "img/tecnologia_bootstrap.png",
-                                        nombre: "Bootstrap"
+                                        image: "img/tecnologia_bootstrap.png",
+                                        name: "Bootstrap",
+                                        web: "https://getbootstrap.com"
                                     }, {
-                                        imagen: "img/tecnologia_fontAwesome.png",
-                                        nombre: "Font Awesome"
+                                        image: "img/tecnologia_fontAwesome.png",
+                                        name: "Font Awesome",
+                                        web: "https://fontawesome.com"
                                     }, {
-                                        imagen: "img/tecnologia_javascript.png",
-                                        nombre: "JavaScript"
+                                        image: "img/tecnologia_javascript.png",
+                                        name: "JavaScript"
                                     }, {
-                                        imagen: "img/tecnologia_jquery.png",
-                                        nombre: "jQuery"
+                                        image: "img/tecnologia_jquery.png",
+                                        name: "jQuery",
+                                        web: "https://jquery.com"
                                     }
                                 ],
                                 funciones: [
@@ -320,37 +362,44 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                                 desde: "10/2016",
                                 hasta: "12/2016",
                                 puesto: "Desarrollador Web",
-                                tecnologias: [
+                                technologies: [
                                     {
-                                        imagen: "img/tecnologia_java.png",
-                                        nombre: "Java"
+                                        image: "img/tecnologia_java.png",
+                                        name: "Java",
+                                        web: "https://www.java.com"
                                     }, {
-                                        imagen: "/img/tecnologia_jsf.png",
-                                        nombre: "JavaServer Faces (JSF)"
+                                        image: "/img/tecnologia_jsf.png",
+                                        name: "JavaServer Faces (JSF)"
                                     }, {
-                                        imagen: "/img/tecnologia_primeFaces.png",
-                                        nombre: "PrimeFaces"
+                                        image: "/img/tecnologia_primeFaces.png",
+                                        name: "PrimeFaces",
+                                        web: "https://www.primefaces.org"
                                     }, {
-                                        imagen: "/img/tecnologia_maven.png",
-                                        nombre: "Maven"
+                                        image: "/img/tecnologia_maven.png",
+                                        name: "Maven",
+                                        web: "https://maven.apache.org"
                                     }, {
-                                        imagen: "/img/tecnologia_postgresql.png",
-                                        nombre: "PostgreSQL"
+                                        image: "/img/tecnologia_postgresql.png",
+                                        name: "PostgreSQL",
+                                        web: "https://www.postgresql.org"
                                     }, {
-                                        imagen: "/img/tecnologia_hibernate.png",
-                                        nombre: "Hibernate"
+                                        image: "/img/tecnologia_hibernate.png",
+                                        name: "Hibernate",
+                                        web: "http://hibernate.org"
                                     }, {
-                                        imagen: "/img/tecnologia_liquibase.jpg",
-                                        nombre: "Liquibase"
+                                        image: "/img/tecnologia_liquibase.jpg",
+                                        name: "Liquibase",
+                                        web: "https://www.liquibase.org"
                                     }, {
-                                        imagen: "/img/tecnologia_css3.png",
-                                        nombre: "CSS3"
+                                        image: "/img/tecnologia_css3.png",
+                                        name: "CSS3"
                                     }, {
-                                        imagen: "/img/tecnologia_javascript.png",
-                                        nombre: "JavaScript"
+                                        image: "/img/tecnologia_javascript.png",
+                                        name: "JavaScript"
                                     }, {
-                                        imagen: "/img/tecnologia_jquery.png",
-                                        nombre: "jQuery"
+                                        image: "/img/tecnologia_jquery.png",
+                                        name: "jQuery",
+                                        web: "https://jquery.com"
                                     }
                                 ],
                                 funciones: [
@@ -382,28 +431,34 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                         desde: "05/2016",
                         hasta: "07/2016",
                         puesto: "Desarrollador Web",
-                        tecnologias: [
+                        technologies: [
                             {
-                                imagen: "/img/tecnologia_angularjs.png",
-                                nombre: "AngularJS"
+                                image: "/img/tecnologia_angularjs.png",
+                                name: "AngularJS",
+                                web: "https://angularjs.org"
                             }, {
-                                imagen: "/img/tecnologia_javascript.png",
-                                nombre: "JavaScript"
+                                image: "/img/tecnologia_javascript.png",
+                                name: "JavaScript"
                             }, {
-                                imagen: "/img/tecnologia_jquery.png",
-                                nombre: "jQuery"
+                                image: "/img/tecnologia_jquery.png",
+                                name: "jQuery",
+                                web: "https://jquery.com"
                             }, {
-                                imagen: "/img/tecnologia_bootstrap.png",
-                                nombre: "Bootstrap"
+                                image: "/img/tecnologia_bootstrap.png",
+                                name: "Bootstrap",
+                                web: "https://getbootstrap.com"
                             }, {
-                                imagen: "/img/tecnologia_brunch.png",
-                                nombre: "Brunch"
+                                image: "/img/tecnologia_brunch.png",
+                                name: "Brunch",
+                                web: "https://brunch.io"
                             }, {
-                                imagen: "/img/tecnologia_bower.png",
-                                nombre: "Bower"
+                                image: "/img/tecnologia_bower.png",
+                                name: "Bower",
+                                web: "https://bower.io"
                             }, {
-                                imagen: "/img/tecnologia_npm.png",
-                                nombre: "NPM"
+                                image: "/img/tecnologia_npm.png",
+                                name: "NPM",
+                                web: "https://www.npmjs.com"
                             }
                         ],
                         funciones: [
@@ -441,22 +496,26 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                                 desde: "05/2016",
                                 hasta: "07/2016",
                                 puesto: "Desarrollador Web",
-                                tecnologias: [
+                                technologies: [
                                     {
-                                        imagen: "/img/tecnologia_angularjs.png",
-                                        nombre: "AngularJS"
+                                        image: "/img/tecnologia_angularjs.png",
+                                        name: "AngularJS",
+                                        web: "https://angularjs.org"
                                     }, {
-                                        imagen: "/img/tecnologia_javascript.png",
-                                        nombre: "JavaScript"
+                                        image: "/img/tecnologia_javascript.png",
+                                        name: "JavaScript"
                                     }, {
-                                        imagen: "/img/tecnologia_jquery.png",
-                                        nombre: "jQuery"
+                                        image: "/img/tecnologia_jquery.png",
+                                        name: "jQuery",
+                                        web: "https://jquery.com"
                                     }, {
-                                        imagen: "/img/tecnologia_bootstrap.png",
-                                        nombre: "Bootstrap"
+                                        image: "/img/tecnologia_bootstrap.png",
+                                        name: "Bootstrap",
+                                        web: "https://getbootstrap.com"
                                     }, {
-                                        imagen: "/img/tecnologia_npm.png",
-                                        nombre: "NPM"
+                                        image: "/img/tecnologia_npm.png",
+                                        name: "NPM",
+                                        web: "https://www.npmjs.com"
                                     }
                                 ],
                                 funciones: [
@@ -486,19 +545,22 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                         desde: "01/2016",
                         hasta: "03/2016",
                         puesto: "Desarrollador Web",
-                        tecnologias: [
+                        technologies: [
                             {
-                                imagen: "/img/tecnologia_php.png",
-                                nombre: "PHP"
+                                image: "/img/tecnologia_php.png",
+                                name: "PHP",
+                                web: "http://php.net"
                             }, {
-                                imagen: "/img/tecnologia_laravel.png",
-                                nombre: "Laravel"
+                                image: "/img/tecnologia_laravel.png",
+                                name: "Laravel",
+                                web: "https://laravel.com"
                             }, {
-                                imagen: "/img/tecnologia_javascript.png",
-                                nombre: "JavaScript"
+                                image: "/img/tecnologia_javascript.png",
+                                name: "JavaScript"
                             }, {
-                                imagen: "/img/tecnologia_bootstrap.png",
-                                nombre: "Bootstrap"
+                                image: "/img/tecnologia_bootstrap.png",
+                                name: "Bootstrap",
+                                web: "https://getbootstrap.com"
                             }
                         ],
                         funciones: [
@@ -532,28 +594,34 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                         desde: "12/2014",
                         hasta: "12/2015",
                         puesto: "Tester",
-                        tecnologias: [
+                        technologies: [
                             {
-                                imagen: "/img/tecnologia_spiraTeam.png",
-                                nombre: "SpiraTeam"
+                                image: "/img/tecnologia_spiraTeam.png",
+                                name: "SpiraTeam",
+                                web: "https://www.inflectra.com/SpiraTeam"
                             }, {
-                                nombre: "Jenkins",
-                                imagen: "/img/tecnologia_jenkins.png"
+                                name: "Jenkins",
+                                image: "/img/tecnologia_jenkins.png",
+                                web: "https://jenkins.io"
                             }, {
-                                nombre: "jMeter",
-                                imagen: "/img/tecnologia_jmeter.png"
+                                name: "jMeter",
+                                image: "/img/tecnologia_jmeter.png",
+                                web: "https://jmeter.apache.org"
                             }, {
-                                nombre: "HP LoadRunner",
-                                imagen: "/img/tecnologia_hpLoadRunner.png"
+                                name: "HP LoadRunner",
+                                image: "/img/tecnologia_hpLoadRunner.png"
                             }, {
-                                nombre: "SoapUI",
-                                imagen: "/img/tecnologia_soapui.png"
+                                name: "SoapUI",
+                                image: "/img/tecnologia_soapui.png",
+                                web: "https://www.soapui.org"
                             }, {
-                                nombre: "Selenium Webdriver",
-                                imagen: "/img/tecnologia_selenium.png"
+                                name: "Selenium Webdriver",
+                                image: "/img/tecnologia_selenium.png",
+                                web: "https://www.seleniumhq.org/projects/webdriver"
                             }, {
-                                nombre: "Mantis",
-                                imagen: "/img/tecnologia_mantis.png"
+                                name: "Mantis",
+                                image: "/img/tecnologia_mantis.png",
+                                web: "https://www.mantisbt.org"
                             }
                         ],
                         funciones: [
@@ -588,19 +656,22 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                         desde: "02/2014",
                         hasta: "05/2014",
                         puesto: "Desarrollador",
-                        tecnologias: [
+                        technologies: [
                             {
-                                imagen: "/img/tecnologia_java.png",
-                                nombre: "Java"
+                                image: "/img/tecnologia_java.png",
+                                name: "Java",
+                                web: "https://www.java.com"
                             }, {
-                                nombre: "Maven",
-                                imagen: "/img/tecnologia_maven.png"
+                                name: "Maven",
+                                image: "/img/tecnologia_maven.png",
+                                web: "https://maven.apache.org"
                             }, {
-                                nombre: "JSF",
-                                imagen: "/img/tecnologia_jsf.png"
+                                name: "JSF",
+                                image: "/img/tecnologia_jsf.png"
                             }, {
-                                nombre: "Hibernate",
-                                imagen: "/img/tecnologia_hibernate.png"
+                                name: "Hibernate",
+                                image: "/img/tecnologia_hibernate.png",
+                                web: "http://hibernate.org"
                             }
                         ],
                         funciones: [
@@ -633,28 +704,35 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 descripcion: "Desarrollo de una aplicación web realizada con AngularJS, la cual incluye una Integración " +
                     "Continua muy completa con la herramienta Brunch, de modo que sea pueda agilizar el desarrollo " +
                     "desde la compilación de assets hasta su despliegue optimizado en un sistema como Heroku.",
-                tecnologias: [
+                technologies: [
                     {
-                        imagen: "img/tecnologia_angularjs.png",
-                        nombre: "AngularJS"
+                        image: "img/tecnologia_angularjs.png",
+                        name: "AngularJS",
+                        web: "https://angularjs.org"
                     }, {
-                        imagen: "img/tecnologia_brunch.png",
-                        nombre: "Brunch"
+                        image: "img/tecnologia_brunch.png",
+                        name: "Brunch",
+                        web: "https://brunch.io"
                     }, {
-                        imagen: "img/tecnologia_sass.png",
-                        nombre: "Sass"
+                        image: "img/tecnologia_sass.png",
+                        name: "Sass",
+                        web: "https://sass-lang.com"
                     }, {
-                        imagen: "img/tecnologia_npm.png",
-                        nombre: "NPM"
+                        image: "img/tecnologia_npm.png",
+                        name: "NPM",
+                        web: "https://www.npmjs.com"
                     }, {
-                        imagen: "img/tecnologia_bower.png",
-                        nombre: "Bower"
+                        image: "img/tecnologia_bower.png",
+                        name: "Bower",
+                        web: "https://bower.io"
                     }, {
-                        imagen: "img/tecnologia_nodejs.png",
-                        nombre: "NodeJS"
+                        image: "img/tecnologia_nodejs.png",
+                        name: "NodeJS",
+                        web: "https://nodejs.org"
                     }, {
-                        imagen: "img/tecnologia_jshint.png",
-                        nombre: "JSHint"
+                        image: "img/tecnologia_jshint.png",
+                        name: "JSHint",
+                        web: "https://jshint.com"
                     }
                 ],
                 desde: "02/2017",
@@ -678,22 +756,27 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                     "realizada con la filosofía SPA (Single Page Application). Esto quiere decir que consta de una " +
                     "sola página con diferentes vistas, de modo que no se necesita recargar la página debido a que las vistas " +
                     "se encuentran en el cliente y no en el servidor.",
-                tecnologias: [
+                technologies: [
                     {
-                        imagen: "img/tecnologia_angularjs.png",
-                        nombre: "AngularJS"
+                        image: "img/tecnologia_angularjs.png",
+                        name: "AngularJS",
+                        web: "https://angularjs.org"
                     }, {
-                        imagen: "img/tecnologia_nodejs.png",
-                        nombre: "Node.js"
+                        image: "img/tecnologia_nodejs.png",
+                        name: "Node.js",
+                        web: "https://nodejs.org"
                     }, {
-                        imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug"
+                        image: "img/tecnologia_pug.png",
+                        name: "Pug",
+                        web: "https://pugjs.org"
                     }, {
-                        imagen: "img/tecnologia_mongodb.png",
-                        nombre: "MongoDB"
+                        image: "img/tecnologia_mongodb.png",
+                        name: "MongoDB",
+                        web: "https://www.mongodb.com"
                     }, {
-                        imagen: "img/tecnologia_bootstrap.png",
-                        nombre: "Bootstrap"
+                        image: "img/tecnologia_bootstrap.png",
+                        name: "Bootstrap",
+                        web: "https://getbootstrap.com"
                     }
                 ],
                 desde: "03/2016",
@@ -711,19 +794,23 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 resumen: "Desarrollo de la página web para la empresa Rayosol Toldos",
                 descripcion: "Página web para la empresa Rayosol Toldos con el objetivo de mostrar los distintos modelos de toldos que fabrican e instalan," +
                     "así como facilitar a los usuarios una forma de contacto inmediata mediante el envío de emails desde la propia página.",
-                tecnologias: [
+                technologies: [
                     {
-                        imagen: "img/tecnologia_angularjs.png",
-                        nombre: "AngularJS"
+                        image: "img/tecnologia_angularjs.png",
+                        name: "AngularJS",
+                        web: "https://angularjs.org"
                     }, {
-                        imagen: "img/tecnologia_nodejs.png",
-                        nombre: "Node.js"
+                        image: "img/tecnologia_nodejs.png",
+                        name: "Node.js",
+                        web: "https://nodejs.org"
                     }, {
-                        imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug"
+                        image: "img/tecnologia_pug.png",
+                        name: "Pug",
+                        web: "https://pugjs.org"
                     }, {
-                        imagen: "img/tecnologia_bootstrap.png",
-                        nombre: "Bootstrap"
+                        image: "img/tecnologia_bootstrap.png",
+                        name: "Bootstrap",
+                        web: "https://getbootstrap.com"
                     }
                 ],
                 desde: "02/2015",
@@ -741,25 +828,31 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 descripcion: "Desarrollo de la página web de Complementos Marta Pazos la cual consta de: un amplio catálogo de productos," +
                     " panel de administración de todo tipo de contenidos de la web como noticias o detalles de los productos, comercio " +
                     "electrónico integrando la API REST de Paypal con el carrito de compras y un diseño totalmente personalizado acorde con el oficio.",
-                tecnologias: [
+                technologies: [
                     {
-                        imagen: "img/tecnologia_angularjs.png",
-                        nombre: "AngularJS"
+                        image: "img/tecnologia_angularjs.png",
+                        name: "AngularJS",
+                        web: "https://angularjs.org"
                     }, {
-                        imagen: "img/tecnologia_nodejs.png",
-                        nombre: "Node.js"
+                        image: "img/tecnologia_nodejs.png",
+                        name: "Node.js",
+                        web: "https://nodejs.org"
                     }, {
-                        imagen: "img/tecnologia_mongodb.png",
-                        nombre: "MongoDB"
+                        image: "img/tecnologia_mongodb.png",
+                        name: "MongoDB",
+                        web: "https://www.mongodb.com"
                     }, {
-                        imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug"
+                        image: "img/tecnologia_pug.png",
+                        name: "Pug",
+                        web: "https://pugjs.org"
                     }, {
-                        imagen: "img/tecnologia_bootstrap.png",
-                        nombre: "Bootstrap"
+                        image: "img/tecnologia_bootstrap.png",
+                        name: "Bootstrap",
+                        web: "https://getbootstrap.com"
                     }, {
-                        imagen: "img/tecnologia_fontAwesome.png",
-                        nombre: "Font Awesome"
+                        image: "img/tecnologia_fontAwesome.png",
+                        name: "Font Awesome",
+                        web: "https://fontawesome.com"
                     }
                 ],
                 desde: "10/2014",
@@ -776,25 +869,31 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 resumen: "Desarrollo de la aplicación web Pronostigol",
                 descripcion: "Aplicación web para consultar estadísticas relacionadas con los distintos sorteos de Loterías y Apuestas " +
                     "del Estado (LAE).",
-                tecnologias: [
+                technologies: [
                     {
-                        imagen: "img/tecnologia_angularjs.png",
-                        nombre: "AngularJS"
+                        image: "img/tecnologia_angularjs.png",
+                        name: "AngularJS",
+                        web: "https://angularjs.org"
                     }, {
-                        imagen: "img/tecnologia_nodejs.png",
-                        nombre: "Node.js"
+                        image: "img/tecnologia_nodejs.png",
+                        name: "Node.js",
+                        web: "https://nodejs.org"
                     }, {
-                        imagen: "img/tecnologia_mongodb.png",
-                        nombre: "MongoDB"
+                        image: "img/tecnologia_mongodb.png",
+                        name: "MongoDB",
+                        web: "https://www.mongodb.com"
                     }, {
-                        imagen: "img/tecnologia_pug.png",
-                        nombre: "Pug"
+                        image: "img/tecnologia_pug.png",
+                        name: "Pug",
+                        web: "https://pugjs.org"
                     }, {
-                        imagen: "img/tecnologia_bootstrap.png",
-                        nombre: "Bootstrap"
+                        image: "img/tecnologia_bootstrap.png",
+                        name: "Bootstrap",
+                        web: "https://getbootstrap.com"
                     }, {
-                        imagen: "img/tecnologia_fontAwesome.png",
-                        nombre: "Font Awesome"
+                        image: "img/tecnologia_fontAwesome.png",
+                        name: "Font Awesome",
+                        web: "https://fontawesome.com"
                     }
                 ],
                 desde: "05/2014",
@@ -819,19 +918,22 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 desde: "02/2014",
                 hasta: "09/2014",
                 imagen: "/img/proyecto_eathub.png",
-                tecnologias: [
+                technologies: [
                     {
-                        nombre: "Django",
-                        imagen: "img/tecnologia_django.png"
+                        name: "Django",
+                        image: "img/tecnologia_django.png",
+                        web: "https://www.djangoproject.com"
                     }, {
-                        nombre: "MongoDB",
-                        imagen: "img/tecnologia_mongodb.png"
+                        name: "MongoDB",
+                        image: "img/tecnologia_mongodb.png",
+                        web: "https://www.mongodb.com"
                     }, {
-                        nombre: "HTML5",
-                        imagen: "img/tecnologia_html5.png"
+                        name: "HTML5",
+                        image: "img/tecnologia_html5.png"
                     }, {
-                        nombre: "Bootstrap",
-                        imagen: "img/tecnologia_bootstrap.png"
+                        name: "Bootstrap",
+                        image: "img/tecnologia_bootstrap.png",
+                        web: "https://getbootstrap.com"
                     }
                 ],
                 enlaces: [
@@ -853,25 +955,31 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 desde: "12/2013",
                 hasta: "09/2014",
                 imagen: "/img/proyecto_lagloria.png",
-                tecnologias: [
+                technologies: [
                     {
-                        nombre: "MongoDB",
-                        imagen: "img/tecnologia_mongodb.png"
+                        name: "MongoDB",
+                        image: "img/tecnologia_mongodb.png",
+                        web: "https://www.mongodb.com"
                     }, {
-                        nombre: "Node.js",
-                        imagen: "img/tecnologia_nodejs.png"
+                        name: "Node.js",
+                        image: "img/tecnologia_nodejs.png",
+                        web: "https://nodejs.org"
                     }, {
-                        nombre: "AngularJS",
-                        imagen: "img/tecnologia_angularjs.png"
+                        name: "AngularJS",
+                        image: "img/tecnologia_angularjs.png",
+                        web: "https://angularjs.org"
                     }, {
-                        nombre: "Pug",
-                        imagen: "img/tecnologia_pug.png"
+                        name: "Pug",
+                        image: "img/tecnologia_pug.png",
+                        web: "https://pugjs.org"
                     }, {
-                        nombre: "Bootstrap",
-                        imagen: "img/tecnologia_bootstrap.png"
+                        name: "Bootstrap",
+                        image: "img/tecnologia_bootstrap.png",
+                        web: "https://getbootstrap.com"
                     }, {
-                        nombre: "Font Awesome",
-                        imagen: "img/tecnologia_fontAwesome.png"
+                        name: "Font Awesome",
+                        image: "img/tecnologia_fontAwesome.png",
+                        web: "https://fontawesome.com"
                     }
                 ],
                 enlaces: [
@@ -910,244 +1018,289 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 tipo: "Lenguajes de programación",
                 lista: [
                     {
-                        nombre: "Java",
-                        imagen: "/img/tecnologia_java.png",
-                        nivel: "3"
+                        name: "Java",
+                        image: "/img/tecnologia_java.png",
+                        level: "3",
+                        web: "https://www.java.com"
                     }, {
-                        nombre: "Python",
-                        imagen: "/img/tecnologia_python.png",
-                        nivel: "1"
+                        name: "Python",
+                        image: "/img/tecnologia_python.png",
+                        level: "1",
+                        web: "https://www.python.org"
                     }, {
-                        nombre: "HTML5",
-                        imagen: "/img/tecnologia_html5.png",
-                        nivel: "3"
+                        name: "HTML5",
+                        image: "/img/tecnologia_html5.png",
+                        level: "3"
                     }, {
-                        nombre: "JavaScript",
-                        imagen: "/img/tecnologia_javascript.png",
-                        nivel: "3"
+                        name: "JavaScript",
+                        image: "/img/tecnologia_javascript.png",
+                        level: "3"
                     }, {
-                        nombre: "Node.js",
-                        imagen: "/img/tecnologia_nodejs.png",
-                        nivel: "3"
+                        name: "Node.js",
+                        image: "/img/tecnologia_nodejs.png",
+                        level: "3",
+                        web: "https://nodejs.org"
                     }, {
-                        nombre: "PHP",
-                        imagen: "/img/tecnologia_php.png",
-                        nivel: "3"
+                        name: "PHP",
+                        image: "/img/tecnologia_php.png",
+                        level: "3",
+                        web: "http://php.net"
                     }
                 ]
             }, {
                 tipo: "Frameworks",
                 lista: [
                     {
-                        nombre: "jQuery",
-                        imagen: "/img/tecnologia_jquery.png",
-                        nivel: "3"
+                        name: "jQuery",
+                        image: "/img/tecnologia_jquery.png",
+                        level: "3",
+                        web: "https://jquery.com"
                     }, {
-                        nombre: "AngularJS",
-                        imagen: "/img/tecnologia_angularjs.png",
-                        nivel: "3"
+                        name: "AngularJS",
+                        image: "/img/tecnologia_angularjs.png",
+                        level: "3",
+                        web: "https://angularjs.org"
                     }, {
-                        nombre: "Angular",
-                        imagen: "/img/tecnologia_angular.png",
-                        nivel: "2"
+                        name: "Angular",
+                        image: "/img/tecnologia_angular.png",
+                        level: "2",
+                        web: "https://angular.io"
                     }, {
-                        nombre: "Express.js",
-                        imagen: "/img/tecnologia_expressjs.png",
-                        nivel: "3"
+                        name: "Express.js",
+                        image: "/img/tecnologia_expressjs.png",
+                        level: "3",
+                        web: "https://expressjs.com"
                     }, {
-                        nombre: "Mongoose",
-                        imagen: "/img/tecnologia_mongoose.png",
-                        nivel: "2"
+                        name: "Mongoose",
+                        image: "/img/tecnologia_mongoose.png",
+                        level: "2",
+                        web: "https://mongoosejs.com"
                     }, {
-                        nombre: "Symfony",
-                        imagen: "/img/tecnologia_symfony.png",
-                        nivel: "2"
+                        name: "Symfony",
+                        image: "/img/tecnologia_symfony.png",
+                        level: "2",
+                        web: "https://symfony.es"
                     }, {
-                        nombre: "Laravel",
-                        imagen: "/img/tecnologia_laravel.png",
-                        nivel: "3"
+                        name: "Laravel",
+                        image: "/img/tecnologia_laravel.png",
+                        level: "3",
+                        web: "https://laravel.com"
                     }, {
-                        nombre: "Lumen",
-                        imagen: "/img/tecnologia_lumen.png",
-                        nivel: "3"
+                        name: "Lumen",
+                        image: "/img/tecnologia_lumen.png",
+                        level: "3",
+                        web: "https://lumen.laravel.com"
                     }, {
-                        nombre: "Spring",
-                        imagen: "/img/tecnologia_spring.png",
-                        nivel: "1"
+                        name: "Spring",
+                        image: "/img/tecnologia_spring.png",
+                        level: "1",
+                        web: "https://spring.io"
                     }, {
-                        nombre: "Doctrine",
-                        imagen: "/img/tecnologia_doctrine.png",
-                        nivel: "2"
+                        name: "Doctrine",
+                        image: "/img/tecnologia_doctrine.png",
+                        level: "2",
+                        web: "https://www.doctrine-project.org"
                     }, {
-                        nombre: "Hibernate",
-                        imagen: "/img/tecnologia_hibernate.png",
-                        nivel: "1"
+                        name: "Hibernate",
+                        image: "/img/tecnologia_hibernate.png",
+                        level: "1",
+                        web: "http://hibernate.org"
                     }, {
-                        nombre: "Selenium Webdriver",
-                        imagen: "/img/tecnologia_selenium.png",
-                        nivel: "3"
+                        name: "Selenium Webdriver",
+                        image: "/img/tecnologia_selenium.png",
+                        level: "3",
+                        web: "https://www.seleniumhq.org/projects/webdriver"
                     }, {
-                        nombre: "Django",
-                        imagen: "/img/tecnologia_django.png",
-                        nivel: "1"
+                        name: "Django",
+                        image: "/img/tecnologia_django.png",
+                        level: "1",
+                        web: "https://www.djangoproject.com"
                     }, {
-                        nombre: "Vue.js",
-                        imagen: "/img/tecnologia_vuejs.png",
-                        nivel: "1"
+                        name: "Vue.js",
+                        image: "/img/tecnologia_vuejs.png",
+                        level: "1",
+                        web: "https://vuejs.org"
                     }, {
-                        nombre: "JavaServer Faces (jsf)",
-                        imagen: "/img/tecnologia_jsf.png",
-                        nivel: "1"
+                        name: "JavaServer Faces (jsf)",
+                        image: "/img/tecnologia_jsf.png",
+                        level: "1"
                     }, {
-                        nombre: "PrimeFaces",
-                        imagen: "/img/tecnologia_primeFaces.png",
-                        nivel: "1"
+                        name: "PrimeFaces",
+                        image: "/img/tecnologia_primeFaces.png",
+                        level: "1",
+                        web: "https://www.primefaces.org"
                     }, {
-                        nombre: "Swagger",
-                        imagen: "/img/tecnologia_swagger.png",
-                        nivel: "3"
+                        name: "Swagger",
+                        image: "/img/tecnologia_swagger.png",
+                        level: "3",
+                        web: "https://swagger.io"
                     }
                 ]
             }, {
                 tipo: "Diseño web",
                 lista: [
                     {
-                        nombre: "CSS3",
-                        imagen: "/img/tecnologia_css3.png",
-                        nivel: "2"
+                        name: "CSS3",
+                        image: "/img/tecnologia_css3.png",
+                        level: "2"
                     }, {
-                        nombre: "Sass",
-                        imagen: "/img/tecnologia_sass.png",
-                        nivel: "2"
+                        name: "Sass",
+                        image: "/img/tecnologia_sass.png",
+                        level: "2",
+                        web: "https://sass-lang.com"
                     }, {
-                        nombre: "Bootstrap",
-                        imagen: "/img/tecnologia_bootstrap.png",
-                        nivel: "3"
+                        name: "Bootstrap",
+                        image: "/img/tecnologia_bootstrap.png",
+                        level: "3",
+                        web: "https://getbootstrap.com"
                     }, {
-                        nombre: "Font Awesome",
-                        imagen: "/img/tecnologia_fontAwesome.png",
-                        nivel: "3"
+                        name: "Font Awesome",
+                        image: "/img/tecnologia_fontAwesome.png",
+                        level: "3",
+                        web: "https://fontawesome.com"
                     }
                 ]
             }, {
                 tipo: "Motores de Plantillas",
                 lista: [
                     {
-                        nombre: "Pug",
-                        imagen: "/img/tecnologia_pug.png",
-                        nivel: "3"
+                        name: "Pug",
+                        image: "/img/tecnologia_pug.png",
+                        level: "3",
+                        web: "https://pugjs.org"
                     }
                 ]
             }, {
                 tipo: "Bases de datos",
                 lista: [
                     {
-                        nombre: "MySQL",
-                        imagen: "/img/tecnologia_mysql.png",
-                        nivel: "2"
+                        name: "MySQL",
+                        image: "/img/tecnologia_mysql.png",
+                        level: "2",
+                        web: "https://www.mysql.com"
                     }, {
-                        nombre: "PostgreSQL",
-                        imagen: "/img/tecnologia_postgresql.png",
-                        nivel: "1"
+                        name: "PostgreSQL",
+                        image: "/img/tecnologia_postgresql.png",
+                        level: "1",
+                        web: "https://www.postgresql.org"
                     }, {
-                        nombre: "Oracle",
-                        imagen: "/img/tecnologia_oracle.png",
-                        nivel: "1"
+                        name: "Oracle",
+                        image: "/img/tecnologia_oracle.png",
+                        level: "1",
+                        web: "https://www.oracle.com/es/database"
                     }, {
-                        nombre: "MongoDB",
-                        imagen: "/img/tecnologia_mongodb.png",
-                        nivel: "3"
+                        name: "MongoDB",
+                        image: "/img/tecnologia_mongodb.png",
+                        level: "3",
+                        web: "https://www.mongodb.com/es"
                     }
                 ]
             }, {
                 tipo: "Sistemas de control de versiones",
                 lista: [
                     {
-                        nombre: "Git",
-                        imagen: "/img/tecnologia_git.png",
-                        nivel: "2"
+                        name: "Git",
+                        image: "/img/tecnologia_git.png",
+                        level: "2",
+                        web: "https://git-scm.com"
                     }, {
-                        nombre: "Subversion",
-                        imagen: "/img/tecnologia_subversion.png",
-                        nivel: "2"
+                        name: "Subversion",
+                        image: "/img/tecnologia_subversion.png",
+                        level: "2",
+                        web: "https://subversion.apache.org"
                     }
                 ]
             }, {
                 tipo: "Herramientas de Gestión de Proyectos",
                 lista: [
                     {
-                        nombre: "Jira",
-                        imagen: "/img/tecnologia_jira.png",
-                        nivel: "3"
+                        name: "Jira",
+                        image: "/img/tecnologia_jira.png",
+                        level: "3",
+                        web: "https://es.atlassian.com/software/jira"
                     }, {
-                        nombre: "Redmine",
-                        imagen: "/img/tecnologia_redmine.png",
-                        nivel: "3"
+                        name: "Redmine",
+                        image: "/img/tecnologia_redmine.png",
+                        level: "3",
+                        web: "https://www.redmine.org"
                     }, {
-                        nombre: "Mantis",
-                        imagen: "/img/tecnologia_mantis.png",
-                        nivel: "3"
+                        name: "Mantis",
+                        image: "/img/tecnologia_mantis.png",
+                        level: "3",
+                        web: "https://www.mantisbt.org"
                     }, {
-                        nombre: "SpiraTeam",
-                        imagen: "/img/tecnologia_spiraTeam.png",
-                        nivel: "3"
+                        name: "SpiraTeam",
+                        image: "/img/tecnologia_spiraTeam.png",
+                        level: "3",
+                        web: "https://www.inflectra.com/SpiraTeam"
                     }
                 ]
             }, {
                 tipo: "Herramientas de Gestión de la Configuración",
                 lista: [
                     {
-                        nombre: "NPM",
-                        imagen: "/img/tecnologia_npm.png",
-                        nivel: "2"
+                        name: "NPM",
+                        image: "/img/tecnologia_npm.png",
+                        level: "2",
+                        web: "https://www.npmjs.com"
                     }, {
-                        nombre: "Bower",
-                        imagen: "/img/tecnologia_bower.png",
-                        nivel: "2"
+                        name: "Bower",
+                        image: "/img/tecnologia_bower.png",
+                        level: "2",
+                        web: "https://bower.io"
                     }, {
-                        nombre: "Composer",
-                        imagen: "/img/tecnologia_composer.png",
-                        nivel: "1"
+                        name: "Composer",
+                        image: "/img/tecnologia_composer.png",
+                        level: "1",
+                        web: "https://getcomposer.org"
                     }, {
-                        imagen: "/img/tecnologia_maven.png",
-                        nombre: "Maven",
-                        nivel: "1"
+                        name: "Maven",
+                        image: "/img/tecnologia_maven.png",
+                        level: "1",
+                        web: "https://maven.apache.org"
                     }, {
-                        nombre: "Brunch",
-                        imagen: "/img/tecnologia_brunch.png",
-                        nivel: "2"
+                        name: "Brunch",
+                        image: "/img/tecnologia_brunch.png",
+                        level: "2",
+                        web: "https://brunch.io"
                     }, {
-                        nombre: "Laravel-mix",
-                        imagen: "/img/tecnologia_laravel-mix.png",
-                        nivel: "2"
+                        name: "Laravel-mix",
+                        image: "/img/tecnologia_laravel-mix.png",
+                        level: "2"
                     }, {
-                        nombre: "Jenkins",
-                        imagen: "/img/tecnologia_jenkins.png",
-                        nivel: "1"
+                        name: "Jenkins",
+                        image: "/img/tecnologia_jenkins.png",
+                        level: "1",
+                        web: "https://jenkins.io"
                     }, {
-                        nombre: "jMeter",
-                        imagen: "/img/tecnologia_jmeter.png",
-                        nivel: "1"
+                        name: "jMeter",
+                        image: "/img/tecnologia_jmeter.png",
+                        level: "1",
+                        web: "https://jmeter.apache.org"
                     }, {
-                        nombre: "HP LoadRunner",
-                        imagen: "/img/tecnologia_hpLoadRunner.png",
-                        nivel: "1"
+                        name: "HP LoadRunner",
+                        image: "/img/tecnologia_hpLoadRunner.png",
+                        level: "1"
                     }, {
-                        nombre: "SoapUI",
-                        imagen: "/img/tecnologia_soapui.png",
-                        nivel: "1"
+                        name: "SoapUI",
+                        image: "/img/tecnologia_soapui.png",
+                        level: "1",
+                        web: "https://www.soapui.org"
                     }, {
-                        nombre: "Source Tree (+ Git Flow)",
-                        imagen: "/img/tecnologia_sourceTree.png",
-                        nivel: "2"
+                        name: "Source Tree (+ Git Flow)",
+                        image: "/img/tecnologia_sourceTree.png",
+                        level: "2",
+                        web: "https://www.sourcetreeapp.com"
                     }, {
-                        nombre: "JSHint",
-                        imagen: "/img/tecnologia_jshint.png",
-                        nivel: "1"
+                        name: "JSHint",
+                        image: "/img/tecnologia_jshint.png",
+                        level: "1",
+                        web: "https://jshint.com"
                     }, {
-                        nombre: "TestNG",
-                        imagen: "/img/tecnologia_testng.png",
-                        nivel: "1"
+                        name: "TestNG",
+                        image: "/img/tecnologia_testng.png",
+                        level: "1",
+                        web: "https://testng.org"
                     }
                 ]
             }
@@ -1155,7 +1308,7 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
         idiomas: [
             {
                 nombre: "Inglés",
-                nivel: "B1",
+                level: "B1",
                 descripcion: "Acreditación de nivel B1 por el Instituto de idiomas de la Universidad de Sevilla.",
                 fecha: "2012",
                 imagen: "/img/estudios_us.png"
