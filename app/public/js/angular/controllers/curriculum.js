@@ -22,7 +22,8 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 desde: "07/2018",
                 hasta: "Actualidad",
                 puesto: "Desarrollador Web",
-                empresa: "Profile Software Services",
+                name: "Profile Software Services",
+                web: "https://profile.es",
                 proyectos: [
                     {
                         nombre: "Aplicación Web para el Portal de Contratación de Sanitas",
@@ -75,10 +76,12 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 desde: "10/2016",
                 hasta: "07/2018",
                 puesto: "Consultor",
-                empresa: "SIAG Consulting",
+                name: "SIAG Consulting",
+                web: "https://siagconsulting.es",
                 clientes: [
                     {
                         nombre: "GMV",
+                        web: "https://www.gmv.com/es",
                         imagen: "/img/empresa_gmv.png",
                         desde: "10/2016",
                         hasta: "07/2018",
@@ -371,7 +374,7 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 desde: "07/2016",
                 hasta: "10/2016",
                 puesto: "Desarrollador Web",
-                empresa: "AUGE Digital",
+                name: "AUGE Digital",
                 proyectos: [
                     {
                         nombre: "Portal del Investigador de Universitas XXI - Investigación",
@@ -423,7 +426,8 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 desde: "05/2016",
                 hasta: "07/2016",
                 puesto: "Consultor",
-                empresa: "Aertis",
+                name: "Aertis",
+                web: "http://www.aertis.es",
                 clientes: [
                     {
                         nombre: "AUGE Digital",
@@ -474,7 +478,7 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 desde: "01/2016",
                 hasta: "03/2016",
                 puesto: "Desarrollador",
-                empresa: "Innopro Advanced",
+                name: "Innopro Advanced",
                 proyectos: [
                     {
                         nombre: "Certificaciones TIC",
@@ -518,7 +522,8 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 desde: "12/2014",
                 hasta: "12/2015",
                 puesto: "Tester",
-                empresa: "Sopra Steria",
+                name: "Sopra Steria",
+                web: "https://www.soprasteria.es/es",
                 proyectos: [
                     {
                         nombre: "Gestión de Calidad sobre aplicaciones para la CMAOT",
@@ -575,7 +580,8 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                 desde: "02/2014",
                 hasta: "05/2014",
                 puesto: "Desarrollador",
-                empresa: "Guadaltel",
+                name: "Guadaltel",
+                web: "https://www.guadaltel.com",
                 proyectos: [
                     {
                         nombre: "Proyecto Interno de Investigación",
