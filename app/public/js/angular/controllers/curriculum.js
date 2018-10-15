@@ -526,7 +526,7 @@ angular.module('jmlp').controller('CurriculumController', function ($scope, $loc
                             "la Consejería de Medio Ambiente y Ordenación del Territorio",
                         desde: "12/2014",
                         hasta: "12/2015",
-                        carpuestogo: "Tester",
+                        puesto: "Tester",
                         tecnologias: [
                             {
                                 imagen: "/img/tecnologia_spiraTeam.png",
