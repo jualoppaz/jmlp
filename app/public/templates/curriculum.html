@@ -10,7 +10,7 @@
     <h1 class="col-xs-12"><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
     <hr class="col-xs-12 without-lateral-padding">
     <ul class="media-list col-xs-12 without-lateral-padding">
-        <li class="media" ng-repeat="formacion in curriculum.formacionAcademica">
+        <li class="media" ng-repeat="formacion in curriculum.curriculum.formacionAcademica">
             <div class="media-left media-middle">
                 <a ng-href="#">
                     <img class="media-object main-image" ng-src="{{formacion.imagen}}">
@@ -20,7 +20,7 @@
                 <h4><b>{{formacion.desde}} - {{formacion.hasta}}</b></h4>
                 <a class="media-heading" ng-bind-template="{{formacion.descripcion}}"></a>
                 <br />
-                Si quieres ver mis notas en la Universidad consulta mi <a ng-href="expediente-academico" class="expediente-academico">Expediente
+                Si quieres ver mis notas en la Universidad consulta mi <a ui-sref="expediente-academico" class="expediente-academico">Expediente
                     académico</a>
             </div>
         </li>
@@ -28,7 +28,7 @@
     <h1 class="col-xs-12"><i class="fa fa-briefcase"></i>&nbsp;Experiencia Profesional</h1>
     <hr class="col-xs-12 without-lateral-padding">
     <ul class="media-list col-xs-12 without-lateral-padding">
-        <li class="media" ng-repeat="experiencia in curriculum.experienciaProfesional">
+        <li class="media" ng-repeat="experiencia in curriculum.curriculum.experienciaProfesional">
             <div class="media-left">
                 <a ng-href="{{experiencia.web}}" target="_blank">
                     <img class="media-object main-image" ng-src="{{experiencia.imagen}}">
@@ -119,7 +119,7 @@
     <h1 class="col-xs-12"><i class="fa fa-university"></i>&nbsp;Formación Complementaria</h1>
     <hr class="col-xs-12">
     <ul class="media-list col-xs-12 without-lateral-padding">
-        <li class="media" ng-repeat="formacion in curriculum.formacionComplementaria">
+        <li class="media" ng-repeat="formacion in curriculum.curriculum.formacionComplementaria">
             <div class="media-left media-middle">
                 <a ng-href="docs/{{formacion.certificado}}" target="_blank">
                     <img class="media-object main-image" ng-src="{{formacion.imagen}}" title="Ver certificado">
@@ -134,7 +134,7 @@
     <h1 class="col-xs-12"><i class="fa fa-code-fork"></i>&nbsp;Proyectos</h1>
     <hr class="col-xs-12">
     <ul class="media-list col-xs-12 without-lateral-padding">
-        <li class="media" ng-repeat="proyecto in curriculum.proyectos">
+        <li class="media" ng-repeat="proyecto in curriculum.curriculum.proyectos">
             <div class="media-left">
                 <a ng-href="#">
                     <img class="media-object main-image" ng-class="{'img-circle': proyecto.bordeImagen == 'img-circle'}"
@@ -162,7 +162,7 @@
     </ul>
     <h1 class="col-xs-12"><i class="fa fa-book"></i>&nbsp;Conocimientos</h1>
     <hr class="col-xs-12 without-lateral-padding">
-    <ul class="media-list col-xs-12 without-lateral-padding" ng-repeat="conocimientos in curriculum.conocimientos">
+    <ul class="media-list col-xs-12 without-lateral-padding" ng-repeat="conocimientos in curriculum.curriculum.conocimientos">
         <h3>
             <i class="fa fa-code" ng-show="conocimientos.tipo == 'Lenguajes de programación'"></i>
             <i class="fa fa-puzzle-piece" ng-show="conocimientos.tipo == 'Frameworks'"></i>
@@ -207,7 +207,7 @@
     <h1 class="col-xs-12"><i class="fa fa-users"></i>&nbsp;Idiomas</h1>
     <hr class="col-xs-12 without-lateral-padding">
     <ul class="media-list col-xs-12 without-lateral-padding">
-        <li class="media" ng-repeat="idioma in curriculum.idiomas">
+        <li class="media" ng-repeat="idioma in curriculum.curriculum.idiomas">
             <div class="media-left">
                 <a ng-href="#">
                     <img class="media-object main-image" ng-src="{{idioma.imagen}}">

@@ -6,7 +6,7 @@ nav.navbar.navbar-fixed-top.navbar-default(role="navigation")
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
-            a(href="/").navbar-brand.middle Inicio
+            a(ui-sref="home").navbar-brand.middle Inicio
             //ul.nav.navbar-nav.navbar-right.hidden-lg.hidden-md.hidden-sm
                 li(style="float: right; padding-right: 15px")
                     a(href="https://twitter.com/pronostigolesp", target="_blank", ng-cloak)
@@ -19,7 +19,7 @@ nav.navbar.navbar-fixed-top.navbar-default(role="navigation")
                 //li
                     a(ng-href="contacto") Contacto
                 li
-                    a(ng-href="curriculum") Curr&iacute;culum
+                    a(ui-sref="curriculum") Curr&iacute;culum
                 //li.hidden-lg.hidden-md.hidden-sm(ng-show="usuarioEstaLogueado == false")
                     a(ng-href="login") Entrar
                 li.hidden-lg.hidden-md.hidden-sm(ng-show="usuarioEstaLogueado")

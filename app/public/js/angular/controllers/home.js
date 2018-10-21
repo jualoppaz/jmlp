@@ -1,5 +1,4 @@
-angular.module('jmlp').controller('HomeController', function ($scope, $http) {
-
+angular.module("jmlp").controller("HomeController", function($scope, $http) {
     $scope.$parent.title = "Bienvenido";
 
     /*
@@ -16,15 +15,14 @@ angular.module('jmlp').controller('HomeController', function ($scope, $http) {
 
     $scope.temas = [];
 
-    $http.get('/api/temas')
-        .success(function(data){
-
+    $http
+        .get("/api/temas")
+        .then(function(data) {
             console.log(data);
 
             $scope.temas = data;
         })
-        .error(function(data){
+        .catch(function(data) {
             console.log(data);
         });
-
 });

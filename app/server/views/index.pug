@@ -9,12 +9,15 @@ html(ng-app="jmlp", ng-controller="LoguedUserController")
         link(rel="stylesheet", type="text/css", href="/css/jmlp.css")
         script(src="js/jquery.js", type="text/javascript")
         script(src="js/angular.js", type="text/javascript")
+        script(src="js/angular/modules/definitions.js")
+        script(src="js/angular-ui-router.js")
         script(src="js/angular-route.js", type="text/javascript")
         script(src="js/angular-filter.js", type="text/javascript")
         script(src="js/satellizer.js", type="text/javascript")
         script(src="js/bootstrap.js", type="text/javascript")
         script(src="js/ui-bootstrap-tpls-0.11.2.js", type="text/javascript")
         script(src="js/angular/services.js", type="text/javascript")
+        script(src="js/angular/router/router.js")
         script(src="js/angular/app.js", type="text/javascript")
         script(src="js/angular/controllers/loguedUser.js", type="text/javascript")
         script(src="js/angular/controllers/home.js", type="text/javascript")
@@ -37,11 +40,11 @@ html(ng-app="jmlp", ng-controller="LoguedUserController")
                 parallax();
             });
 
-        base(href="/")
+        //base(href="/")
     body
 
         include partials/navbar
 
-        div.ng-view.container
+        main.container(ui-view="main")
 
         include partials/footer
