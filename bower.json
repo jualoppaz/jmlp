@@ -1,0 +1,13 @@
+{
+    "name": "jmlp",
+    "description": "Página web personal de Juan Manuel López Pazos.",
+    "main": "app.js",
+    "authors": ["Juan Manuel López Pazos"],
+    "license": "ISC",
+    "homepage": "http://www.juanmanuellopezpazos.es",
+    "private": true,
+    "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+    "dependencies": {
+        "angular-ui-router": "^1.0.20"
+    }
+}
