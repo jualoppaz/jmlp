@@ -13,12 +13,12 @@
   "author": "Juan Manuel López Pazos",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.0",
+    "body-parser": "^1.18.3",
     "bower": "^1.8.4",
-    "express": "^4.13.4",
+    "express": "^4.16.4",
     "jwt-simple": "^0.4.1",
-    "method-override": "^2.3.5",
-    "mongoose": "^4.4.3",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.17",
     "path": "^0.12.7",
     "pug": "^2.0.3",
     "satellizer": "^0.13.4"
