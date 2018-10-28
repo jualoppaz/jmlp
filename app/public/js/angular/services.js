@@ -1,86 +1,80 @@
-var services = angular.module('services', []);
+var services = angular.module("services");
 
-services.service('UserService', ['$http', function($http){
+services.service("UserService", [
+    "$http",
+    function($http) {
+        this.solicitarUsuario = function() {
+            return $http.get("/api/user");
+        };
+    }
+]);
 
-    this.solicitarUsuario = function(){
-        return $http.get('/api/user');
-    };
+services.service("LoginService", [
+    "$http",
+    function($http, $q, $auth, $location) {
+        this.hacerLogin = function(form) {
+            return $http.post("/api/login", form);
+        };
 
-}]);
+        this.loginRealizado = function($q, $auth, $location) {
+            var defered = $q.defer();
 
-services.service('LoginService', ['$http', function($http, $q, $auth, $location){
+            if ($auth.isAuthenticated()) {
+                defered.resolve($auth.isAuthenticated());
+            } else {
+                defered.reject($auth.isAuthenticated());
+            }
 
-    this.hacerLogin = function(form){
-        return $http.post('/api/login', form);
-    };
+            return defered.promise;
+        };
+    }
+]);
 
-    this.loginRealizado = function($q, $auth, $location){
-        var defered = $q.defer();
+services.service("VariosService", [
+    function() {
+        this.traducirDia = function(dia) {
+            var res = "";
 
-        if($auth.isAuthenticated()){
-            defered.resolve($auth.isAuthenticated());
-        }else{
-            defered.reject($auth.isAuthenticated());
+            if (dia == "Monday") {
+                res = "Lunes";
+            } else if (dia == "Tuesday") {
+                res = "Martes";
+            } else if (dia == "Wednesday") {
+                res = "Miércoles";
+            } else if (dia == "Thursday") {
+                res = "Jueves";
+            } else if (dia == "Friday") {
+                res = "Viernes";
+            } else if (dia == "Saturday") {
+                res = "Sábado";
+            } else if (dia == "Sunday") {
+                res = "Domingo";
+            } else {
+                res = "-";
+            }
 
-        }
+            return res;
+        };
 
-        return defered.promise;
-    };
+        this.jsonVacio = function(json) {
+            var res = Object.keys(json).length == 0;
+            console.log("Vacio: " + res);
+            return res;
+        };
 
-}]);
+        this.apuestaRealizada = function(ticket) {
+            var res = false;
 
-services.service('VariosService', [function(){
+            console.log(JSON.stringify(ticket));
 
-    this.traducirDia = function(dia){
-
-        var res = "";
-
-        if(dia == "Monday"){
-            res = "Lunes";
-        }else if(dia == "Tuesday"){
-            res = "Martes";
-        }else if(dia == "Wednesday"){
-            res = "Miércoles";
-        }else if(dia == "Thursday"){
-            res = "Jueves";
-        }else if(dia == "Friday"){
-            res = "Viernes";
-        }else if(dia == "Saturday"){
-            res = "Sábado";
-        }else if(dia == "Sunday"){
-            res = "Domingo";
-        }else{
-            res = "-";
-        }
-
-        return res;
-    };
-
-    this.jsonVacio = function(json){
-
-        var res = Object.keys(json).length == 0;
-        console.log("Vacio: " + res);
-        return res;
-    };
-
-    this.apuestaRealizada = function(ticket){
-        var res = false;
-
-        console.log(JSON.stringify(ticket));
-
-        if(ticket != null){
-            if(ticket.apuestas != null){
-                if(ticket.apuestas.combinaciones.length > 0){
-                    res = true;
+            if (ticket != null) {
+                if (ticket.apuestas != null) {
+                    if (ticket.apuestas.combinaciones.length > 0) {
+                        res = true;
+                    }
                 }
             }
-        }
-        return res;
+            return res;
+        };
     }
-
-}]);
-
-
-
-
-
+]);
