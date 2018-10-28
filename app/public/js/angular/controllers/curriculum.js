@@ -25,7 +25,6 @@ angular
                     imagen: "/img/empresa_profile.png",
                     desde: "07/2018",
                     hasta: "Actualidad",
-                    puesto: "Desarrollador Web",
                     name: "Profile Software Services",
                     web: "https://profile.es",
                     proyectos: [
@@ -103,7 +102,6 @@ angular
                     imagen: "/img/empresa_siag.png",
                     desde: "10/2016",
                     hasta: "07/2018",
-                    puesto: "Consultor",
                     name: "SIAG Consulting",
                     web: "https://siagconsulting.es",
                     clientes: [
@@ -580,7 +578,6 @@ angular
                     imagen: "/img/empresa_augeDigital.png",
                     desde: "07/2016",
                     hasta: "10/2016",
-                    puesto: "Desarrollador Web",
                     name: "AUGE Digital",
                     proyectos: [
                         {
@@ -652,7 +649,6 @@ angular
                     imagen: "/img/empresa_aertis.png",
                     desde: "05/2016",
                     hasta: "07/2016",
-                    puesto: "Consultor",
                     name: "Aertis",
                     web: "http://www.aertis.es",
                     clientes: [
@@ -724,7 +720,6 @@ angular
                     imagen: "/img/empresa_innopro.png",
                     desde: "01/2016",
                     hasta: "03/2016",
-                    puesto: "Desarrollador",
                     name: "Innopro Advanced",
                     proyectos: [
                         {
@@ -782,7 +777,6 @@ angular
                     imagen: "/img/empresa_sopra.png",
                     desde: "12/2014",
                     hasta: "12/2015",
-                    puesto: "Tester",
                     name: "Sopra Steria",
                     web: "https://www.soprasteria.es/es",
                     proyectos: [
@@ -867,7 +861,6 @@ angular
                     imagen: "/img/empresa_guadaltel.png",
                     desde: "02/2014",
                     hasta: "05/2014",
-                    puesto: "Desarrollador",
                     name: "Guadaltel",
                     web: "https://www.guadaltel.com",
                     proyectos: [
@@ -875,7 +868,7 @@ angular
                             nombre: "Proyecto Interno de Investigación",
                             desde: "02/2014",
                             hasta: "05/2014",
-                            puesto: "Desarrollador",
+                            puesto: "Desarrollador Web",
                             technologies: [
                                 {
                                     image: "/img/tecnologia_java.png",

@@ -36,7 +36,7 @@
             </div>
             <div class="media-body">
                 <h4 ng-class="{'title-job-centered': !experiencia.descripcion}"><b>{{experiencia.desde}} -
-                        {{experiencia.hasta}}: {{experiencia.puesto}}</b> en <b>{{experiencia.name}}</b></h4>
+                        {{experiencia.hasta}}: {{experiencia.name}}</b></h4>
                 <a class="media-heading" ng-show="experiencia.descripcion" ng-bind-template="{{experiencia.descripcion}}"></a>
                 <!-- Seccion para mostrar colaboraciones en clientes -->
                 <div ng-repeat="cliente in experiencia.clientes">
