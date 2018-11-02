@@ -5,7 +5,6 @@ exports.config = {
     conventions: {
         ignored: [
             /^app(\/|\\)angular(\/|\\)styles(\/|\\).*_.*\.scss$/,
-            /^app(\/|\\)public-old/,
             /^app(\/|\\)server/
         ]
     },
