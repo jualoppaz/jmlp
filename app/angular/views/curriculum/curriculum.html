@@ -1,0 +1,223 @@
+<section class="container">
+    <h3 class="pdf">Consultar en Formato PDF
+        <a ng-href="/docs/Curriculum.pdf" target="_blank" title="Visualizar">
+            <i class="far fa-file-pdf"></i>
+        </a>
+        <a ng-href="/docs/Curriculum.pdf" target="_self" download title="Descargar">
+            <i class="fa fa-download"></i>
+        </a>
+    </h3>
+    <h1 class="col-xs-12"><i class="fa fa-graduation-cap"></i>&nbsp;Formaci&oacute;n Acad&eacute;mica</h1>
+    <hr class="col-xs-12 without-lateral-padding">
+    <ul class="media-list col-xs-12 without-lateral-padding">
+        <li class="media" ng-repeat="formacion in curriculum.curriculum.formacionAcademica">
+            <div class="media-left media-middle">
+                <a ng-href="#">
+                    <img class="media-object main-image" ng-src="{{formacion.imagen}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4><b>{{formacion.desde}} - {{formacion.hasta}}</b></h4>
+                <a class="media-heading" ng-bind-template="{{formacion.descripcion}}"></a>
+                <br />
+                Si quieres ver mis notas en la Universidad consulta mi <a ui-sref="curriculum.expediente-academico"
+                    class="expediente-academico">Expediente
+                    académico</a>
+            </div>
+        </li>
+    </ul>
+    <h1 class="col-xs-12"><i class="fa fa-briefcase"></i>&nbsp;Experiencia Profesional</h1>
+    <hr class="col-xs-12 without-lateral-padding">
+    <ul class="media-list col-xs-12 without-lateral-padding">
+        <li class="media" ng-repeat="experiencia in curriculum.curriculum.experienciaProfesional">
+            <div class="media-left">
+                <a ng-href="{{experiencia.web}}" target="_blank">
+                    <img class="media-object main-image" ng-src="{{experiencia.imagen}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 ng-class="{'title-job-centered': !experiencia.descripcion}"><b>{{experiencia.desde}} -
+                        {{experiencia.hasta}}: {{experiencia.name}}</b></h4>
+                <a class="media-heading" ng-show="experiencia.descripcion" ng-bind-template="{{experiencia.descripcion}}"></a>
+                <!-- Seccion para mostrar colaboraciones en clientes -->
+                <div ng-repeat="cliente in experiencia.clientes">
+                    <div class="media-left">
+                        <a ng-href="{{cliente.web}}" target="_blank">
+                            <img class="media-object secondary-image" ng-src="{{cliente.imagen}}">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4><b>{{cliente.desde}} - {{cliente.hasta}}</b></h4>
+                        <a class="media-heading" ng-show="cliente.descripcion" ng-bind-template="{{cliente.descripcion}}"></a>
+                    </div>
+                    <h3 class="proyectos-cliente" ng-show="cliente.proyectos">Proyectos</h3>
+                    <div class="proyecto-cliente" ng-repeat="proyecto in cliente.proyectos">
+                        <div class="custom-line">
+                            <b>
+                                <a ng-bind-template="{{proyecto.nombre}}: "></a>
+                                <a ng-bind-template="{{proyecto.desde}} - {{proyecto.hasta}}"></a>
+                            </b>
+                        </div>
+                        <div class="custom-line" ng-if="proyecto.descripcion">
+                            <p ng-bind="proyecto.descripcion"></p>
+                        </div>
+                        <div class="custom-line">
+                            <a>Puesto: </a>
+                            <a ng-bind="proyecto.puesto"></a>
+                        </div>
+                        <div ng-show="proyecto.technologies" class="custom-line technologies">
+                            <a class="pull-left title">Tecnologías utilizadas:</a>
+                            <div class="technologies-list">
+                                <a ng-href="{{technology.web}}" target="_blank" ng-repeat="technology in proyecto.technologies">
+                                    <img title="{{technology.name}}" class="col-xs-4 img-responsive img-thumbnail technology"
+                                        ng-src="{{technology.image}}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="custom-line functions-title">
+                            Funciones:
+                        </div>
+                        <ul class="list-group functions-list">
+                            <li class="list-group-item" ng-repeat="funcion in proyecto.funciones" ng-bind="funcion.nombre"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Seccion para mostrar proyectos de la empresa -->
+            <h3 class="proyectos-empresa" ng-show="experiencia.proyectos">Proyectos</h3>
+            <div ng-repeat="proyecto in experiencia.proyectos">
+                <div class="custom-line">
+                    <b>
+                        <a ng-bind-template="{{proyecto.nombre}}: "></a>
+                        <a ng-bind-template="{{proyecto.desde}} - {{proyecto.hasta}}"></a>
+                    </b>
+                </div>
+                <div class="custom-line" ng-if="proyecto.descripcion">
+                    <p ng-bind="proyecto.descripcion"></p>
+                </div>
+                <div class="custom-line">
+                    <a>Puesto: </a>
+                    <a ng-bind="proyecto.puesto"></a>
+                </div>
+                <div ng-show="proyecto.technologies" class="technologies">
+                    <a class="pull-left title">Tecnologías utilizadas:</a>
+                    <div class="technologies-list">
+                        <a ng-href="{{technology.web}}" target="_blank" ng-repeat="technology in proyecto.technologies">
+                            <img title="{{technology.name}}" class="col-xs-4 img-responsive img-thumbnail technology"
+                                ng-src="{{technology.image}}">
+                        </a>
+                    </div>
+                </div>
+                <div class="custom-line functions-title">
+                    <a>Funciones:</a>
+                </div>
+                <ul class="list-group functions-list">
+                    <li class="list-group-item" ng-repeat="funcion in proyecto.funciones" ng-bind="funcion.nombre"></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <h1 class="col-xs-12"><i class="fa fa-university"></i>&nbsp;Formación Complementaria</h1>
+    <hr class="col-xs-12">
+    <ul class="media-list col-xs-12 without-lateral-padding">
+        <li class="media" ng-repeat="formacion in curriculum.curriculum.formacionComplementaria">
+            <div class="media-left media-middle">
+                <a ng-href="docs/{{formacion.certificado}}" target="_blank">
+                    <img class="media-object main-image" ng-src="{{formacion.imagen}}" title="Ver certificado">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4><b>{{formacion.fecha}}</b></h4>
+                <a class="media-heading">{{formacion.descripcion}}</a>
+            </div>
+        </li>
+    </ul>
+    <h1 class="col-xs-12"><i class="fa fa-code-fork"></i>&nbsp;Proyectos</h1>
+    <hr class="col-xs-12">
+    <ul class="media-list col-xs-12 without-lateral-padding">
+        <li class="media" ng-repeat="proyecto in curriculum.curriculum.proyectos">
+            <div class="media-left">
+                <a ng-href="#">
+                    <img class="media-object main-image" ng-class="{'img-circle': proyecto.bordeImagen == 'img-circle'}"
+                        ng-src="{{proyecto.imagen}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4><b>{{proyecto.desde}} - {{proyecto.hasta}}: {{proyecto.resumen}}</b></h4>
+                <a class="media-heading col-xs-12 without-lateral-padding">{{proyecto.descripcion}}</a>
+                <div ng-show="proyecto.technologies" class="technologies col-xs-12 without-lateral-padding">
+                    <b class="pull-left title">Tecnologías utilizadas:</b>
+                    <div class="technologies-list">
+                        <a ng-href="{{technology.web}}" target="_blank" ng-repeat="technology in proyecto.technologies">
+                            <img title="{{technology.name}}" class="col-xs-4 img-responsive img-thumbnail technology"
+                                ng-src="{{technology.image}}">
+                        </a>
+                    </div>
+                </div>
+                <div ng-repeat="enlace in proyecto.enlaces | orderBy:'$index'" class="custom-line col-xs-12 without-lateral-padding">
+                    <b class="text-capitalize" ng-bind-template="{{enlace.tipo}}:"></b>
+                    <a ng-href="{{enlace.ruta}}" target="_blank">{{enlace.nombre}}</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h1 class="col-xs-12"><i class="fa fa-book"></i>&nbsp;Conocimientos</h1>
+    <hr class="col-xs-12 without-lateral-padding">
+    <ul class="media-list col-xs-12 without-lateral-padding" ng-repeat="conocimientos in curriculum.curriculum.conocimientos">
+        <h3>
+            <i class="fa fa-code" ng-show="conocimientos.tipo == 'Lenguajes de programación'"></i>
+            <i class="fa fa-puzzle-piece" ng-show="conocimientos.tipo == 'Frameworks'"></i>
+            <i class="fa fa-exchenge" ng-show="conocimientos.tipo == 'ORMs y ODMs'"></i>
+            <i class="fa fa-paint-brush" ng-show="conocimientos.tipo == 'Diseño web'"></i>
+            <i class="fa fa-sitemap" ng-show="conocimientos.tipo == 'Motores de Plantillas'"></i>
+            <i class="fa fa-files-o" ng-show="conocimientos.tipo == 'Gestores de contenido'"></i>
+            <i class="fa fa-database" ng-show="conocimientos.tipo == 'Bases de datos'"></i>
+            <i class="fa fa-share-alt" ng-show="conocimientos.tipo == 'Sistemas de control de versiones'"></i>
+            <i class="fa fa-calendar" ng-show="conocimientos.tipo == 'Herramientas de Gestión de Proyectos'"></i>
+            <i class="fa fa-cogs" ng-show="conocimientos.tipo == 'Herramientas de Gestión de la Configuración'"></i>
+            &nbsp;{{conocimientos.tipo}}
+        </h3>
+        <li class="media col-md-4 col-sm-6 col-xs-12" ng-repeat="conocimiento in conocimientos.lista">
+            <div class="media-left">
+                <a ng-href="{{conocimiento.web}}" target="_blank">
+                    <img class="media-object main-image" ng-src="{{conocimiento.image}}" title="{{conocimiento.name}}">
+                </a>
+            </div>
+            <div class="media-body media-middle">
+                <div class="progress" ng-show="conocimiento.level == 1">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="33.3" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 33.3%">
+                        <span class="">Básico</span>
+                    </div>
+                </div>
+                <div class="progress" ng-show="conocimiento.level == 2">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="66.6" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 66.6%">
+                        <span class="">Intermedio</span>
+                    </div>
+                </div>
+                <div class="progress" ng-show="conocimiento.level == 3">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 100%">
+                        <span class="">Avanzado</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h1 class="col-xs-12"><i class="fa fa-users"></i>&nbsp;Idiomas</h1>
+    <hr class="col-xs-12 without-lateral-padding">
+    <ul class="media-list col-xs-12 without-lateral-padding">
+        <li class="media" ng-repeat="idioma in curriculum.curriculum.idiomas">
+            <div class="media-left">
+                <a ng-href="#">
+                    <img class="media-object main-image" ng-src="{{idioma.imagen}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4><b>Nivel {{idioma.nivel}} en {{idioma.nombre}} ({{idioma.fecha}})</b></h4>
+                <a class="media-heading">{{idioma.descripcion}}</a>
+            </div>
+        </li>
+    </ul>
+</section>

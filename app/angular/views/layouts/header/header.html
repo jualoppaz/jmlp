@@ -1,0 +1,20 @@
+<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse"><span
+                    class="sr-only">Cambiar la navegación</span><span class="icon-bar"></span><span class="icon-bar"></span><span
+                    class="icon-bar"></span></button><a class="navbar-brand middle" ui-sref="home">Inicio</a>
+        </div>
+        <div class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="curriculum">Curr&iacute;culum</a></li>
+                <li class="hidden-lg hidden-md hidden-sm" ng-show="usuarioEstaLogueado"><a ng-href="#" ng-click="cerrarSesion()">Cerrar
+                        sesión</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li ng-show="isAuthenticated()" style="margin-left:15px" ng-cloak="ng-cloak"><a class="btn btn-qdb"
+                        href="/logout" role="button" ng-click="cerrarSesion()" id="entrar">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
