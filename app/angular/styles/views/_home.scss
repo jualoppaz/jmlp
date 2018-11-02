@@ -1,0 +1,409 @@
+/*
+        Tablets:        >= 768px;
+        Medium deviceS: >= 992px;
+        Large devices:  >= 1200px;
+*/
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+body {
+    padding-top: 60px;
+    background-color: white;
+    text-align: justify;
+}
+
+nav.navbar-default {
+    background-color: #2b2b2b;
+    border-color: #2b2b2b;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #eee;
+    border-top: 5px solid #2b2b2b;
+    border-bottom: 5px solid #2b2b2b;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-brand {
+    font-size: 22px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-size: 16px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #eee;
+    border-top: 5px solid green;
+}
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav>li>a:focus {
+    outline: none;
+}
+
+.parallax-window {
+    min-height: 600px;
+    background: transparent;
+}
+
+section {
+    background-color: white;
+}
+
+/* Parallax */
+
+.bg {
+    /*margin-top: -150px;*/
+    /* El segundo porcentaje mide a partir de que altura vertical se empieza a visualizar la imagen */
+    background: url("/images/pino_montano.jpg") 0% -140px no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    width: 100%;
+    /* Altura natural de la imagen, que no del div*/
+    min-height: 800px;
+    top: 0;
+    left: 0;
+    /* Comentamos esto para evitar que se rompan los href en la cabecera */
+    /*z-index: -1;*/
+}
+
+.bg div {
+    position: relative;
+}
+
+.bg div img {
+    margin: auto;
+    width: 180px;
+    height: 180px;
+    margin-top: 100px;
+    border: 4px solid white;
+}
+
+@media (min-width: 768px) {
+    .bg div img {
+        margin-top: 150px;
+    }
+}
+
+section {
+    font-family: arial;
+    width: 100%;
+    line-height: 20px;
+    font-size: 16px;
+    z-index: 10;
+}
+
+section h1:first-child {
+    padding-top: 15px;
+}
+
+div.bg+div {
+    /* distancia entre el section y el navbar */
+    /*margin-top: 470px;*/
+    margin-top: 600px;
+    background-color: white;
+    padding-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    div.bg+div {
+        margin-top: 500px;
+    }
+}
+
+@media (min-width: 992px) {
+    div.bg+div {
+        margin-top: 520px;
+    }
+}
+
+.bg div div h1,
+.bg div div h3 {
+    color: #fff;
+}
+
+div img.img-thumbnail {
+    border: none;
+}
+
+body>main.container {
+    margin-bottom: 20px;
+    background: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+}
+
+body>main.container:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+footer {
+    clear: both;
+}
+
+ul li a {
+    color: black;
+}
+
+ul li a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+div.custom-line:not(:first-of-type):not(.technologies):not(.functions-title) {
+    margin-top: 15px;
+}
+
+.custom-line {
+    overflow: auto;
+}
+
+img.main-image {
+    width: 80px;
+    height: 80px;
+}
+
+img.secondary-image {
+    width: 80px;
+    height: 80px;
+}
+
+div.media-body a[href]:hover,
+div.media-body a[ng-click]:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ul+h1 {
+    margin-top: 50px;
+}
+
+div.media-body a+div {
+    display: block;
+}
+
+div.media-body div.progress-bar {
+    margin-top: 0px;
+}
+
+.media:first-child {
+    margin-top: 15px;
+}
+
+/* Sticky footer - Inicio */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* El margin inferior del body debe coincidir con el height del footer */
+    /*margin-bottom: 165px;*/
+    margin-bottom: 56px;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 56px;
+    /* Estos 3 parámetros son para que la imagen de la página principal no se vea entre el body y el footer debido al Parallax */
+    background-color: #2b2b2b;
+    color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.footer div {
+    /* También es necesario para que la imagen de la página principal no se vea entre el section y el footer al hacer scroll */
+    background-color: #2b2b2b;
+}
+
+/* Sticky footer - Fin */
+
+.footer a {
+    color: white;
+}
+
+ul h1 {
+    padding-top: 15px;
+}
+
+div.login {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    margin-top: 15px;
+}
+
+.without-lateral-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+div.media-body div {
+    word-break: break-all;
+}
+
+div.media-body a {
+    text-align: justify;
+}
+
+.technologies-list {
+    clear: both;
+}
+
+@media (min-width: 768px) {
+    .technologies-list {
+        clear: none;
+    }
+    .technologies-list img.technology {
+        padding: 4px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+tr.text-center th {
+    text-align: center;
+}
+
+.label-fail {
+    background-color: #4000ff;
+    color: white;
+}
+
+.label-success {
+    background-color: #468847;
+}
+
+ul li a.expediente-academico {
+    font-weight: bold;
+}
+
+ul li a.expediente-academico:hover {
+    text-decoration: underline;
+}
+
+.contact-border {
+    border: 2px solid #2b2b2b;
+    border-radius: 4px;
+}
+
+div.contact {
+    padding-bottom: 20px;
+}
+
+textarea.mail-message {
+    resize: none;
+}
+
+.contact-panel {
+    padding: 15px;
+}
+
+.contact i {
+    color: #2b2b2b;
+}
+
+.contact i.fa-envelope-square:hover {
+    color: #b92c28;
+}
+
+.contact i.fa-github-square:hover {
+    color: #ccc;
+}
+
+.contact i.fa-linkedin:hover {
+    color: #069;
+}
+
+.white-background {
+    background-color: white;
+}
+
+.fa-file-pdf,
+.fa-download {
+    color: #b92c28;
+    cursor: pointer;
+}
+
+h3.pdf a:hover,
+h3.pdf a:visited,
+h3.pdf a:focus {
+    text-decoration: none;
+}
+
+a.no-decoration {
+    text-decoration: none;
+}
+
+/* CSS para letras del texto MEAN */
+
+a.mean span {
+    display: inline-block;
+}
+
+a.mean span.mongo {
+    color: #3e8f3e;
+}
+
+a.mean span.express {
+    color: #e38d13;
+}
+
+a.mean span.angular {
+    color: #d43f3a;
+}
+
+a.mean span.node {
+    color: #66cc33;
+}
+
+hr {
+    box-sizing: border-box;
+}
+
+.proyectos-cliente,
+.proyectos-empresa {
+    text-decoration: underline;
+}
+
+.title-job-centered {
+    margin-bottom: 40px;
+}
+
+.technologies .title {
+    padding-top: 12px;
+    margin-right: 15px;
+}
+
+.functions-list {
+    margin-top: 5px;
+}
+
+.technologies-list {
+    overflow: auto;
+}
+
+div.progress {
+    margin-bottom: 0;
+}
