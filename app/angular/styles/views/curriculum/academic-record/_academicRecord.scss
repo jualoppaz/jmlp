@@ -1,0 +1,28 @@
+main#academic-record {
+    section {
+        &>div {
+            table {
+                tbody {
+                    tr {
+                        &.text-center {
+                            th {
+                                text-align: center;
+                            }
+                        }
+                        td {
+                            span {
+                                &.label-fail {
+                                    background-color: #4000ff;
+                                    color: white;
+                                }
+                                &.label-success {
+                                    background-color: #468847;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

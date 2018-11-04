@@ -1,3 +1,9 @@
+/*
+        Tablets:        >= 768px;
+        Medium deviceS: >= 992px;
+        Large devices:  >= 1200px;
+*/
+
 // Librerías
 @import "lib/variables";
 @import "lib/global";
@@ -7,6 +13,7 @@
 @import "layouts/footer";
 @import "layouts/header";
 // Vistas
+@import "views/curriculum/academic-record/academicRecord";
 @import "views/curriculum/curriculum";
 @import "views/home";
 // CSS necesario al final
