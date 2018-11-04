@@ -17,7 +17,7 @@
                 },
                 parent: "layout"
             })
-            .state("curriculum.expediente-academico", {
+            .state("curriculum.academic-record", {
                 url: "/expediente-academico",
                 views: {
                     "main@": {

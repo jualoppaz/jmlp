@@ -40,9 +40,22 @@
         $urlRouterProvider.otherwise("/");
     }
 
-    function run($transitions) {
-        $transitions.onSuccess({}, function() {
+    run.$inject = ["$rootScope", "$transitions"];
+    function run($rootScope, $transitions) {
+        $transitions.onStart({}, onStart);
+        function onStart() {
+            $rootScope.loading = true;
+        }
+
+        $transitions.onSuccess({}, onSuccess);
+        function onSuccess(transition) {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
-        });
+
+            $rootScope.currentState = transition.to().name;
+            $rootScope.loading = false;
+        }
+
+        $transitions.onError({}, onError);
+        function onError() {}
     }
 })();
