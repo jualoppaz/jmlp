@@ -20,6 +20,9 @@ function createToken(user) {
 
 require("./routes/temas/api.js")(router);
 
+// API REST routes
+require("./routes")(router);
+
 router.post("/api/login", function(req, res) {
     var user = req.body;
 
