@@ -18,6 +18,25 @@ var findAllTechnologies = function(req, res) {
     });
 };
 
+var findTechnologyById = function(req, res) {
+    Technology.findById(req.params.technology_id, function(err, technology) {
+        if (err) {
+            return res.status(400).send(
+                JSON.stringify(
+                    {
+                        message: err
+                    },
+                    null,
+                    4
+                )
+            );
+        }
+
+        res.status(200).send(JSON.stringify(technology, null, 4));
+    });
+};
+
 module.exports = {
-    index: findAllTechnologies
+    index: findAllTechnologies,
+    show: findTechnologyById
 };
