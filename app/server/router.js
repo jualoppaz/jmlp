@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var jwt = require("jwt-simple");
 var config = require("./config");
+var path = require("path");
 
 function createToken(user) {
     var expire = new Date();
