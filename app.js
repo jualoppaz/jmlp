@@ -3,7 +3,8 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     methodOverride = require("method-override"),
     mongoose = require("mongoose"),
-    path = require("path");
+    path = require("path"),
+    ev = require("express-validation");
 
 const http = require("http");
 
@@ -42,6 +43,13 @@ mongoose.connection.on("error", function(err) {
 var router = require("./app/server/router");
 
 app.use(router);
+
+app.use(function(err, req, res, next) {
+    // specific for validation errors
+    if (err instanceof ev.ValidationError) {
+        return res.status(err.status).json(err);
+    }
+});
 
 var port = process.env.PORT || 3000;
 
