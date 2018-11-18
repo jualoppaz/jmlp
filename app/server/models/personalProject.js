@@ -5,10 +5,15 @@ var schema = new Schema(
     {
         name: { type: String, required: true },
         technologies: [{ type: Schema.Types.ObjectId, ref: "Technology" }],
-        startdate: { type: Date, required: true },
-        enddate: { type: Date },
+        startDate: { type: Date, required: true },
+        endDate: { type: Date },
         description: { type: String, required: true },
-        webUrl: { type: String },
+        links: [
+            {
+                type: { type: String },
+                value: { type: String }
+            }
+        ],
         repositoryUrl: { type: String }
     },
     {
