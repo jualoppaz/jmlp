@@ -6,7 +6,8 @@
         .constant("API", {
             BASE_URL: "/api",
             CV: "/cv",
-            KNOWLEDGE: "/knowledge"
+            KNOWLEDGE: "/knowledge",
+            PERSONAL_PROJECTS: "/personal-projects"
         })
         .constant("KNOWLEDGE_TYPE", {
             CONFIGURATION_MANAGEMENT_TOOL: "configuration_management_tool",
@@ -17,5 +18,10 @@
             TEMPLATE_ENGINE: "template_engine",
             VERSION_CONTROL_SYSTEM: "version_control_system",
             WEB_DESIGN: "web_design"
+        })
+        .constant("LINK_TYPE", {
+            WEB: "web",
+            REPOSITORY: "repository",
+            TFG_DOCUMENTATION: "tfg_documentation"
         });
 })();
