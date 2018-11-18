@@ -237,19 +237,23 @@
                     <img
                         class="media-object main-image"
                         ng-class="{'img-circle': proyecto.bordeImagen == 'img-circle'}"
-                        ng-src="{{proyecto.imagen}}"
+                        ng-src="/images/{{proyecto.image}}"
                     />
                 </a>
             </div>
             <div class="media-body">
                 <h4>
-                    <b
-                        >{{ proyecto.desde }} - {{ proyecto.hasta }}:
-                        {{ proyecto.resumen }}</b
-                    >
+                    <b>
+                        {{ proyecto.startDate | date: "MM/yyyy" }} -
+                        {{
+                            proyecto.endDate
+                                ? (proyecto.endDate | date: "MM/yyyy")
+                                : "Actualidad"
+                        }}: {{ proyecto.name }}
+                    </b>
                 </h4>
                 <a class="media-heading col-xs-12 without-lateral-padding">{{
-                    proyecto.descripcion
+                    proyecto.description
                 }}</a>
                 <div
                     ng-show="proyecto.technologies"
@@ -265,21 +269,20 @@
                             <img
                                 title="{{technology.name}}"
                                 class="col-xs-4 img-responsive img-thumbnail technology"
-                                ng-src="{{technology.image}}"
+                                ng-src="/images/{{technology.image}}"
                             />
                         </a>
                     </div>
                 </div>
                 <div
-                    ng-repeat="enlace in proyecto.enlaces | orderBy:'$index'"
+                    ng-repeat="link in proyecto.links | orderBy:'$index'"
                     class="custom-line col-xs-12 without-lateral-padding"
                 >
                     <b
-                        class="text-capitalize"
-                        ng-bind-template="{{enlace.tipo}}:"
+                        ng-bind-template="{{curriculum.getLinkTypeTitle(link.type)}}:"
                     ></b>
-                    <a ng-href="{{enlace.ruta}}" target="_blank">{{
-                        enlace.nombre
+                    <a ng-href="{{link.value}}" target="_blank">{{
+                        curriculum.getLinkValueTitle(link)
                     }}</a>
                 </div>
             </div>
