@@ -93,20 +93,21 @@
 
             vm.curriculum.conocimientos = conocimientos;
 
-            vm.technologyTypeTitles = {
-                [KNOWLEDGE_TYPE.PROGRAMMING_LANGUAGE]:
-                    "Lenguajes de programación",
-                [KNOWLEDGE_TYPE.FRAMEWORK]: "Frameworks",
-                [KNOWLEDGE_TYPE.WEB_DESIGN]: "Diseño web",
-                [KNOWLEDGE_TYPE.TEMPLATE_ENGINE]: "Motores de Plantillas",
-                [KNOWLEDGE_TYPE.DATABASE]: "Bases de datos",
-                [KNOWLEDGE_TYPE.VERSION_CONTROL_SYSTEM]:
-                    "Sistemas de control de versiones",
-                [KNOWLEDGE_TYPE.PROJECT_MANAGEMENT_TOOL]:
-                    "Herramientas de Gestión de Proyectos",
-                [KNOWLEDGE_TYPE.CONFIGURATION_MANAGEMENT_TOOL]:
-                    "Herramiantas de Gestión de la Configuración"
-            };
+            vm.technologyTypeTitles = {};
+            vm.technologyTypeTitles[KNOWLEDGE_TYPE.PROGRAMMING_LANGUAGE] =
+                "Lenguajes de programación";
+            vm.technologyTypeTitles[KNOWLEDGE_TYPE.FRAMEWORK] = "Frameworks";
+            vm.technologyTypeTitles[KNOWLEDGE_TYPE.WEB_DESIGN] = "Diseño web";
+            vm.technologyTypeTitles[KNOWLEDGE_TYPE.TEMPLATE_ENGINE] =
+                "Motores de Plantillas";
+            vm.technologyTypeTitles[KNOWLEDGE_TYPE.DATABASE] = "Bases de datos";
+            vm.technologyTypeTitles[KNOWLEDGE_TYPE.VERSION_CONTROL_SYSTEM] =
+                "Sistemas de control de versiones";
+            vm.technologyTypeTitles[KNOWLEDGE_TYPE.PROJECT_MANAGEMENT_TOOL] =
+                "Herramientas de Gestión de Proyectos";
+            vm.technologyTypeTitles[
+                KNOWLEDGE_TYPE.CONFIGURATION_MANAGEMENT_TOOL
+            ] = "Herramiantas de Gestión de la Configuración";
         }
 
         function descargarCurriculumFn() {
