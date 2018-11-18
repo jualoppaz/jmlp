@@ -80,6 +80,9 @@
                         return curriculumService.getCVKnowledge({
                             type: KNOWLEDGE_TYPE.CONFIGURATION_MANAGEMENT_TOOL
                         });
+                    },
+                    personalProjectsResolve: function(curriculumService) {
+                        return curriculumService.getCVPersonalProjects();
                     }
                 }
             })

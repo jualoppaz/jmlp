@@ -10,6 +10,7 @@
         "$location",
         "$window",
         "KNOWLEDGE_TYPE",
+        "LINK_TYPE",
         "curriculumService",
         "programmingLanguagesResolve",
         "frameworksResolve",
@@ -18,13 +19,15 @@
         "databasesResolve",
         "versionControlSystemsResolve",
         "projectManagementToolsResolve",
-        "configurationManagementToolsResolve"
+        "configurationManagementToolsResolve",
+        "personalProjectsResolve"
     ];
     function CurriculumController(
         $scope,
         $location,
         $window,
         KNOWLEDGE_TYPE,
+        LINK_TYPE,
         curriculumService,
         programmingLanguagesResolve,
         frameworksResolve,
@@ -33,7 +36,8 @@
         databasesResolve,
         versionControlSystemsResolve,
         projectManagementToolsResolve,
-        configurationManagementToolsResolve
+        configurationManagementToolsResolve,
+        personalProjectsResolve
     ) {
         $scope.$parent.title = "Currículum";
 
@@ -43,6 +47,8 @@
         vm.getKnowledgeTypeTitle = getKnowledgeTypeTitleFn;
         vm.descargarCurriculum = descargarCurriculumFn;
         vm.host = hostFn;
+        vm.getLinkTypeTitle = getLinkTypeTitleFn;
+        vm.getLinkValueTitle = getLinkValueTitleFn;
 
         activate();
 
@@ -92,6 +98,7 @@
             });
 
             vm.curriculum.conocimientos = conocimientos;
+            vm.curriculum.proyectos = personalProjectsResolve;
 
             vm.technologyTypeTitles = {};
             vm.technologyTypeTitles[KNOWLEDGE_TYPE.PROGRAMMING_LANGUAGE] =
@@ -108,6 +115,11 @@
             vm.technologyTypeTitles[
                 KNOWLEDGE_TYPE.CONFIGURATION_MANAGEMENT_TOOL
             ] = "Herramiantas de Gestión de la Configuración";
+
+            vm.linkTypeTitles = {};
+            vm.linkTypeTitles[LINK_TYPE.WEB] = "Web";
+            vm.linkTypeTitles[LINK_TYPE.REPOSITORY] = "Repositorio";
+            vm.linkTypeTitles[LINK_TYPE.TFG_DOCUMENTATION] = "Memoria";
         }
 
         function descargarCurriculumFn() {
@@ -127,12 +139,36 @@
         /**
          * Método que sirve para obtener el título de un tipo de tecnología dado su código.
          *
-         * @param {*} technology_type
+         * @param {*} technologyType
          *
          * @author jualoppaz
          */
-        function getKnowledgeTypeTitleFn(technology_type) {
-            return vm.technologyTypeTitles[technology_type] || technology_type;
+        function getKnowledgeTypeTitleFn(technologyType) {
+            return vm.technologyTypeTitles[technologyType] || technology_type;
+        }
+
+        /**
+         * Método que sirve para obtener el título de un tipo de enlace dado su código.
+         *
+         * @param {*} linkType
+         *
+         * @author jualoppaz
+         */
+        function getLinkTypeTitleFn(linkType) {
+            return vm.linkTypeTitles[linkType] || linkType;
+        }
+
+        /**
+         * Método que sirve para obtener el título de un enlace dado su código.
+         *
+         * @param {*} linkValue
+         *
+         * @author jualoppaz
+         */
+        function getLinkValueTitleFn(link) {
+            return link.type === "tfg_documentation"
+                ? "Documentación del Proyecto"
+                : link.value;
         }
     }
 })();
