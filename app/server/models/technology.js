@@ -4,7 +4,8 @@ var mongoose = require("mongoose"),
 var schema = new Schema(
     {
         name: { type: String },
-        image: { type: String }
+        image: { type: String },
+        web: { type: String }
     },
     {
         collection: "technologies"
