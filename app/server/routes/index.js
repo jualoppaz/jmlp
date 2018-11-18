@@ -8,6 +8,7 @@ module.exports = function(router) {
     // Controllers
     var technologyController = require("../controllers/technologyController");
     var knowledgeController = require("../controllers/knowledgeController");
+    var personalProjectController = require("../controllers/personalProjectController");
 
     // Validations
     var validationsTechnology = require("../validations/technologyValidations");
@@ -30,6 +31,8 @@ module.exports = function(router) {
             ev(validationsKnowledge.findAllKnowledge),
             knowledgeController.index
         );
+
+    apiRouter.route("/personal-projects").get(personalProjectController.index);
 
     router.use("/api", apiRouter);
 };
