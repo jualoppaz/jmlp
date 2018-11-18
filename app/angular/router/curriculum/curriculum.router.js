@@ -15,7 +15,73 @@
                             "app/angular/views/curriculum/curriculum.html"
                     }
                 },
-                parent: "layout"
+                parent: "layout",
+                resolve: {
+                    programmingLanguagesResolve: function(
+                        curriculumService,
+                        KNOWLEDGE_TYPE
+                    ) {
+                        return curriculumService.getCVKnowledge({
+                            type: KNOWLEDGE_TYPE.PROGRAMMING_LANGUAGE
+                        });
+                    },
+                    frameworksResolve: function(
+                        curriculumService,
+                        KNOWLEDGE_TYPE
+                    ) {
+                        return curriculumService.getCVKnowledge({
+                            type: KNOWLEDGE_TYPE.FRAMEWORK
+                        });
+                    },
+                    webDesignResolve: function(
+                        curriculumService,
+                        KNOWLEDGE_TYPE
+                    ) {
+                        return curriculumService.getCVKnowledge({
+                            type: KNOWLEDGE_TYPE.WEB_DESIGN
+                        });
+                    },
+                    templateEngineResolve: function(
+                        curriculumService,
+                        KNOWLEDGE_TYPE
+                    ) {
+                        return curriculumService.getCVKnowledge({
+                            type: KNOWLEDGE_TYPE.TEMPLATE_ENGINE
+                        });
+                    },
+                    databasesResolve: function(
+                        curriculumService,
+                        KNOWLEDGE_TYPE
+                    ) {
+                        return curriculumService.getCVKnowledge({
+                            type: KNOWLEDGE_TYPE.DATABASE
+                        });
+                    },
+                    versionControlSystemsResolve: function(
+                        curriculumService,
+                        KNOWLEDGE_TYPE
+                    ) {
+                        return curriculumService.getCVKnowledge({
+                            type: KNOWLEDGE_TYPE.VERSION_CONTROL_SYSTEM
+                        });
+                    },
+                    projectManagementToolsResolve: function(
+                        curriculumService,
+                        KNOWLEDGE_TYPE
+                    ) {
+                        return curriculumService.getCVKnowledge({
+                            type: KNOWLEDGE_TYPE.PROJECT_MANAGEMENT_TOOL
+                        });
+                    },
+                    configurationManagementToolsResolve: function(
+                        curriculumService,
+                        KNOWLEDGE_TYPE
+                    ) {
+                        return curriculumService.getCVKnowledge({
+                            type: KNOWLEDGE_TYPE.CONFIGURATION_MANAGEMENT_TOOL
+                        });
+                    }
+                }
             })
             .state("curriculum.academic-record", {
                 url: "/expediente-academico",
