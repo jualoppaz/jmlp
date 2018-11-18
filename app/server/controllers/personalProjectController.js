@@ -33,6 +33,10 @@ var findAllPersonalProjects = function(req, res) {
                     );
                 }
 
+                personalProjects.sort(function(a, b) {
+                    return b.startDate - a.startDate;
+                });
+
                 res.status(200).send(JSON.stringify(personalProjects, null, 4));
             }
         );
