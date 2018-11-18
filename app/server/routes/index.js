@@ -16,6 +16,8 @@ module.exports = function(router) {
 
     var express = require("express");
     var apiRouter = express.Router();
+    var curriculum = express.Router();
+
     apiRouter.route("/technologies").get(technologyController.index);
 
     apiRouter
@@ -25,14 +27,16 @@ module.exports = function(router) {
             technologyController.show
         );
 
-    apiRouter
+    curriculum
         .route("/knowledge")
         .get(
             ev(validationsKnowledge.findAllKnowledge),
             knowledgeController.index
         );
 
-    apiRouter.route("/personal-projects").get(personalProjectController.index);
+    curriculum.route("/personal-projects").get(personalProjectController.index);
+
+    apiRouter.use("/cv", curriculum);
 
     router.use("/api", apiRouter);
 };
