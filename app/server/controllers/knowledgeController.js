@@ -62,6 +62,12 @@ var findAllKnowledge = function(req, res) {
                         });
                     }
 
+                    knowledge = knowledge.sort(function(a, b) {
+                        return a.technology.name.localeCompare(
+                            b.technology.name
+                        );
+                    });
+
                     res.status(200).send(JSON.stringify(knowledge, null, 4));
                 }
             );
