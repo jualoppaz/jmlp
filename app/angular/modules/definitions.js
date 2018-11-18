@@ -9,6 +9,7 @@
     angular.module("curriculum", []);
     angular.module("models", []);
     angular.module("directives", []);
+    angular.module("constants", []);
 
     angular.module("jmlp", [
         "services",
@@ -22,6 +23,7 @@
         "footer",
         "curriculum",
         "models",
-        "directives"
+        "directives",
+        "constants"
     ]);
 })();
