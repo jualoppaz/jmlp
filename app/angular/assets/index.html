@@ -9,6 +9,7 @@
     </head>
 
     <body>
+        <loading ng-if="loading"></loading>
         <header data-ui-view="header"></header>
         <main ui-view="main" id="{{currentState}}"></main>
         <footer data-ui-view="footer" id="footer"></footer>
