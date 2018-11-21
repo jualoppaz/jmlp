@@ -924,21 +924,6 @@
                     ]
                 }
             ],
-            formacionComplementaria: [
-                {
-                    descripcion: "Certificación ISTQB nivel Foundation",
-                    fecha: "Noviembre de 2015",
-                    imagen: "/images/formacionComplementaria_istqb.png",
-                    certificado: "certificado_istqb.pdf"
-                },
-                {
-                    descripcion:
-                        "Curso de 12 horas sobre la herramienta HP LoadRunner",
-                    fecha: "Octubre de 2015",
-                    imagen: "/images/formacionComplementaria_hp_loadRunner.png",
-                    certificado: "certificado_hploadrunner.pdf"
-                }
-            ],
             idiomas: [
                 {
                     nombre: "Inglés",
@@ -954,7 +939,8 @@
         return {
             getCV: getCVFn,
             getCVKnowledge: getCVKnowledgeFn,
-            getCVPersonalProjects: getCVPersonalProjectsFn
+            getCVPersonalProjects: getCVPersonalProjectsFn,
+            getCVExtraTraining: getCVExtraTrainingFn
         };
 
         ////////////////////
@@ -997,6 +983,27 @@
 
             $http
                 .get(API.BASE_URL + API.CV + API.PERSONAL_PROJECTS)
+                .then(function(data) {
+                    defered.resolve(data.data);
+                })
+                .catch(function(err) {
+                    defered.reject(err.data);
+                });
+
+            return promise;
+        }
+
+        /**
+         * Método que sirve para consultar el listado de formaciones complementarias del CV.
+         *
+         * @author jualoppaz
+         */
+        function getCVExtraTrainingFn() {
+            var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http
+                .get(API.BASE_URL + API.CV + API.EXTRA_TRAINING)
                 .then(function(data) {
                     defered.resolve(data.data);
                 })
