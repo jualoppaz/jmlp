@@ -209,19 +209,22 @@
             ng-repeat="formacion in curriculum.curriculum.formacionComplementaria"
         >
             <div class="media-left media-middle">
-                <a ng-href="docs/{{formacion.certificado}}" target="_blank">
+                <a ng-href="docs/{{formacion.certification}}" target="_blank">
                     <img
                         class="media-object main-image"
-                        ng-src="{{formacion.imagen}}"
+                        ng-src="/images/{{formacion.image}}"
                         title="Ver certificado"
                     />
                 </a>
             </div>
             <div class="media-body">
                 <h4>
-                    <b>{{ formacion.fecha }}</b>
+                    <b
+                        ng-bind-template="{{ formacion.date | date: 'MMMM' }} de
+                    {{ formacion.date | date: 'yyyy' }}"
+                    ></b>
                 </h4>
-                <a class="media-heading">{{ formacion.descripcion }}</a>
+                <a class="media-heading">{{ formacion.description }}</a>
             </div>
         </li>
     </ul>

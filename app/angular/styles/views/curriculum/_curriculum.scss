@@ -41,6 +41,18 @@ main#curriculum {
                         &:first-child {
                             margin-top: 15px;
                         }
+                        div {
+                            &.media-body {
+                                h4 {
+                                    b {
+                                        display: block;
+                                        &:first-letter {
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
