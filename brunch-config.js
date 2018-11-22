@@ -77,6 +77,11 @@ exports.config = {
             logLevel: "debug"
         }
     },
+    overrides: {
+        production: {
+            plugins: { off: ["jshint-brunch"] }
+        }
+    },
     // Configuracion especifica del servidor NodeJS utilizado mediante Brunch
     server: {
         path: "app.js",
