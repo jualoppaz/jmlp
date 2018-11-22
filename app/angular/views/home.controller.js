@@ -12,9 +12,7 @@
         $http
             .get("/api/temas")
             .then(function(data) {
-                console.log(data);
-
-                $scope.temas = data;
+                $scope.temas = data.data;
             })
             .catch(function(data) {
                 console.log(data);
