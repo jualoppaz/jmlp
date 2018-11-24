@@ -10,6 +10,7 @@ module.exports = function(router) {
     var knowledgeController = require("../controllers/knowledgeController");
     var personalProjectController = require("../controllers/personalProjectController");
     var extraTrainingController = require("../controllers/extraTrainingController");
+    var companyController = require("../controllers/companyController");
 
     // Validations
     var validationsTechnology = require("../validations/technologyValidations");
@@ -27,6 +28,8 @@ module.exports = function(router) {
             ev(validationsTechnology.findTechnologyById),
             technologyController.show
         );
+
+    apiRouter.route("/companies").get(companyController.index);
 
     curriculum
         .route("/knowledge")
