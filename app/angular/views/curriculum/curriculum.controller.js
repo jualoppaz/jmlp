@@ -21,7 +21,8 @@
         "projectManagementToolsResolve",
         "configurationManagementToolsResolve",
         "personalProjectsResolve",
-        "extraTrainingResolve"
+        "extraTrainingResolve",
+        "professionalExperiencesResolve"
     ];
     function CurriculumController(
         $scope,
@@ -39,7 +40,8 @@
         projectManagementToolsResolve,
         configurationManagementToolsResolve,
         personalProjectsResolve,
-        extraTrainingResolve
+        extraTrainingResolve,
+        professionalExperiencesResolve
     ) {
         $scope.$parent.title = "Currículum";
 
@@ -102,6 +104,7 @@
             vm.curriculum.conocimientos = conocimientos;
             vm.curriculum.proyectos = personalProjectsResolve;
             vm.curriculum.formacionComplementaria = extraTrainingResolve;
+            vm.curriculum.experienciaProfesional = professionalExperiencesResolve;
 
             vm.technologyTypeTitles = {};
             vm.technologyTypeTitles[KNOWLEDGE_TYPE.PROGRAMMING_LANGUAGE] =
