@@ -940,7 +940,8 @@
             getCV: getCVFn,
             getCVKnowledge: getCVKnowledgeFn,
             getCVPersonalProjects: getCVPersonalProjectsFn,
-            getCVExtraTraining: getCVExtraTrainingFn
+            getCVExtraTraining: getCVExtraTrainingFn,
+            getCVProfessionalExperiences: getCVProfessionalExperiencesFn
         };
 
         ////////////////////
@@ -1004,6 +1005,27 @@
 
             $http
                 .get(API.BASE_URL + API.CV + API.EXTRA_TRAINING)
+                .then(function(data) {
+                    defered.resolve(data.data);
+                })
+                .catch(function(err) {
+                    defered.reject(err.data);
+                });
+
+            return promise;
+        }
+
+        /**
+         * Método que sirve para consultar el listado de experiencias profesionales del CV.
+         *
+         * @author jualoppaz
+         */
+        function getCVProfessionalExperiencesFn() {
+            var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http
+                .get(API.BASE_URL + API.CV + API.PROFESSIONAL_EXPERIENCES)
                 .then(function(data) {
                     defered.resolve(data.data);
                 })
