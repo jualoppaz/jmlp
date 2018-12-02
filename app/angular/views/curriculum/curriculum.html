@@ -59,68 +59,75 @@
             ng-repeat="experiencia in curriculum.curriculum.experienciaProfesional"
         >
             <div class="media-left">
-                <a ng-href="{{experiencia.web}}" target="_blank">
+                <a ng-href="{{experiencia.company.web}}" target="_blank">
                     <img
                         class="media-object main-image"
-                        ng-src="{{experiencia.imagen}}"
+                        ng-src="/images/{{experiencia.company.image}}"
                     />
                 </a>
             </div>
             <div class="media-body">
-                <h4 ng-class="{'title-job-centered': !experiencia.descripcion}">
+                <h4 ng-class="{'title-job-centered': !experiencia.description}">
                     <b
-                        >{{ experiencia.desde }} - {{ experiencia.hasta }}:
-                        {{ experiencia.name }}</b
+                        >{{ experiencia.startDate | date: "MM/yyyy" }} -
+                        {{ experiencia.endDate | date: "MM/yyyy" }}:
+                        {{ experiencia.company.name }}</b
                     >
                 </h4>
                 <a
                     class="media-heading"
-                    ng-show="experiencia.descripcion"
-                    ng-bind-template="{{experiencia.descripcion}}"
+                    ng-show="experiencia.description"
+                    ng-bind="experiencia.description"
                 ></a>
                 <!-- Seccion para mostrar colaboraciones en clientes -->
-                <div ng-repeat="cliente in experiencia.clientes">
+                <div ng-repeat="client in experiencia.clients">
                     <div class="media-left">
-                        <a ng-href="{{cliente.web}}" target="_blank">
+                        <a ng-href="{{client.company.web}}" target="_blank">
                             <img
                                 class="media-object secondary-image"
-                                ng-src="{{cliente.imagen}}"
+                                ng-src="/images/{{client.company.image}}"
                             />
                         </a>
                     </div>
                     <div class="media-body">
                         <h4>
-                            <b>{{ cliente.desde }} - {{ cliente.hasta }}</b>
+                            <b
+                                >{{ client.startDate | date: "MM/yyyy" }} -
+                                {{ client.endDate | date: "MM/yyyy" }}</b
+                            >
                         </h4>
                         <a
                             class="media-heading"
-                            ng-show="cliente.descripcion"
-                            ng-bind-template="{{cliente.descripcion}}"
+                            ng-show="client.description"
+                            ng-bind="client.description"
                         ></a>
                     </div>
-                    <h3 class="proyectos-cliente" ng-show="cliente.proyectos">
+                    <h3
+                        class="proyectos-cliente"
+                        ng-show="client.projects.length"
+                    >
                         Proyectos
                     </h3>
                     <div
                         class="proyecto-cliente"
-                        ng-repeat="proyecto in cliente.proyectos"
+                        ng-repeat="project in client.projects"
                     >
                         <div class="custom-line">
                             <b>
-                                <a ng-bind-template="{{proyecto.nombre}}: "></a>
+                                <a ng-bind-template="{{project.name}}: "></a>
                                 <a
-                                    ng-bind-template="{{proyecto.desde}} - {{proyecto.hasta}}"
+                                    ng-bind-template="{{project.startDate | date: 'MM/yyyy'}} - {{project.endDate | date: 'MM/yyyy'}}"
                                 ></a>
                             </b>
                         </div>
-                        <div class="custom-line" ng-if="proyecto.descripcion">
-                            <p ng-bind="proyecto.descripcion"></p>
+                        <div class="custom-line" ng-if="project.description">
+                            <p ng-bind="project.description"></p>
                         </div>
                         <div class="custom-line">
-                            <a>Puesto: </a> <a ng-bind="proyecto.puesto"></a>
+                            <a>Puesto: </a> <a ng-bind="project.position"></a>
                         </div>
                         <div
-                            ng-show="proyecto.technologies"
+                            ng-show="project.technologies"
                             class="custom-line technologies"
                         >
                             <a class="pull-left title"
@@ -130,12 +137,12 @@
                                 <a
                                     ng-href="{{technology.web}}"
                                     target="_blank"
-                                    ng-repeat="technology in proyecto.technologies"
+                                    ng-repeat="technology in project.technologies"
                                 >
                                     <img
                                         title="{{technology.name}}"
                                         class="col-xs-4 img-responsive img-thumbnail technology"
-                                        ng-src="{{technology.image}}"
+                                        ng-src="/images/{{technology.image}}"
                                     />
                                 </a>
                             </div>
@@ -146,44 +153,44 @@
                         <ul class="list-group functions-list">
                             <li
                                 class="list-group-item"
-                                ng-repeat="funcion in proyecto.funciones"
-                                ng-bind="funcion.nombre"
+                                ng-repeat="function in project.functions"
+                                ng-bind="function.text"
                             ></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- Seccion para mostrar proyectos de la empresa -->
-            <h3 class="proyectos-empresa" ng-show="experiencia.proyectos">
+            <h3 class="proyectos-empresa" ng-show="experiencia.projects">
                 Proyectos
             </h3>
-            <div ng-repeat="proyecto in experiencia.proyectos">
+            <div ng-repeat="project in experiencia.projects">
                 <div class="custom-line">
                     <b>
-                        <a ng-bind-template="{{proyecto.nombre}}: "></a>
+                        <a ng-bind-template="{{project.name}}: "></a>
                         <a
-                            ng-bind-template="{{proyecto.desde}} - {{proyecto.hasta}}"
+                            ng-bind-template="{{project.startDate | date: 'MM/yyyy'}} - {{project.endDate | date: 'MM/yyyy'}}"
                         ></a>
                     </b>
                 </div>
-                <div class="custom-line" ng-if="proyecto.descripcion">
-                    <p ng-bind="proyecto.descripcion"></p>
+                <div class="custom-line" ng-if="project.description">
+                    <p ng-bind="project.description"></p>
                 </div>
                 <div class="custom-line">
-                    <a>Puesto: </a> <a ng-bind="proyecto.puesto"></a>
+                    <a>Puesto: </a> <a ng-bind="project.position"></a>
                 </div>
-                <div ng-show="proyecto.technologies" class="technologies">
+                <div ng-show="project.technologies" class="technologies">
                     <a class="pull-left title">Tecnologías utilizadas:</a>
                     <div class="technologies-list">
                         <a
                             ng-href="{{technology.web}}"
                             target="_blank"
-                            ng-repeat="technology in proyecto.technologies"
+                            ng-repeat="technology in project.technologies"
                         >
                             <img
                                 title="{{technology.name}}"
                                 class="col-xs-4 img-responsive img-thumbnail technology"
-                                ng-src="{{technology.image}}"
+                                ng-src="/images/{{technology.image}}"
                             />
                         </a>
                     </div>
@@ -192,8 +199,8 @@
                 <ul class="list-group functions-list">
                     <li
                         class="list-group-item"
-                        ng-repeat="funcion in proyecto.funciones"
-                        ng-bind="funcion.nombre"
+                        ng-repeat="function in project.functions"
+                        ng-bind="function.text"
                     ></li>
                 </ul>
             </div>
