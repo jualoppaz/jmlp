@@ -86,6 +86,11 @@
                     },
                     extraTrainingResolve: function(curriculumService) {
                         return curriculumService.getCVExtraTraining();
+                    },
+                    professionalExperiencesResolve: function(
+                        curriculumService
+                    ) {
+                        return curriculumService.getCVProfessionalExperiences();
                     }
                 }
             })
