@@ -8,7 +8,8 @@
             CV: "/cv",
             KNOWLEDGE: "/knowledge",
             PERSONAL_PROJECTS: "/personal-projects",
-            EXTRA_TRAINING: "/extra-training"
+            EXTRA_TRAINING: "/extra-training",
+            PROFESSIONAL_EXPERIENCES: "/professional-experiences"
         })
         .constant("KNOWLEDGE_TYPE", {
             CONFIGURATION_MANAGEMENT_TOOL: "configuration_management_tool",
