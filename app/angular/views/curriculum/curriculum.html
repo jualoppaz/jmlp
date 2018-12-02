@@ -70,8 +70,11 @@
                 <h4 ng-class="{'title-job-centered': !experiencia.description}">
                     <b
                         >{{ experiencia.startDate | date: "MM/yyyy" }} -
-                        {{ experiencia.endDate | date: "MM/yyyy" }}:
-                        {{ experiencia.company.name }}</b
+                        {{
+                            experiencia.endDate
+                                ? (experiencia.endDate | date: "MM/yyyy")
+                                : "Actualidad"
+                        }}: {{ experiencia.company.name }}</b
                     >
                 </h4>
                 <a
@@ -266,7 +269,7 @@
                     proyecto.description
                 }}</a>
                 <div
-                    ng-show="proyecto.technologies"
+                    ng-show="proyecto.technologies.length"
                     class="technologies col-xs-12 without-lateral-padding"
                 >
                     <b class="pull-left title">Tecnologías utilizadas:</b>
