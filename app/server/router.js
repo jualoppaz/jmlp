@@ -3,6 +3,7 @@ var router = express.Router();
 var jwt = require("jwt-simple");
 var config = require("./config");
 var path = require("path");
+var pjson = require("../../package.json");
 
 function createToken(user) {
     var expire = new Date();
@@ -50,7 +51,11 @@ router.get("/robots.txt", function(req, res) {
 });
 
 router.get("/", function(req, res) {
-    return res.sendFile(path.join(__dirname, "../../public", "index.html"));
+    const appVersion = pjson.version;
+
+    return res.render("index", {
+        version: appVersion
+    });
 });
 
 router.get("/*", function(req, res) {

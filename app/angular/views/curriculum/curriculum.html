@@ -27,7 +27,7 @@
                 <a ng-href="#">
                     <img
                         class="media-object main-image"
-                        ng-src="{{formacion.imagen}}"
+                        ng-src="{{ formacion.imagen }}"
                     />
                 </a>
             </div>
@@ -37,7 +37,7 @@
                 </h4>
                 <a
                     class="media-heading"
-                    ng-bind-template="{{formacion.descripcion}}"
+                    ng-bind-template="{{ formacion.descripcion }}"
                 ></a>
                 <br />
                 Si quieres ver mis notas en la Universidad consulta mi
@@ -59,10 +59,10 @@
             ng-repeat="experiencia in curriculum.curriculum.experienciaProfesional"
         >
             <div class="media-left">
-                <a ng-href="{{experiencia.company.web}}" target="_blank">
+                <a ng-href="{{ experiencia.company.web }}" target="_blank">
                     <img
                         class="media-object main-image"
-                        ng-src="/images/{{experiencia.company.image}}"
+                        ng-src="/images/{{ experiencia.company.image }}"
                     />
                 </a>
             </div>
@@ -85,10 +85,10 @@
                 <!-- Seccion para mostrar colaboraciones en clientes -->
                 <div ng-repeat="client in experiencia.clients">
                     <div class="media-left">
-                        <a ng-href="{{client.company.web}}" target="_blank">
+                        <a ng-href="{{ client.company.web }}" target="_blank">
                             <img
                                 class="media-object secondary-image"
-                                ng-src="/images/{{client.company.image}}"
+                                ng-src="/images/{{ client.company.image }}"
                             />
                         </a>
                     </div>
@@ -117,9 +117,13 @@
                     >
                         <div class="custom-line">
                             <b>
-                                <a ng-bind-template="{{project.name}}: "></a>
+                                <a ng-bind-template="{{ project.name }}: "></a>
                                 <a
-                                    ng-bind-template="{{project.startDate | date: 'MM/yyyy'}} - {{project.endDate | date: 'MM/yyyy'}}"
+                                    ng-bind-template="{{
+                                        project.startDate | date: 'MM/yyyy'
+                                    }} - {{
+                                        project.endDate | date: 'MM/yyyy'
+                                    }}"
                                 ></a>
                             </b>
                         </div>
@@ -138,14 +142,14 @@
                             >
                             <div class="technologies-list">
                                 <a
-                                    ng-href="{{technology.web}}"
+                                    ng-href="{{ technology.web }}"
                                     target="_blank"
                                     ng-repeat="technology in project.technologies"
                                 >
                                     <img
-                                        title="{{technology.name}}"
+                                        title="{{ technology.name }}"
                                         class="col-xs-4 img-responsive img-thumbnail technology"
-                                        ng-src="/images/{{technology.image}}"
+                                        ng-src="/images/{{ technology.image }}"
                                     />
                                 </a>
                             </div>
@@ -164,15 +168,21 @@
                 </div>
             </div>
             <!-- Seccion para mostrar proyectos de la empresa -->
-            <h3 class="proyectos-empresa" ng-show="experiencia.projects">
+            <h3 class="proyectos-empresa" ng-show="experiencia.projects.length">
                 Proyectos
             </h3>
             <div ng-repeat="project in experiencia.projects">
                 <div class="custom-line">
                     <b>
-                        <a ng-bind-template="{{project.name}}: "></a>
+                        <a ng-bind-template="{{ project.name }}: "></a>
                         <a
-                            ng-bind-template="{{project.startDate | date: 'MM/yyyy'}} - {{project.endDate | date: 'MM/yyyy'}}"
+                            ng-bind-template="{{
+                                project.startDate | date: 'MM/yyyy'
+                            }} - {{
+                                project.endDate
+                                    ? (project.startDate | date: 'MM/yyyy')
+                                    : 'Actualidad'
+                            }}"
                         ></a>
                     </b>
                 </div>
@@ -186,14 +196,14 @@
                     <a class="pull-left title">Tecnologías utilizadas:</a>
                     <div class="technologies-list">
                         <a
-                            ng-href="{{technology.web}}"
+                            ng-href="{{ technology.web }}"
                             target="_blank"
                             ng-repeat="technology in project.technologies"
                         >
                             <img
-                                title="{{technology.name}}"
+                                title="{{ technology.name }}"
                                 class="col-xs-4 img-responsive img-thumbnail technology"
-                                ng-src="/images/{{technology.image}}"
+                                ng-src="/images/{{ technology.image }}"
                             />
                         </a>
                     </div>
@@ -219,10 +229,10 @@
             ng-repeat="formacion in curriculum.curriculum.formacionComplementaria"
         >
             <div class="media-left media-middle">
-                <a ng-href="docs/{{formacion.certification}}" target="_blank">
+                <a ng-href="docs/{{ formacion.certification }}" target="_blank">
                     <img
                         class="media-object main-image"
-                        ng-src="/images/{{formacion.image}}"
+                        ng-src="/images/{{ formacion.image }}"
                         title="Ver certificado"
                     />
                 </a>
@@ -250,7 +260,7 @@
                     <img
                         class="media-object main-image"
                         ng-class="{'img-circle': proyecto.bordeImagen == 'img-circle'}"
-                        ng-src="/images/{{proyecto.image}}"
+                        ng-src="/images/{{ proyecto.image }}"
                     />
                 </a>
             </div>
@@ -275,14 +285,14 @@
                     <b class="pull-left title">Tecnologías utilizadas:</b>
                     <div class="technologies-list">
                         <a
-                            ng-href="{{technology.web}}"
+                            ng-href="{{ technology.web }}"
                             target="_blank"
                             ng-repeat="technology in proyecto.technologies"
                         >
                             <img
-                                title="{{technology.name}}"
+                                title="{{ technology.name }}"
                                 class="col-xs-4 img-responsive img-thumbnail technology"
-                                ng-src="/images/{{technology.image}}"
+                                ng-src="/images/{{ technology.image }}"
                             />
                         </a>
                     </div>
@@ -292,9 +302,11 @@
                     class="custom-line col-xs-12 without-lateral-padding"
                 >
                     <b
-                        ng-bind-template="{{curriculum.getLinkTypeTitle(link.type)}}:"
+                        ng-bind-template="{{
+                            curriculum.getLinkTypeTitle(link.type)
+                        }}:"
                     ></b>
-                    <a ng-href="{{link.value}}" target="_blank">{{
+                    <a ng-href="{{ link.value }}" target="_blank">{{
                         curriculum.getLinkValueTitle(link)
                     }}</a>
                 </div>
@@ -347,11 +359,11 @@
             ng-repeat="conocimiento in conocimientos.lista"
         >
             <div class="media-left">
-                <a ng-href="{{conocimiento.technology.web}}" target="_blank">
+                <a ng-href="{{ conocimiento.technology.web }}" target="_blank">
                     <img
                         class="media-object main-image"
-                        ng-src="/images/{{conocimiento.technology.image}}"
-                        title="{{conocimiento.technology.name}}"
+                        ng-src="/images/{{ conocimiento.technology.image }}"
+                        title="{{ conocimiento.technology.name }}"
                     />
                 </a>
             </div>
@@ -403,7 +415,7 @@
                 <a ng-href="#">
                     <img
                         class="media-object main-image"
-                        ng-src="{{idioma.imagen}}"
+                        ng-src="{{ idioma.imagen }}"
                     />
                 </a>
             </div>
