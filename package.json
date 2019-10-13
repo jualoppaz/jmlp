@@ -29,7 +29,7 @@
         "hoek": ">=4.2.1",
         "joi": "^14.0.4",
         "joi-objectid": "^2.0.0",
-        "jwt-simple": "^0.4.1",
+        "jwt-simple": "^0.5.3",
         "less-brunch": "^2.10.0",
         "method-override": "^2.3.10",
         "mongoose": "^4.13.17",
