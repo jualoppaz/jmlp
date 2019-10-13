@@ -120,7 +120,7 @@
                 "Herramientas de Gestión de Proyectos";
             vm.technologyTypeTitles[
                 KNOWLEDGE_TYPE.CONFIGURATION_MANAGEMENT_TOOL
-            ] = "Herramiantas de Gestión de la Configuración";
+            ] = "Herramientas de Gestión de la Configuración";
 
             vm.linkTypeTitles = {};
             vm.linkTypeTitles[LINK_TYPE.WEB] = "Web";

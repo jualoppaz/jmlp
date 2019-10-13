@@ -6,6 +6,8 @@ var express = require("express"),
     path = require("path"),
     ev = require("express-validation");
 
+var port = process.env.PORT || 3000;
+
 const http = require("http");
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,6 +15,8 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 
 app.use(express.static("public"));
+
+app.set("port", port);
 
 app.set("views", path.join(__dirname + "/app/server/views"));
 app.set("view engine", "pug");
@@ -25,12 +29,9 @@ if (process.env.MONGOLAB_URL) {
     cadena_bbdd = "mongodb://127.0.0.1/jmlp";
 }
 
-mongoose.connect(
-    cadena_bbdd,
-    {
-        useMongoClient: true
-    }
-);
+mongoose.connect(cadena_bbdd, {
+    useMongoClient: true
+});
 
 mongoose.connection.on("connected", function() {
     console.log("Connected to Database");
@@ -50,8 +51,6 @@ app.use(function(err, req, res, next) {
         return res.status(err.status).json(err);
     }
 });
-
-var port = process.env.PORT || 3000;
 
 if (process.env.PORT) {
     app.listen(port, function() {
