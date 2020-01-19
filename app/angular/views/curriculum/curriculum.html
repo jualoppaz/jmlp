@@ -180,7 +180,7 @@
                                 project.startDate | date: 'MM/yyyy'
                             }} - {{
                                 project.endDate
-                                    ? (project.startDate | date: 'MM/yyyy')
+                                    ? (project.endDate | date: 'MM/yyyy')
                                     : 'Actualidad'
                             }}"
                         ></a>
