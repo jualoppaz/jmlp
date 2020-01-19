@@ -74,8 +74,7 @@ exports.config = {
         },
         browserSync: {
             watch: true,
-            port: 3333,
-            logLevel: "debug"
+            port: 3333
         }
     },
     overrides: {
