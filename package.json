@@ -19,7 +19,7 @@
         "after-brunch": "0.0.5",
         "angularjs-templates-brunch": "^1.0.0",
         "body-parser": "^1.18.3",
-        "bower": "^1.8.4",
+        "bower": "^1.8.8",
         "brunch": "^2.10.17",
         "clean-css-brunch": "^2.10.0",
         "cryptiles": ">=4.1.2",
