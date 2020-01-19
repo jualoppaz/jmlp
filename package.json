@@ -33,7 +33,6 @@
         "less-brunch": "^2.10.0",
         "method-override": "^2.3.10",
         "mongoose": "^4.13.17",
-        "node-sass": "^4.13.1",
         "path": "^0.12.7",
         "pug": "^2.0.3",
         "sass-brunch": "2.10.5",
