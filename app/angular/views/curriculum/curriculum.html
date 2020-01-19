@@ -69,12 +69,10 @@
             <div class="media-body">
                 <h4 ng-class="{'title-job-centered': !experiencia.description}">
                     <b
-                        >{{ experiencia.startDate | date: "MM/yyyy" }} -
-                        {{
-                            experiencia.endDate
-                                ? (experiencia.endDate | date: "MM/yyyy")
-                                : "Actualidad"
-                        }}: {{ experiencia.company.name }}</b
+                        >{{ experiencia.startDate | date: "MM/yyyy" }} - {{
+                        experiencia.endDate ? (experiencia.endDate | date:
+                        "MM/yyyy") : "Actualidad" }}: {{
+                        experiencia.company.name }}</b
                     >
                 </h4>
                 <a
@@ -95,8 +93,8 @@
                     <div class="media-body">
                         <h4>
                             <b
-                                >{{ client.startDate | date: "MM/yyyy" }} -
-                                {{ client.endDate | date: "MM/yyyy" }}</b
+                                >{{ client.startDate | date: "MM/yyyy" }} - {{
+                                client.endDate | date: "MM/yyyy" }}</b
                             >
                         </h4>
                         <a
@@ -267,17 +265,14 @@
             <div class="media-body">
                 <h4>
                     <b>
-                        {{ proyecto.startDate | date: "MM/yyyy" }} -
-                        {{
-                            proyecto.endDate
-                                ? (proyecto.endDate | date: "MM/yyyy")
-                                : "Actualidad"
-                        }}: {{ proyecto.name }}
+                        {{ proyecto.startDate | date: "MM/yyyy" }} - {{
+                        proyecto.endDate ? (proyecto.endDate | date: "MM/yyyy")
+                        : "Actualidad" }}: {{ proyecto.name }}
                     </b>
                 </h4>
-                <a class="media-heading col-xs-12 without-lateral-padding">{{
-                    proyecto.description
-                }}</a>
+                <a class="media-heading col-xs-12 without-lateral-padding"
+                    >{{ proyecto.description }}</a
+                >
                 <div
                     ng-show="proyecto.technologies.length"
                     class="technologies col-xs-12 without-lateral-padding"
@@ -306,9 +301,9 @@
                             curriculum.getLinkTypeTitle(link.type)
                         }}:"
                     ></b>
-                    <a ng-href="{{ link.value }}" target="_blank">{{
-                        curriculum.getLinkValueTitle(link)
-                    }}</a>
+                    <a ng-href="{{ link.value }}" target="_blank"
+                        >{{ curriculum.getLinkValueTitle(link) }}</a
+                    >
                 </div>
             </div>
         </li>
@@ -423,8 +418,7 @@
                 <h4>
                     <b
                         >Nivel {{ idioma.nivel }} en {{ idioma.nombre }} ({{
-                            idioma.fecha
-                        }})</b
+                        idioma.fecha }})</b
                     >
                 </h4>
                 <a class="media-heading">{{ idioma.descripcion }}</a>
