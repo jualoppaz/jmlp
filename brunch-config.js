@@ -55,7 +55,8 @@ exports.config = {
                 bitwise: true,
                 curly: true,
                 unused: true,
-                eqeqeq: true
+                eqeqeq: true,
+                esversion: 6
             },
             warnOnly: true
         },
