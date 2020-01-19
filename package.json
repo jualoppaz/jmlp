@@ -42,5 +42,8 @@
     "devDependencies": {
         "browser-sync-brunch": "0.0.9",
         "jshint-brunch": "^2.0.0"
+    },
+    "engines": {
+        "node": "10.15.3"
     }
 }
