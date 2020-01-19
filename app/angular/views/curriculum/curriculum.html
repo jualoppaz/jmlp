@@ -257,7 +257,7 @@
                 <a ng-href="#">
                     <img
                         class="media-object main-image"
-                        ng-class="{'img-circle': proyecto.bordeImagen == 'img-circle'}"
+                        ng-class="{'img-circle': proyecto.bordeImagen === 'img-circle'}"
                         ng-src="/images/{{ proyecto.image }}"
                     />
                 </a>
@@ -363,7 +363,7 @@
                 </a>
             </div>
             <div class="media-body media-middle">
-                <div class="progress" ng-show="conocimiento.level == 1">
+                <div class="progress" ng-show="conocimiento.level === 1">
                     <div
                         class="progress-bar progress-bar-danger"
                         role="progressbar"
@@ -375,7 +375,7 @@
                         <span class="">Básico</span>
                     </div>
                 </div>
-                <div class="progress" ng-show="conocimiento.level == 2">
+                <div class="progress" ng-show="conocimiento.level === 2">
                     <div
                         class="progress-bar progress-bar-info"
                         role="progressbar"
@@ -387,7 +387,7 @@
                         <span class="">Intermedio</span>
                     </div>
                 </div>
-                <div class="progress" ng-show="conocimiento.level == 3">
+                <div class="progress" ng-show="conocimiento.level === 3">
                     <div
                         class="progress-bar progress-bar-success"
                         role="progressbar"

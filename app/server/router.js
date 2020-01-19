@@ -30,7 +30,7 @@ router.post("/api/login", function(req, res) {
 
     console.log(req.body);
 
-    if (user.email == "juanmalp1992@gmail.com" && user.password == "12345") {
+    if (user.email === "juanmalp1992@gmail.com" && user.password === "12345") {
         var token = createToken(user);
         res.status(200).send({ token: token, user: user });
     } else {

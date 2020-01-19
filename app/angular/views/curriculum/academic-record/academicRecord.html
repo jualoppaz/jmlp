@@ -1,12 +1,19 @@
 <section class="container">
-    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">Cursos Acad&eacute;micos</h1>
-    <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+        Cursos Acad&eacute;micos
+    </h1>
+    <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding" />
 
     <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-        <table class="table table-bordered text-center" ng-repeat="cursoAcademico in getCursosAcademicos()">
+        <table
+            class="table table-bordered text-center"
+            ng-repeat="cursoAcademico in getCursosAcademicos()"
+        >
             <thead>
                 <tr>
-                    <th colspan="7" class="text-center">Curso académico {{cursoAcademico}}</th>
+                    <th colspan="7" class="text-center">
+                        Curso académico {{cursoAcademico}}
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -22,82 +29,184 @@
                 <tr>
                     <th colspan="7" class="text-center">Primer Cuatrimestre</th>
                 </tr>
-                <tr ng-repeat="nota in notasExpediente | filter:{cursoAcademico: cursoAcademico, cuatrimestre: 1}"
-                    class="text-center" ng-show="esUltimaConvocatoriaDelCursoAcademico(nota.asignatura, cursoAcademico, nota.numeroConvocatoria)">
+                <tr
+                    ng-repeat="nota in notasExpediente | filter:{cursoAcademico: cursoAcademico, cuatrimestre: 1}"
+                    class="text-center"
+                    ng-show="esUltimaConvocatoriaDelCursoAcademico(nota.asignatura, cursoAcademico, nota.numeroConvocatoria)"
+                >
                     <td>{{nota.abreviatura}}</td>
                     <td>{{nota.departamento}}</td>
                     <td>{{nota.asignatura}}</td>
                     <td>{{nota.curso}}</td>
                     <td>
-                        <span class="label label-success" ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota == 'APTO'">{{nota.nota}}</span>
-                        <span class="label label-fail" ng-show="nota.nota <5">{{nota.nota}}</span>
-                        <span class="label label-primary" ng-show="nota.nota >=7 && nota.nota <9">{{nota.nota}}</span>
-                        <span class="label label-warning" ng-show="nota.nota >=9 && !nota.matriculaHonor">{{nota.nota}}</span>
-                        <span class="label label-danger" ng-show="nota.matriculaHonor">{{nota.nota}}</span>
+                        <span
+                            class="label label-success"
+                            ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota === 'APTO'"
+                            >{{nota.nota}}</span
+                        >
+                        <span class="label label-fail" ng-show="nota.nota <5"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.nota >=7 && nota.nota <9"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.nota >=9 && !nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-danger"
+                            ng-show="nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
                     </td>
                     <td>
-                        <span class="label label-primary" ng-show="nota.metodoAprobado == 'Parciales'">{{nota.metodoAprobado}}</span>
-                        <span class="label label-warning" ng-show="nota.metodoAprobado == 'Convocatoria'">{{nota.metodoAprobado}}</span>
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.metodoAprobado === 'Parciales'"
+                            >{{nota.metodoAprobado}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.metodoAprobado === 'Convocatoria'"
+                            >{{nota.metodoAprobado}}</span
+                        >
                     </td>
-                    <td>{{getConvocatoriasUtilizadasEnCursoAcademico(nota.asignatura, cursoAcademico)}}</td>
+                    <td>
+                        {{getConvocatoriasUtilizadasEnCursoAcademico(nota.asignatura,
+                        cursoAcademico)}}
+                    </td>
                 </tr>
                 <tr>
-                    <th colspan="7" class="text-center">Segundo Cuatrimestre</th>
+                    <th colspan="7" class="text-center">
+                        Segundo Cuatrimestre
+                    </th>
                 </tr>
-                <tr ng-repeat="nota in notasExpediente | filter:{cursoAcademico: cursoAcademico, cuatrimestre: 2}"
-                    class="text-center" ng-show="esUltimaConvocatoriaDelCursoAcademico(nota.asignatura, cursoAcademico, nota.numeroConvocatoria)">
+                <tr
+                    ng-repeat="nota in notasExpediente | filter:{cursoAcademico: cursoAcademico, cuatrimestre: 2}"
+                    class="text-center"
+                    ng-show="esUltimaConvocatoriaDelCursoAcademico(nota.asignatura, cursoAcademico, nota.numeroConvocatoria)"
+                >
                     <td>{{nota.abreviatura}}</td>
                     <td>{{nota.departamento}}</td>
                     <td>{{nota.asignatura}}</td>
                     <td>{{nota.curso}}</td>
                     <td>
-                        <span class="label label-success" ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota == 'APTO'">{{nota.nota}}</span>
-                        <span class="label label-fail" ng-show="nota.nota <5">{{nota.nota}}</span>
-                        <span class="label label-primary" ng-show="nota.nota >=7 && nota.nota <9">{{nota.nota}}</span>
-                        <span class="label label-warning" ng-show="nota.nota >=9 && !nota.matriculaHonor">{{nota.nota}}</span>
-                        <span class="label label-danger" ng-show="nota.matriculaHonor">{{nota.nota}}</span>
+                        <span
+                            class="label label-success"
+                            ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota === 'APTO'"
+                            >{{nota.nota}}</span
+                        >
+                        <span class="label label-fail" ng-show="nota.nota <5"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.nota >=7 && nota.nota <9"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.nota >=9 && !nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-danger"
+                            ng-show="nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
                     </td>
-                    <td><span class="label label-primary">{{nota.metodoAprobado}}</span></td>
-                    <td>{{getConvocatoriasUtilizadasEnCursoAcademico(nota.asignatura, cursoAcademico)}}</td>
+                    <td>
+                        <span class="label label-primary"
+                            >{{nota.metodoAprobado}}</span
+                        >
+                    </td>
+                    <td>
+                        {{getConvocatoriasUtilizadasEnCursoAcademico(nota.asignatura,
+                        cursoAcademico)}}
+                    </td>
                 </tr>
                 <tr>
                     <th colspan="7" class="text-center">Anuales</th>
                 </tr>
-                <tr ng-repeat="nota in notasExpediente | filter:{cursoAcademico: cursoAcademico, cuatrimestre: 0}"
-                    class="text-center" ng-show="esUltimaConvocatoriaDelCursoAcademico(nota.asignatura, cursoAcademico, nota.numeroConvocatoria)">
+                <tr
+                    ng-repeat="nota in notasExpediente | filter:{cursoAcademico: cursoAcademico, cuatrimestre: 0}"
+                    class="text-center"
+                    ng-show="esUltimaConvocatoriaDelCursoAcademico(nota.asignatura, cursoAcademico, nota.numeroConvocatoria)"
+                >
                     <td>{{nota.abreviatura}}</td>
                     <td>{{nota.departamento}}</td>
                     <td>{{nota.asignatura}}</td>
                     <td>{{nota.curso}}</td>
                     <td>
-                        <span class="label label-success" ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota == 'APTO'">{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
-                            nota.asignatura) || 'N/A'}}</span>
-                        <span class="label label-fail" ng-show="nota.nota <5">{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
-                            nota.asignatura) || 'N/A'}}</span>
-                        <span class="label label-primary" ng-show="nota.nota >=7 && nota.nota <9">{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
-                            nota.asignatura) || 'N/A'}}</span>
-                        <span class="label label-warning" ng-show="nota.nota >=9 && !nota.matriculaHonor">{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
-                            nota.asignatura) || 'N/A'}}</span>
-                        <span class="label label-danger" ng-show="nota.matriculaHonor">{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
-                            nota.asignatura) || 'N/A'}}</span>
+                        <span
+                            class="label label-success"
+                            ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota === 'APTO'"
+                            >{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
+                            nota.asignatura) || 'N/A'}}</span
+                        >
+                        <span class="label label-fail" ng-show="nota.nota <5"
+                            >{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
+                            nota.asignatura) || 'N/A'}}</span
+                        >
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.nota >=7 && nota.nota <9"
+                            >{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
+                            nota.asignatura) || 'N/A'}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.nota >=9 && !nota.matriculaHonor"
+                            >{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
+                            nota.asignatura) || 'N/A'}}</span
+                        >
+                        <span
+                            class="label label-danger"
+                            ng-show="nota.matriculaHonor"
+                            >{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
+                            nota.asignatura) || 'N/A'}}</span
+                        >
                     </td>
                     <td>
-                        <span class="label label-primary" ng-show="nota.metodoAprobado == 'Parciales'">{{nota.metodoAprobado}}</span>
-                        <span class="label label-warning" ng-show="nota.metodoAprobado == 'Convocatoria'">{{nota.metodoAprobado}}</span>
-                        <span class="label label-default" ng-show="nota.metodoAprobado != 'Parciales' && nota.metodoAprobado != 'Convocatoria'">{{nota.metodoAprobado
-                            || 'N/A'}}</span>
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.metodoAprobado === 'Parciales'"
+                            >{{nota.metodoAprobado}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.metodoAprobado === 'Convocatoria'"
+                            >{{nota.metodoAprobado}}</span
+                        >
+                        <span
+                            class="label label-default"
+                            ng-show="nota.metodoAprobado != 'Parciales' && nota.metodoAprobado != 'Convocatoria'"
+                            >{{nota.metodoAprobado || 'N/A'}}</span
+                        >
                     </td>
-                    <td>{{getConvocatoriasUtilizadasEnCursoAcademico(nota.asignatura, cursoAcademico)}}</td>
+                    <td>
+                        {{getConvocatoriasUtilizadasEnCursoAcademico(nota.asignatura,
+                        cursoAcademico)}}
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">Cursos del Grado</h1>
-    <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding">
+        Cursos del Grado
+    </h1>
+    <hr class="col-md-12 col-sm-12 col-xs-12 without-lateral-padding" />
 
     <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-        <table class="table table-bordered text-center" ng-repeat="curso in getCursos()">
+        <table
+            class="table table-bordered text-center"
+            ng-repeat="curso in getCursos()"
+        >
             <thead>
                 <tr>
                     <th colspan="7" class="text-center">Curso: {{curso}}º</th>
@@ -116,67 +225,164 @@
                 <tr>
                     <th colspan="7" class="text-center">Primer Cuatrimestre</th>
                 </tr>
-                <tr ng-repeat="nota in notasExpediente | filter:{curso: curso, cuatrimestre: 1}" class="text-center"
-                    ng-show="esUltimaNotaDeLaAsignatura(nota.asignatura, nota.nota)">
+                <tr
+                    ng-repeat="nota in notasExpediente | filter:{curso: curso, cuatrimestre: 1}"
+                    class="text-center"
+                    ng-show="esUltimaNotaDeLaAsignatura(nota.asignatura, nota.nota)"
+                >
                     <td>{{nota.abreviatura}}</td>
                     <td>{{nota.departamento}}</td>
                     <td>{{nota.asignatura}}</td>
                     <td>{{nota.curso}}</td>
                     <td>
-                        <span class="label label-success" ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota == 'APTO'">{{nota.nota}}</span>
-                        <span class="label label-fail" ng-show="nota.nota <5">{{nota.nota}}</span>
-                        <span class="label label-primary" ng-show="nota.nota >=7 && nota.nota <9">{{nota.nota}}</span>
-                        <span class="label label-warning" ng-show="nota.nota >=9 && !nota.matriculaHonor">{{nota.nota}}</span>
-                        <span class="label label-danger" ng-show="nota.matriculaHonor">{{nota.nota}}</span>
+                        <span
+                            class="label label-success"
+                            ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota === 'APTO'"
+                            >{{nota.nota}}</span
+                        >
+                        <span class="label label-fail" ng-show="nota.nota <5"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.nota >=7 && nota.nota <9"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.nota >=9 && !nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-danger"
+                            ng-show="nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
                     </td>
                     <td>
-                        <span class="label label-primary" ng-show="nota.metodoAprobado == 'Parciales'">{{nota.metodoAprobado}}</span>
-                        <span class="label label-warning" ng-show="nota.metodoAprobado == 'Convocatoria'">{{nota.metodoAprobado}}</span>
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.metodoAprobado === 'Parciales'"
+                            >{{nota.metodoAprobado}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.metodoAprobado === 'Convocatoria'"
+                            >{{nota.metodoAprobado}}</span
+                        >
                     </td>
-                    <td>{{getConvocatoriasUtilizadasEnCurso(nota.asignatura, curso)}}</td>
+                    <td>
+                        {{getConvocatoriasUtilizadasEnCurso(nota.asignatura,
+                        curso)}}
+                    </td>
                 </tr>
                 <tr>
-                    <th colspan="7" class="text-center">Segundo Cuatrimestre</th>
+                    <th colspan="7" class="text-center">
+                        Segundo Cuatrimestre
+                    </th>
                 </tr>
-                <tr ng-repeat="nota in notasExpediente | filter:{curso: curso, cuatrimestre: 2}" class="text-center"
-                    ng-show="esUltimaNotaDeLaAsignatura(nota.asignatura, nota.nota)">
+                <tr
+                    ng-repeat="nota in notasExpediente | filter:{curso: curso, cuatrimestre: 2}"
+                    class="text-center"
+                    ng-show="esUltimaNotaDeLaAsignatura(nota.asignatura, nota.nota)"
+                >
                     <td>{{nota.abreviatura}}</td>
                     <td>{{nota.departamento}}</td>
                     <td>{{nota.asignatura}}</td>
                     <td>{{nota.curso}}</td>
                     <td>
-                        <span class="label label-success" ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota == 'APTO'">{{nota.nota}}</span>
-                        <span class="label label-fail" ng-show="nota.nota <5">{{nota.nota}}</span>
-                        <span class="label label-primary" ng-show="nota.nota >=7 && nota.nota <9">{{nota.nota}}</span>
-                        <span class="label label-warning" ng-show="nota.nota >=9 && !nota.matriculaHonor">{{nota.nota}}</span>
-                        <span class="label label-danger" ng-show="nota.matriculaHonor">{{nota.nota}}</span>
+                        <span
+                            class="label label-success"
+                            ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota === 'APTO'"
+                            >{{nota.nota}}</span
+                        >
+                        <span class="label label-fail" ng-show="nota.nota <5"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.nota >=7 && nota.nota <9"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.nota >=9 && !nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-danger"
+                            ng-show="nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
                     </td>
-                    <td><span class="label label-primary">{{nota.metodoAprobado}}</span></td>
-                    <td>{{getConvocatoriasUtilizadasEnCurso(nota.asignatura, curso)}}</td>
+                    <td>
+                        <span class="label label-primary"
+                            >{{nota.metodoAprobado}}</span
+                        >
+                    </td>
+                    <td>
+                        {{getConvocatoriasUtilizadasEnCurso(nota.asignatura,
+                        curso)}}
+                    </td>
                 </tr>
                 <tr>
                     <th colspan="7" class="text-center">Anuales</th>
                 </tr>
-                <tr ng-repeat="nota in notasExpediente | filter:{curso: curso, cuatrimestre: 0}" class="text-center"
-                    ng-show="esUltimaNotaDeLaAsignatura(nota.asignatura, nota.nota)">
+                <tr
+                    ng-repeat="nota in notasExpediente | filter:{curso: curso, cuatrimestre: 0}"
+                    class="text-center"
+                    ng-show="esUltimaNotaDeLaAsignatura(nota.asignatura, nota.nota)"
+                >
                     <td>{{nota.abreviatura}}</td>
                     <td>{{nota.departamento}}</td>
                     <td>{{nota.asignatura}}</td>
                     <td>{{nota.curso}}</td>
                     <td>
-                        <span class="label label-success" ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota == 'APTO'">{{nota.nota}}</span>
-                        <span class="label label-fail" ng-show="nota.nota <5">{{nota.nota}}</span>
-                        <span class="label label-primary" ng-show="nota.nota >=7 && nota.nota <9">{{nota.nota}}</span>
-                        <span class="label label-warning" ng-show="nota.nota >=9 && !nota.matriculaHonor">{{nota.nota}}</span>
-                        <span class="label label-danger" ng-show="nota.matriculaHonor">{{nota.nota}}</span>
+                        <span
+                            class="label label-success"
+                            ng-show="(nota.nota >=5 && nota.nota <7) || nota.nota === 'APTO'"
+                            >{{nota.nota}}</span
+                        >
+                        <span class="label label-fail" ng-show="nota.nota <5"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.nota >=7 && nota.nota <9"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.nota >=9 && !nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
+                        <span
+                            class="label label-danger"
+                            ng-show="nota.matriculaHonor"
+                            >{{nota.nota}}</span
+                        >
                     </td>
                     <td>
-                        <span class="label label-primary" ng-show="nota.metodoAprobado == 'Parciales'">{{nota.metodoAprobado}}</span>
-                        <span class="label label-warning" ng-show="nota.metodoAprobado == 'Convocatoria'">{{nota.metodoAprobado}}</span>
-                        <span class="label label-default" ng-show="nota.metodoAprobado != 'Parciales' && nota.metodoAprobado != 'Convocatoria'">{{nota.metodoAprobado
-                            || 'N/A'}}</span>
+                        <span
+                            class="label label-primary"
+                            ng-show="nota.metodoAprobado === 'Parciales'"
+                            >{{nota.metodoAprobado}}</span
+                        >
+                        <span
+                            class="label label-warning"
+                            ng-show="nota.metodoAprobado === 'Convocatoria'"
+                            >{{nota.metodoAprobado}}</span
+                        >
+                        <span
+                            class="label label-default"
+                            ng-show="nota.metodoAprobado != 'Parciales' && nota.metodoAprobado != 'Convocatoria'"
+                            >{{nota.metodoAprobado || 'N/A'}}</span
+                        >
                     </td>
-                    <td>{{getConvocatoriasUtilizadasEnCurso(nota.asignatura, curso)}}</td>
+                    <td>
+                        {{getConvocatoriasUtilizadasEnCurso(nota.asignatura,
+                        curso)}}
+                    </td>
                 </tr>
             </tbody>
         </table>

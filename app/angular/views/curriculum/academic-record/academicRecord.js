@@ -54,10 +54,10 @@
                 var aux = $scope.notasExpediente[i];
 
                 if (
-                    aux.asignatura == asignatura &&
-                    aux.cursoAcademico == cursoAcademico
+                    aux.asignatura === asignatura &&
+                    aux.cursoAcademico === cursoAcademico
                 ) {
-                    if (res == 0) {
+                    if (res === 0) {
                         if (!isNaN(aux.nota)) {
                             res = aux.nota;
                         }
@@ -76,7 +76,7 @@
             for (var i = 0; i < $scope.notasExpediente.length; i++) {
                 var existe = false;
                 for (var j = 0; j < $scope.notasExpediente.length; j++) {
-                    if (res[j] == $scope.notasExpediente[i].cursoAcademico) {
+                    if (res[j] === $scope.notasExpediente[i].cursoAcademico) {
                         existe = true;
                         break;
                     }
@@ -108,10 +108,10 @@
                 var nota = notasOrdenadas[i];
 
                 if (
-                    nota.asignatura == asignatura &&
-                    nota.cursoAcademico == cursoAcademico
+                    nota.asignatura === asignatura &&
+                    nota.cursoAcademico === cursoAcademico
                 ) {
-                    if (nota.numeroConvocatoria == numeroConvocatoria) {
+                    if (nota.numeroConvocatoria === numeroConvocatoria) {
                         res = true;
                     } else {
                         break;
@@ -134,8 +134,8 @@
             for (var i = 0; i < notasOrdenadas.length; i++) {
                 var n = notasOrdenadas[i];
 
-                if (n.asignatura == asignatura) {
-                    if (n.nota == nota) {
+                if (n.asignatura === asignatura) {
+                    if (n.nota === nota) {
                         res = true;
                     } else {
                         break;
