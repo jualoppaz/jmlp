@@ -27,6 +27,9 @@
             false
         );
 
+        $scope.averageByAcademicCourseAndSubject = academicRecordService.getAverageByAcademicCourseAndSubject();
+        $scope.averageByAcademicCourseAndCredit = academicRecordService.getAverageByAcademicCourseAndCredit();
+
         $scope.abrirEnlace = function(enlace) {
             $window.open(enlace, "_blank");
         };
