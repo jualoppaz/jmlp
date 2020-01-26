@@ -5,10 +5,22 @@
         .module("services")
         .factory("academicRecordService", academicRecordService);
 
-    academicRecordService.$inject = [];
-    function academicRecordService() {
+    academicRecordService.$inject = ["$filter"];
+    function academicRecordService($filter) {
+        var academicCourses = [
+            "2010/2011",
+            "2011/2012",
+            "2012/2013",
+            "2013/2014"
+        ];
         return {
-            getRecords: getRecordsFn
+            getRecords: getRecordsFn,
+            getAverageByAcademicCourseAndSubject: getAverageByAcademicCourseAndSubjectFn,
+            getAverageByAcademicCourseAndCredit: getAverageByAcademicCourseAndCreditFn,
+            //getAverageByDegreeCourseAndSubject: getAverageByDegreeCourseAndSubjectFn,
+            //getAverageByDegreeCourseAndCredit: getAverageByDegreeCourseAndCreditFn,
+            //getDegreeAverageBySubject: getDegreeAverageBySubject,
+            getAcademicCourses: getAcademicCoursesFn
         };
 
         /////////////////
@@ -19,7 +31,7 @@
          * @author jualoppaz
          */
         function getRecordsFn() {
-            return [
+            return angular.copy([
                 {
                     curso: "1",
                     cursoAcademico: "2010/2011",
@@ -629,7 +641,150 @@
                     tipoCreditos: "Obligatorias",
                     numeroConvocatoria: 2
                 }
-            ];
+            ]);
+        }
+
+        /**
+         * Método que sirve para obtener la nota media de cada curso académico según las asignaturas.
+         *
+         * @author jualoppaz
+         */
+        function getAverageByAcademicCourseAndSubjectFn() {
+            const res = [];
+            getAcademicCoursesFn().forEach(function(academicCourse) {
+                let uniqueCourseSubjects = [];
+
+                let courseSubjects = $filter("filter")(getRecordsFn(), function(
+                    element
+                ) {
+                    return element.cursoAcademico === academicCourse;
+                });
+
+                courseSubjects.forEach(function(courseSubject) {
+                    if (
+                        !uniqueCourseSubjects.some(function(uniqueSubject) {
+                            return (
+                                uniqueSubject.asignatura ===
+                                courseSubject.asignatura
+                            );
+                        })
+                    ) {
+                        if (!isNaN(courseSubject.nota)) {
+                            uniqueCourseSubjects.push(courseSubject);
+                        }
+                        return;
+                    }
+
+                    const uniqueSubject = uniqueCourseSubjects.find(function(
+                        subject
+                    ) {
+                        return subject.asignatura === courseSubject.asignatura;
+                    });
+
+                    if (
+                        uniqueSubject.numeroConvocatoria <
+                        courseSubject.numeroConvocatoria
+                    ) {
+                        const index = uniqueCourseSubjects.indexOf(
+                            uniqueSubject
+                        );
+                        uniqueCourseSubjects[index] = courseSubject;
+                    }
+                });
+
+                const marks = uniqueCourseSubjects.map(function(element) {
+                    return element.nota;
+                });
+
+                let sum = 0;
+                for (let i = 0; i < marks.length; i++) {
+                    sum += marks[i];
+                }
+
+                const average = Math.round((sum / marks.length) * 100) / 100;
+
+                res.push({
+                    cursoAcademico: academicCourse,
+                    nota: average
+                });
+            });
+
+            return res;
+        }
+
+        /**
+         * Método que sirve para obtener la nota media de cada curso académico según los créditos de las asignaturas.
+         *
+         * @author jualoppaz
+         */
+        function getAverageByAcademicCourseAndCreditFn() {
+            const res = [];
+            getAcademicCoursesFn().forEach(function(academicCourse) {
+                let uniqueCourseSubjects = [];
+
+                let courseSubjects = $filter("filter")(getRecordsFn(), function(
+                    element
+                ) {
+                    return element.cursoAcademico === academicCourse;
+                });
+
+                courseSubjects.forEach(function(courseSubject) {
+                    if (
+                        !uniqueCourseSubjects.some(function(uniqueSubject) {
+                            return (
+                                uniqueSubject.asignatura ===
+                                courseSubject.asignatura
+                            );
+                        })
+                    ) {
+                        if (!isNaN(courseSubject.nota)) {
+                            uniqueCourseSubjects.push(courseSubject);
+                        }
+                        return;
+                    }
+
+                    const uniqueSubject = uniqueCourseSubjects.find(function(
+                        subject
+                    ) {
+                        return subject.asignatura === courseSubject.asignatura;
+                    });
+
+                    if (
+                        uniqueSubject.numeroConvocatoria <
+                        courseSubject.numeroConvocatoria
+                    ) {
+                        const index = uniqueCourseSubjects.indexOf(
+                            uniqueSubject
+                        );
+                        uniqueCourseSubjects[index] = courseSubject;
+                    }
+                });
+
+                let sum = 0;
+                let totalCredits = 0;
+                for (let i = 0; i < uniqueCourseSubjects.length; i++) {
+                    sum += uniqueCourseSubjects[i].nota * uniqueCourseSubjects[i].creditos;
+                    totalCredits += uniqueCourseSubjects[i].creditos;
+                }
+
+                const average = Math.round((sum / totalCredits) * 100) / 100;
+
+                res.push({
+                    cursoAcademico: academicCourse,
+                    nota: average
+                });
+            });
+
+            return res;
+        }
+
+        /**
+         * Método que devuelve el listado de cursos académicos del grado.
+         *
+         * @author jualoppaz
+         */
+        function getAcademicCoursesFn() {
+            return angular.copy(academicCourses);
         }
     }
 })();
