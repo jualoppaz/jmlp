@@ -96,7 +96,7 @@
                     convocatoriaUtilizada: true,
                     creditos: 12,
                     tipoCreditos: "Troncal/Formación básica",
-                    numeroConvocatoria: 1
+                    numeroConvocatoria: 3
                 },
                 {
                     curso: "1",
