@@ -55,7 +55,8 @@ exports.config = {
                 bitwise: true,
                 curly: true,
                 unused: true,
-                eqeqeq: true
+                eqeqeq: true,
+                esversion: 6
             },
             warnOnly: true
         },
@@ -73,8 +74,7 @@ exports.config = {
         },
         browserSync: {
             watch: true,
-            port: 3333,
-            logLevel: "debug"
+            port: 3333
         }
     },
     overrides: {
