@@ -23,12 +23,15 @@
 
         return {
             getRecords: getRecordsFn,
+            getSubjectMarksByAcademicCourseAndQuarter: getSubjectMarksByAcademicCourseAndQuarterFn,
+            getSubjectMarksByDegreeCourseAndQuarter: getSubjectMarksByDegreeCourseAndQuarterFn,
             getAverageByAcademicCourseAndSubject: getAverageByAcademicCourseAndSubjectFn,
             getAverageByAcademicCourseAndCredit: getAverageByAcademicCourseAndCreditFn,
-            //getAverageByDegreeCourseAndSubject: getAverageByDegreeCourseAndSubjectFn,
-            //getAverageByDegreeCourseAndCredit: getAverageByDegreeCourseAndCreditFn,
-            //getDegreeAverageBySubject: getDegreeAverageBySubject,
-            getAcademicCourses: getAcademicCoursesFn
+            getAverageByDegreeCourseAndSubject: getAverageByDegreeCourseAndSubjectFn,
+            getAverageByDegreeCourseAndCredit: getAverageByDegreeCourseAndCreditFn,
+            getDegreeAverageBySubject: getDegreeAverageBySubjectFn,
+            getDegreeAverageByCredit: getDegreeAverageByCreditFn,
+            getAcademicCourses: getAcademicCoursesFn,
             getDegreeCourses: getDegreeCoursesFn
         };
 
@@ -654,6 +657,68 @@
         }
 
         /**
+         * Método que sirve para otbener las asignaturas del cuatrimestre de un curso académico.
+         *
+         * @param {*} academicCourse
+         * @param {*} quarter
+         *
+         * @author jualoppaz
+         */
+        function getSubjectMarksByAcademicCourseAndQuarterFn(academicCourse, quarter){
+            let aux = $filter("filter")(getRecordsFn(), (element => element.cursoAcademico === academicCourse && element.cuatrimestre === quarter));
+
+            aux = $filter("orderBy")(aux, "-numeroConvocatoria");
+
+            const res = [];
+
+            aux.forEach(item => {
+                const elem = res.find(element => element.abreviatura === item.abreviatura);
+                if(elem){
+                    if(item.convocatoriaUtilizada) {
+                        const resIndex = res.indexOf(elem);
+                        res[resIndex].convocatoriasUtilizadas += 1 ;
+                    }
+                }else if(item.convocatoriaUtilizada) {
+                    item.convocatoriasUtilizadas = 1;
+                    res.push(item);
+                }
+            });
+
+            return res;
+        }
+
+        /**
+         * Método que sirve para otbener las asignaturas del cuatrimestre de un curso del grado.
+         *
+         * @param {*} course
+         * @param {*} quarter
+         *
+         * @author jualoppaz
+         */
+        function getSubjectMarksByDegreeCourseAndQuarterFn(course, quarter){
+            let aux = $filter("filter")(getRecordsFn(), (element => element.curso === course && element.cuatrimestre === quarter));
+
+            aux = $filter("orderBy")(aux, "-numeroConvocatoria");
+
+            const res = [];
+
+            aux.forEach(item => {
+                const elem = res.find(element => element.abreviatura === item.abreviatura);
+                if(elem){
+                    if(item.convocatoriaUtilizada) {
+                        const resIndex = res.indexOf(elem);
+                        res[resIndex].convocatoriasUtilizadas += 1 ;
+                    }
+                }else if(item.convocatoriaUtilizada) {
+                    item.convocatoriasUtilizadas = 1;
+                    res.push(item);
+                }
+            });
+
+            return res;
+        }
+
+        /**
          * Método que sirve para obtener la nota media de cada curso académico según las asignaturas.
          *
          * @author jualoppaz
@@ -785,6 +850,217 @@
             });
 
             return res;
+        }
+
+        /**
+         * Método que sirve para obtener la nota media de cada curso académico según las asignaturas.
+         *
+         * @author jualoppaz
+         */
+        function getAverageByDegreeCourseAndSubjectFn() {
+            const res = [];
+            getDegreeCoursesFn().forEach(function(degreeCourse) {
+                let uniqueCourseSubjects = [];
+
+                let courseSubjects = $filter("filter")(getRecordsFn(), function(
+                    element
+                ) {
+                    return element.curso === degreeCourse;
+                });
+
+                courseSubjects.forEach(function(courseSubject) {
+                    if (
+                        !uniqueCourseSubjects.some(function(uniqueSubject) {
+                            return (
+                                uniqueSubject.asignatura ===
+                                courseSubject.asignatura
+                            );
+                        })
+                    ) {
+                        if (!isNaN(courseSubject.nota)) {
+                            uniqueCourseSubjects.push(courseSubject);
+                        }
+                        return;
+                    }
+
+                    const uniqueSubject = uniqueCourseSubjects.find(function(
+                        subject
+                    ) {
+                        return subject.asignatura === courseSubject.asignatura;
+                    });
+
+                    if (
+                        uniqueSubject.numeroConvocatoria <
+                        courseSubject.numeroConvocatoria
+                    ) {
+                        const index = uniqueCourseSubjects.indexOf(
+                            uniqueSubject
+                        );
+                        uniqueCourseSubjects[index] = courseSubject;
+                    }
+                });
+
+                const marks = uniqueCourseSubjects.map(function(element) {
+                    return element.nota;
+                });
+
+                let sum = 0;
+                for (let i = 0; i < marks.length; i++) {
+                    sum += marks[i];
+                }
+
+                const average = Math.round((sum / marks.length) * 100) / 100;
+
+                res.push({
+                    curso: degreeCourse,
+                    nota: average
+                });
+            });
+
+            return res;
+        }
+
+        /**
+         * Método que sirve para obtener la nota media de cada curso académico según los créditos de las asignaturas.
+         *
+         * @author jualoppaz
+         */
+        function getAverageByDegreeCourseAndCreditFn() {
+            const res = [];
+            getDegreeCoursesFn().forEach(function(degreeCourse) {
+                let uniqueCourseSubjects = [];
+
+                let courseSubjects = $filter("filter")(getRecordsFn(), function(
+                    element
+                ) {
+                    return element.curso === degreeCourse;
+                });
+
+                courseSubjects.forEach(function(courseSubject) {
+                    if (
+                        !uniqueCourseSubjects.some(function(uniqueSubject) {
+                            return (
+                                uniqueSubject.asignatura ===
+                                courseSubject.asignatura
+                            );
+                        })
+                    ) {
+                        if (!isNaN(courseSubject.nota)) {
+                            uniqueCourseSubjects.push(courseSubject);
+                        }
+                        return;
+                    }
+
+                    const uniqueSubject = uniqueCourseSubjects.find(function(
+                        subject
+                    ) {
+                        return subject.asignatura === courseSubject.asignatura;
+                    });
+
+                    if (
+                        uniqueSubject.numeroConvocatoria <
+                        courseSubject.numeroConvocatoria
+                    ) {
+                        const index = uniqueCourseSubjects.indexOf(
+                            uniqueSubject
+                        );
+                        uniqueCourseSubjects[index] = courseSubject;
+                    }
+                });
+
+                let sum = 0;
+                let totalCredits = 0;
+                for (let i = 0; i < uniqueCourseSubjects.length; i++) {
+                    sum += uniqueCourseSubjects[i].nota * uniqueCourseSubjects[i].creditos;
+                    totalCredits += uniqueCourseSubjects[i].creditos;
+                }
+
+                const average = Math.round((sum / totalCredits) * 100) / 100;
+
+                res.push({
+                    curso: degreeCourse,
+                    nota: average
+                });
+            });
+
+            return res;
+        }
+
+        /**
+         * Método que sirve para obtener la media del grado por asignatura.
+         *
+         * @author jualoppaz
+         */
+        function getDegreeAverageBySubjectFn(){
+            const allSubjects = getOfficialSubjectsFn();
+
+            let sum = 0, denominator = allSubjects.length;
+
+            allSubjects.forEach(subject => {
+                sum += subject.nota;
+            });
+
+            return Math.round((sum / denominator) * 100) / 100;
+        }
+
+        /**
+         * Método que sirve para obtener la media del grado por crédito.
+         *
+         * @author jualoppaz
+         */
+        function getDegreeAverageByCreditFn(){
+            debugger;
+            const allSubjects = getOfficialSubjectsFn();
+
+            let sum = 0, denominator = 0;
+
+            allSubjects.forEach(subject => {
+                sum += subject.nota * subject.creditos;
+                denominator += subject.creditos;
+            });
+
+            return Math.round((sum / denominator) * 100) / 100;
+        }
+
+        /**
+         * Método que sirve para obtener todas las notas numéricas de las actas.
+         *
+         * @author jualoppaz
+         */
+        function getOfficialSubjectsFn(){
+            debugger;
+            const firstCourse = [
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("1", 1),
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("1", 2),
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("1", null)
+            ];
+
+            const secondCourse = [
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("2", 1),
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("2", 2),
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("2", null)
+            ];
+
+            const thirdCourse = [
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("3", 1),
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("3", 2),
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("3", null)
+            ];
+
+            const fourthCourse = [
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("4", 1),
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("4", 2),
+                ...getSubjectMarksByDegreeCourseAndQuarterFn("4", null)
+            ];
+
+            let allSubjects = [
+                ...firstCourse,
+                ...secondCourse,
+                ...thirdCourse,
+                ...fourthCourse
+            ];
+
+            return allSubjects.filter(element => !isNaN(element.nota));
         }
 
         /**
