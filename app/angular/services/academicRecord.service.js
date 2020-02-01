@@ -1009,7 +1009,6 @@
          * @author jualoppaz
          */
         function getDegreeAverageByCreditFn(){
-            debugger;
             const allSubjects = getOfficialSubjectsFn();
 
             let sum = 0, denominator = 0;
@@ -1028,7 +1027,6 @@
          * @author jualoppaz
          */
         function getOfficialSubjectsFn(){
-            debugger;
             const firstCourse = [
                 ...getSubjectMarksByDegreeCourseAndQuarterFn("1", 1),
                 ...getSubjectMarksByDegreeCourseAndQuarterFn("1", 2),
