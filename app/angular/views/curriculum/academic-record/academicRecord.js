@@ -8,20 +8,37 @@
     AcademicRecordController.$inject = [
         "$scope",
         "$window",
-        "$filter",
-        "academicRecordService"
+        "academicRecordResolve",
+        "averageByAcademicCourseAndSubjectResolve",
+        "averageByAcademicCourseAndCreditResolve",
+        "averageByDegreeCourseAndSubjectResolve",
+        "averageByDegreeCourseAndCreditResolve",
+        "degreeAverageBySubjectResolve",
+        "degreeAverageByCreditResolve"
     ];
     function AcademicRecordController(
         $scope,
         $window,
-        $filter,
-        academicRecordService
+        academicRecordResolve,
+        averageByAcademicCourseAndSubjectResolve,
+        averageByAcademicCourseAndCreditResolve,
+        averageByDegreeCourseAndSubjectResolve,
+        averageByDegreeCourseAndCreditResolve,
+        degreeAverageBySubjectResolve,
+        degreeAverageByCreditResolve
     ) {
+        debugger;
         $scope.$parent.title = "Expediente Académico";
 
+        $scope.academicCourses = academicRecordResolve.academicCourses;
+        $scope.degreeCourses = academicRecordResolve.degreeCourses;
 
-        $scope.averageByAcademicCourseAndSubject = academicRecordService.getAverageByAcademicCourseAndSubject();
-        $scope.averageByAcademicCourseAndCredit = academicRecordService.getAverageByAcademicCourseAndCredit();
+        $scope.averageByAcademicCourseAndSubject = averageByAcademicCourseAndSubjectResolve;
+        $scope.averageByAcademicCourseAndCredit = averageByAcademicCourseAndCreditResolve;
+        $scope.averageByDegreeCourseAndSubject = averageByDegreeCourseAndSubjectResolve;
+        $scope.averageByDegreeCourseAndCredit = averageByDegreeCourseAndCreditResolve;
+        $scope.degreeAverageBySubject = degreeAverageBySubjectResolve;
+        $scope.degreeAverageByCredit = degreeAverageByCreditResolve;
 
         $scope.abrirEnlace = function(enlace) {
             $window.open(enlace, "_blank");
