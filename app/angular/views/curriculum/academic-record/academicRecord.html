@@ -8,12 +8,12 @@
         <div class="col-xs-12 table-responsive">
             <table
                 class="table table-bordered text-center"
-                ng-repeat="cursoAcademico in getCursosAcademicos()"
+                ng-repeat="(index, cursoAcademico) in academicCourses"
             >
                 <thead>
                     <tr>
                         <th colspan="7" class="text-center">
-                            Curso académico {{cursoAcademico}}
+                            Curso académico {{cursoAcademico.course}}
                         </th>
                     </tr>
                 </thead>
@@ -31,9 +31,8 @@
                         <th colspan="7" class="text-center">Primer Cuatrimestre</th>
                     </tr>
                     <tr
-                        ng-repeat="nota in notasExpediente | filter:{cursoAcademico: cursoAcademico, cuatrimestre: 1}"
+                        ng-repeat="nota in cursoAcademico.data.firstQuarter"
                         class="text-center"
-                        ng-show="esUltimaConvocatoriaDelCursoAcademico(nota.asignatura, cursoAcademico, nota.numeroConvocatoria)"
                     >
                         <td>{{nota.abreviatura}}</td>
                         <td>{{nota.departamento}}</td>
@@ -57,10 +56,7 @@
                                 >{{nota.metodoAprobado}}</span
                             >
                         </td>
-                        <td>
-                            {{getConvocatoriasUtilizadasEnCursoAcademico(nota.asignatura,
-                            cursoAcademico)}}
-                        </td>
+                        <td>{{nota.convocatoriasUtilizadas}}</td>
                     </tr>
                     <tr>
                         <th colspan="7" class="text-center">
@@ -68,9 +64,8 @@
                         </th>
                     </tr>
                     <tr
-                        ng-repeat="nota in notasExpediente | filter:{cursoAcademico: cursoAcademico, cuatrimestre: 2}"
+                        ng-repeat="nota in cursoAcademico.data.secondQuarter"
                         class="text-center"
-                        ng-show="esUltimaConvocatoriaDelCursoAcademico(nota.asignatura, cursoAcademico, nota.numeroConvocatoria)"
                     >
                         <td>{{nota.abreviatura}}</td>
                         <td>{{nota.departamento}}</td>
@@ -83,22 +78,25 @@
                             >
                         </td>
                         <td>
-                            <span class="label label-primary"
+                            <span
+                                class="label label-primary"
+                                ng-show="nota.metodoAprobado === 'Parciales'"
+                                >{{nota.metodoAprobado}}</span
+                            >
+                            <span
+                                class="label label-warning"
+                                ng-show="nota.metodoAprobado === 'Convocatoria'"
                                 >{{nota.metodoAprobado}}</span
                             >
                         </td>
-                        <td>
-                            {{getConvocatoriasUtilizadasEnCursoAcademico(nota.asignatura,
-                            cursoAcademico)}}
-                        </td>
+                        <td>{{nota.convocatoriasUtilizadas}}</td>
                     </tr>
                     <tr>
                         <th colspan="7" class="text-center">Anuales</th>
                     </tr>
                     <tr
-                        ng-repeat="nota in notasExpediente | filter:{cursoAcademico: cursoAcademico, cuatrimestre: 0}"
+                        ng-repeat="nota in cursoAcademico.data.allYear"
                         class="text-center"
-                        ng-show="esUltimaConvocatoriaDelCursoAcademico(nota.asignatura, cursoAcademico, nota.numeroConvocatoria)"
                     >
                         <td>{{nota.abreviatura}}</td>
                         <td>{{nota.departamento}}</td>
@@ -107,8 +105,7 @@
                         <td>
                             <span
                                 class="label label-{{getLabelClassByMark(nota)}}"
-                                >{{getNotaMasRecienteDelCursoAcademico(nota.cursoAcademico,
-                                    nota.asignatura) || 'N/A'}}</span
+                                >{{nota.nota || 'N/A'}}</span
                             >
                         </td>
                         <td>
@@ -128,10 +125,7 @@
                                 >{{nota.metodoAprobado || 'N/A'}}</span
                             >
                         </td>
-                        <td>
-                            {{getConvocatoriasUtilizadasEnCursoAcademico(nota.asignatura,
-                            cursoAcademico)}}
-                        </td>
+                        <td>{{nota.convocatoriasUtilizadas}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -147,11 +141,11 @@
         <div class="col-xs-12 table-responsive">
             <table
                 class="table table-bordered text-center"
-                ng-repeat="curso in getCursos()"
+                ng-repeat="curso in degreeCourses"
             >
                 <thead>
                     <tr>
-                        <th colspan="7" class="text-center">Curso: {{curso}}º</th>
+                        <th colspan="7" class="text-center">Curso: {{curso.course}}º</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -168,9 +162,8 @@
                         <th colspan="7" class="text-center">Primer Cuatrimestre</th>
                     </tr>
                     <tr
-                        ng-repeat="nota in notasExpediente | filter:{curso: curso, cuatrimestre: 1}"
+                        ng-repeat="nota in curso.data.firstQuarter"
                         class="text-center"
-                        ng-show="esUltimaNotaDeLaAsignatura(nota.asignatura, nota.nota)"
                     >
                         <td>{{nota.abreviatura}}</td>
                         <td>{{nota.departamento}}</td>
@@ -194,10 +187,7 @@
                                 >{{nota.metodoAprobado}}</span
                             >
                         </td>
-                        <td>
-                            {{getConvocatoriasUtilizadasEnCurso(nota.asignatura,
-                            curso)}}
-                        </td>
+                        <td>{{nota.convocatoriasUtilizadas}}</td>
                     </tr>
                     <tr>
                         <th colspan="7" class="text-center">
@@ -205,9 +195,8 @@
                         </th>
                     </tr>
                     <tr
-                        ng-repeat="nota in notasExpediente | filter:{curso: curso, cuatrimestre: 2}"
+                        ng-repeat="nota in curso.data.secondQuarter"
                         class="text-center"
-                        ng-show="esUltimaNotaDeLaAsignatura(nota.asignatura, nota.nota)"
                     >
                         <td>{{nota.abreviatura}}</td>
                         <td>{{nota.departamento}}</td>
@@ -224,18 +213,14 @@
                                 >{{nota.metodoAprobado}}</span
                             >
                         </td>
-                        <td>
-                            {{getConvocatoriasUtilizadasEnCurso(nota.asignatura,
-                            curso)}}
-                        </td>
+                        <td>{{nota.convocatoriasUtilizadas}}</td>
                     </tr>
                     <tr>
                         <th colspan="7" class="text-center">Anuales</th>
                     </tr>
                     <tr
-                        ng-repeat="nota in notasExpediente | filter:{curso: curso, cuatrimestre: 0}"
+                        ng-repeat="nota in curso.data.allYear"
                         class="text-center"
-                        ng-show="esUltimaNotaDeLaAsignatura(nota.asignatura, nota.nota)"
                     >
                         <td>{{nota.abreviatura}}</td>
                         <td>{{nota.departamento}}</td>
@@ -264,10 +249,7 @@
                                 >{{nota.metodoAprobado || 'N/A'}}</span
                             >
                         </td>
-                        <td>
-                            {{getConvocatoriasUtilizadasEnCurso(nota.asignatura,
-                            curso)}}
-                        </td>
+                        <td>{{nota.convocatoriasUtilizadas}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -309,6 +291,86 @@
                             <span
                                 class="label label-{{getLabelClassByMark(averageByAcademicCourseAndCredit[index])}}"
                                 >{{averageByAcademicCourseAndCredit[index].nota}}</span
+                            >
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <h1>
+            Media por Curso del Grado
+        </h1>
+        <hr/>
+        <div class="col-xs-12 table-responsive">
+            <table
+                class="table table-bordered text-center"
+            >
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            Curso
+                        </th>
+                        <th class="text-center">
+                            Media por Asignatura
+                        </th>
+                        <th class="text-center">
+                            Media por Crédito
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="(index, course) in averageByDegreeCourseAndSubject">
+                        <td data-ng-bind="course.curso"></td>
+                        <td>
+                            <span
+                                class="label label-{{getLabelClassByMark(course)}}"
+                                >{{course.nota}}</span
+                            >
+                        </td>
+                        <td>
+                            <span
+                                class="label label-{{getLabelClassByMark(averageByAcademicCourseAndCredit[index])}}"
+                                >{{averageByDegreeCourseAndCredit[index].nota}}</span
+                            >
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <h1>
+            Media del Grado
+        </h1>
+        <hr/>
+        <div class="col-xs-12 table-responsive">
+            <table
+                class="table table-bordered text-center"
+            >
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            Media por Asignatura
+                        </th>
+                        <th class="text-center">
+                            Media por Crédito
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span
+                                class="label label-{{getLabelClassByMark({nota: degreeAverageBySubject})}}"
+                                >{{degreeAverageBySubject}}</span
+                            >
+                        </td>
+                        <td>
+                            <span
+                                class="label label-{{getLabelClassByMark({nota: degreeAverageByCredit})}}"
+                                >{{degreeAverageByCredit}}</span
                             >
                         </td>
                     </tr>
