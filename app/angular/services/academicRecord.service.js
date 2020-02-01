@@ -13,6 +13,14 @@
             "2012/2013",
             "2013/2014"
         ];
+
+        var degreeCourses = [
+            "1",
+            "2",
+            "3",
+            "4"
+        ];
+
         return {
             getRecords: getRecordsFn,
             getAverageByAcademicCourseAndSubject: getAverageByAcademicCourseAndSubjectFn,
@@ -21,6 +29,7 @@
             //getAverageByDegreeCourseAndCredit: getAverageByDegreeCourseAndCreditFn,
             //getDegreeAverageBySubject: getDegreeAverageBySubject,
             getAcademicCourses: getAcademicCoursesFn
+            getDegreeCourses: getDegreeCoursesFn
         };
 
         /////////////////
@@ -785,6 +794,15 @@
          */
         function getAcademicCoursesFn() {
             return angular.copy(academicCourses);
+        }
+
+        /**
+         * Método que devuelve el listado de cursos del grado.
+         *
+         * @author jualoppaz
+         */
+        function getDegreeCoursesFn() {
+            return angular.copy(degreeCourses);
         }
     }
 })();
