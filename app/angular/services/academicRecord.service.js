@@ -58,7 +58,7 @@
                 {
                     curso: "1",
                     cursoAcademico: "2010/2011",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "FP",
                     departamento: "LSI",
                     asignatura: "Fundamentos de Programación",
@@ -72,7 +72,7 @@
                 {
                     curso: "1",
                     cursoAcademico: "2010/2011",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "FP",
                     departamento: "LSI",
                     asignatura: "Fundamentos de Programación",
@@ -86,7 +86,7 @@
                 {
                     curso: "1",
                     cursoAcademico: "2011/2012",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "FP",
                     departamento: "LSI",
                     asignatura: "Fundamentos de Programación",
@@ -312,7 +312,7 @@
                 {
                     curso: "2",
                     cursoAcademico: "2011/2012",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "ADDA",
                     departamento: "LSI",
                     asignatura: "Análisis y Diseño de Datos y Algoritmos",
@@ -326,7 +326,7 @@
                 {
                     curso: "2",
                     cursoAcademico: "2011/2012",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "IISSI",
                     departamento: "LSI",
                     asignatura:
@@ -468,7 +468,7 @@
                 {
                     curso: "3",
                     cursoAcademico: "2012/2013",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "DP",
                     departamento: "LSI",
                     asignatura: "Diseño y Pruebas",
@@ -482,7 +482,7 @@
                 {
                     curso: "3",
                     cursoAcademico: "2012/2013",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "DP",
                     departamento: "LSI",
                     asignatura: "Diseño y Pruebas",
@@ -496,7 +496,7 @@
                 {
                     curso: "3",
                     cursoAcademico: "2012/2013",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "PSG",
                     departamento: "LSI",
                     asignatura: "Proceso Software y Gestión",
@@ -625,7 +625,7 @@
                 {
                     curso: "4",
                     cursoAcademico: "2013/2014",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "TFG",
                     departamento: "LSI",
                     asignatura: "Trabajo de Fin de Grado",
@@ -639,7 +639,7 @@
                 {
                     curso: "4",
                     cursoAcademico: "2013/2014",
-                    cuatrimestre: 0,
+                    cuatrimestre: null,
                     abreviatura: "TFG",
                     departamento: "LSI",
                     asignatura: "Trabajo de Fin de Grado",
