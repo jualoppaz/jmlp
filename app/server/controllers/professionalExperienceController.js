@@ -37,6 +37,10 @@ var findAllProfessionalExperiences = function(req, res) {
                             return a.name.localeCompare(b.name);
                         });
                     });
+
+                    professionalExperiences.projects.sort(function(a, b) {
+                        return b.startDate - a.startDate;
+                    });
                 }
 
                 if (
@@ -48,6 +52,10 @@ var findAllProfessionalExperiences = function(req, res) {
                             project.technologies.sort(function(a, b) {
                                 return a.name.localeCompare(b.name);
                             });
+                        });
+
+                        client.projects.sort(function(a, b) {
+                            return b.startDate - a.startDate;
                         });
                     });
                 }
