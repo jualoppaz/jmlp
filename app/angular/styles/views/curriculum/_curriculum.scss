@@ -118,11 +118,9 @@ main#curriculum {
                 }
                 img {
                     &.technology {
-                        @media screen and (min-width: $min-width-tablet) {
-                            padding: 4px;
-                            width: 50px;
-                            height: 50px;
-                        }
+                        padding: 4px;
+                        width: 50px;
+                        height: 50px;
                     }
                 }
             }
