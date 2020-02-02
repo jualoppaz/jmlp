@@ -69,8 +69,9 @@ exports.config = {
             '([ -d public/webfonts ] || mkdir "public/webfonts") && cp bower_components/components-font-awesome/webfonts/* public/webfonts',
             '([ -d public/fonts ] || mkdir "public/fonts") && cp bower_components/bootstrap/fonts/* public/fonts'
         ],
-        uglify: {
-            mangle: false
+        terser: {
+            mangle: false,
+            ecma: 2015
         },
         browserSync: {
             watch: true,
