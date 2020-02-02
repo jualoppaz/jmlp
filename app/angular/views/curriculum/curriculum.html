@@ -69,12 +69,10 @@
             <div class="media-body">
                 <h4 ng-class="{'title-job-centered': !experiencia.description}">
                     <b
-                        >{{ experiencia.startDate | date: "MM/yyyy" }} -
-                        {{
-                            experiencia.endDate
-                                ? (experiencia.endDate | date: "MM/yyyy")
-                                : "Actualidad"
-                        }}: {{ experiencia.company.name }}</b
+                        >{{ experiencia.startDate | date: "MM/yyyy" }} - {{
+                        experiencia.endDate ? (experiencia.endDate | date:
+                        "MM/yyyy") : "Actualidad" }}: {{
+                        experiencia.company.name }}</b
                     >
                 </h4>
                 <a
@@ -95,8 +93,8 @@
                     <div class="media-body">
                         <h4>
                             <b
-                                >{{ client.startDate | date: "MM/yyyy" }} -
-                                {{ client.endDate | date: "MM/yyyy" }}</b
+                                >{{ client.startDate | date: "MM/yyyy" }} - {{
+                                client.endDate | date: "MM/yyyy" }}</b
                             >
                         </h4>
                         <a
@@ -148,7 +146,7 @@
                                 >
                                     <img
                                         title="{{ technology.name }}"
-                                        class="col-xs-4 img-responsive img-thumbnail technology"
+                                        class="img-responsive img-thumbnail technology"
                                         ng-src="/images/{{ technology.image }}"
                                     />
                                 </a>
@@ -180,7 +178,7 @@
                                 project.startDate | date: 'MM/yyyy'
                             }} - {{
                                 project.endDate
-                                    ? (project.startDate | date: 'MM/yyyy')
+                                    ? (project.endDate | date: 'MM/yyyy')
                                     : 'Actualidad'
                             }}"
                         ></a>
@@ -202,7 +200,7 @@
                         >
                             <img
                                 title="{{ technology.name }}"
-                                class="col-xs-4 img-responsive img-thumbnail technology"
+                                class="img-responsive img-thumbnail technology"
                                 ng-src="/images/{{ technology.image }}"
                             />
                         </a>
@@ -259,7 +257,7 @@
                 <a ng-href="#">
                     <img
                         class="media-object main-image"
-                        ng-class="{'img-circle': proyecto.bordeImagen == 'img-circle'}"
+                        ng-class="{'img-circle': proyecto.bordeImagen === 'img-circle'}"
                         ng-src="/images/{{ proyecto.image }}"
                     />
                 </a>
@@ -267,17 +265,14 @@
             <div class="media-body">
                 <h4>
                     <b>
-                        {{ proyecto.startDate | date: "MM/yyyy" }} -
-                        {{
-                            proyecto.endDate
-                                ? (proyecto.endDate | date: "MM/yyyy")
-                                : "Actualidad"
-                        }}: {{ proyecto.name }}
+                        {{ proyecto.startDate | date: "MM/yyyy" }} - {{
+                        proyecto.endDate ? (proyecto.endDate | date: "MM/yyyy")
+                        : "Actualidad" }}: {{ proyecto.name }}
                     </b>
                 </h4>
-                <a class="media-heading col-xs-12 without-lateral-padding">{{
-                    proyecto.description
-                }}</a>
+                <a class="media-heading col-xs-12 without-lateral-padding"
+                    >{{ proyecto.description }}</a
+                >
                 <div
                     ng-show="proyecto.technologies.length"
                     class="technologies col-xs-12 without-lateral-padding"
@@ -291,7 +286,7 @@
                         >
                             <img
                                 title="{{ technology.name }}"
-                                class="col-xs-4 img-responsive img-thumbnail technology"
+                                class="img-responsive img-thumbnail technology"
                                 ng-src="/images/{{ technology.image }}"
                             />
                         </a>
@@ -306,9 +301,9 @@
                             curriculum.getLinkTypeTitle(link.type)
                         }}:"
                     ></b>
-                    <a ng-href="{{ link.value }}" target="_blank">{{
-                        curriculum.getLinkValueTitle(link)
-                    }}</a>
+                    <a ng-href="{{ link.value }}" target="_blank"
+                        >{{ curriculum.getLinkValueTitle(link) }}</a
+                    >
                 </div>
             </div>
         </li>
@@ -368,7 +363,7 @@
                 </a>
             </div>
             <div class="media-body media-middle">
-                <div class="progress" ng-show="conocimiento.level == 1">
+                <div class="progress" ng-show="conocimiento.level === 1">
                     <div
                         class="progress-bar progress-bar-danger"
                         role="progressbar"
@@ -380,7 +375,7 @@
                         <span class="">Básico</span>
                     </div>
                 </div>
-                <div class="progress" ng-show="conocimiento.level == 2">
+                <div class="progress" ng-show="conocimiento.level === 2">
                     <div
                         class="progress-bar progress-bar-info"
                         role="progressbar"
@@ -392,7 +387,7 @@
                         <span class="">Intermedio</span>
                     </div>
                 </div>
-                <div class="progress" ng-show="conocimiento.level == 3">
+                <div class="progress" ng-show="conocimiento.level === 3">
                     <div
                         class="progress-bar progress-bar-success"
                         role="progressbar"
@@ -423,8 +418,7 @@
                 <h4>
                     <b
                         >Nivel {{ idioma.nivel }} en {{ idioma.nombre }} ({{
-                            idioma.fecha
-                        }})</b
+                        idioma.fecha }})</b
                     >
                 </h4>
                 <a class="media-heading">{{ idioma.descripcion }}</a>

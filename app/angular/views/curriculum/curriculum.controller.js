@@ -135,7 +135,7 @@
         function hostFn() {
             var host = $location.host();
 
-            if (host == "localhost" || host == "127.0.0.1") {
+            if (host === "localhost" || host === "127.0.0.1") {
                 host += ":" + $location.port();
             }
 
