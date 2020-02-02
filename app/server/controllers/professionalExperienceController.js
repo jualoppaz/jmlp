@@ -38,7 +38,7 @@ var findAllProfessionalExperiences = function(req, res) {
                         });
                     });
 
-                    professionalExperiences.projects.sort(function(a, b) {
+                    professionalExperience.projects.sort(function(a, b) {
                         return b.startDate - a.startDate;
                     });
                 }
