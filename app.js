@@ -43,6 +43,7 @@ mongoose.connection.on("error", function(err) {
 
 var router = require("./app/server/router");
 
+app.use(express.static('app/server/static'));
 app.use(router);
 
 app.use(function(err, req, res, next) {
