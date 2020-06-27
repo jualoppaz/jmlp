@@ -46,10 +46,6 @@ router.get("/google1e2e247e7cbf40b6.html", function(req, res) {
     res.status(200).render("google1e2e247e7cbf40b6");
 });
 
-router.get("/robots.txt", function(req, res) {
-    return res.sendFile(path.join(__dirname, "robots.txt"));
-});
-
 router.get("/", function(req, res) {
     const appVersion = pjson.version;
 
